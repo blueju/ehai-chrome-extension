@@ -1,4 +1,7 @@
 # Tampermonkey-Vue
+
+> node 版本 14 才可以运行本项目
+
 使用 Vue 3.0 + Antd-Design-Vue 开发油猴插件（Tampermonkey）。
 
 如果需要使用 Vue 2.0 + Eelement-UI 请使用`vue2.0`分支。
