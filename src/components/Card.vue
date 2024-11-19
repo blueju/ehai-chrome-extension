@@ -8,20 +8,17 @@
       <a-button type="primary">从这里开始探索吧！</a-button>
     </div>
 
+    <a-divider />
+
+    <a-select v-model:value="store" show-search placeholder="Select a person" style="width: 200px"
+      :options="storeOptios" :filter-option="filterOption" @change="handleChange" @select="handleChange"></a-select>
+
     <div class="card__btn" @click="hide">
-      <svg
-        t="1589962875590"
-        class="icon"
-        viewBox="0 0 1024 1024"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        p-id="2601"
-      >
+      <svg t="1589962875590" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        p-id="2601">
         <path
           d="M730.020653 1018.946715l91.277028-89.978692a16.760351 16.760351 0 0 0 5.114661-11.803064 15.343983 15.343983 0 0 0-5.114661-11.803064l-400.123871-393.435467L821.691117 118.254899a17.075099 17.075099 0 0 0 0-23.606129L730.020653 4.670079a17.232473 17.232473 0 0 0-23.999564 0L202.030255 500.08402a16.445603 16.445603 0 0 0-4.721226 11.803064 15.265296 15.265296 0 0 0 5.114661 11.803064l503.597399 495.413941a17.153786 17.153786 0 0 0 23.999564 0z m0 0"
-          fill="#FFFFFF"
-          p-id="2602"
-        ></path>
+          fill="#FFFFFF" p-id="2602"></path>
       </svg>
     </div>
   </div>
@@ -29,19 +26,31 @@
 
 <script>
 import Header from './Header.vue'
+import stores from './stores.json'
 
 export default {
   name: 'Card',
   components: { Header },
   data() {
     return {
-      isHide: true,
+      isHide: false,
+      store: undefined,
+      storeOptios: stores.map(item => {
+        return { label: item.name, value: item.id }
+      })
     }
   },
   methods: {
     hide() {
       this.isHide = !this.isHide
     },
+    filterOption(input, option) {
+      return option.label.indexOf(input) >= 0
+    },
+    handleChange(value) {
+      console.log(value)
+      this.store = value
+    }
   },
 }
 </script>
@@ -56,8 +65,9 @@ export default {
   width: 420px;
   background-color: rgba(255, 255, 255, 0.5);
   transition: all 0.5s;
-  box-shadow: 2px 3px 3px 0 rgba(0,0,0,.1);
+  box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, .1);
 }
+
 .card__btn {
   transition: all 0.5s;
   border-radius: 30px 0 0 30px;
@@ -70,6 +80,7 @@ export default {
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
+
   svg {
     height: 20px;
     width: 20px;
@@ -79,11 +90,14 @@ export default {
     transition: all 0.5s;
   }
 }
+
 .card--hide {
   left: -420px;
+
   .card__btn {
     border-radius: 0 30px 30px 0;
     right: -30px;
+
     svg {
       transform: rotate(180deg);
     }
