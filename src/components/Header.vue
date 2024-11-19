@@ -1,6 +1,7 @@
 <template>
   <div class="header">
-    <h3 class="header-title">{{AppName}}</h3>
+    <!-- <h3 class="header-title">{{AppName}}</h3> -->
+     <h3 class="header-title">付费升级</h3>
     <a-tag color="#b25eef">v{{AppVersion}}</a-tag>
   </div>
 </template>

@@ -19,7 +19,7 @@
       <a-time-picker v-model:value="pickupHour" format="HH" value-format="HH:00" style="width: 100%;" />
     </div>
     <br>
-    <a-input-number v-model:value="usageDays" :min="1" :max="5" />
+    使用天数：<a-input-number v-model:value="usageDays" :min="1" :max="5" />
     <br>
     <br>
     <a-button type="primary" @click="confirm">确认</a-button>
@@ -102,7 +102,7 @@ export default {
           customRender: ({ _, record }) => {
             const cost = record.priceItemList[0].totalPrice - this.topComfortCarPrice + 127 * this.usageDays + 20
             const addMoney = record.priceItemList[0].totalPrice - this.topComfortCarPrice
-            return `${cost + basicServicePrice}（+${addMoney}）`
+            return `${cost + this.basicServicePrice}（+${addMoney}）`
           }
         },
         {
@@ -112,7 +112,7 @@ export default {
           customRender: ({ _, record }) => {
             const cost = record.priceItemList[0].totalPrice - this.topBetterCarPrice + 187 * this.usageDays + 20
             const addMoney = record.priceItemList[0].totalPrice - this.topBetterCarPrice
-            return `${cost + basicServicePrice}（+${addMoney}）`
+            return `${cost + this.basicServicePrice}（+${addMoney}）`
           }
         },
       ]
@@ -182,18 +182,25 @@ export default {
         pickupTime: this.pickupTime,
         returnTime: this.returnTime,
       }
-      // mock
-      // this.stock = stockMock
-      // 实际
-      queryList(params)
-        .then(res => {
-          console.log(res)
-          this.stock = res.data.result.carTypeList
-          compute(res.data.result.carTypeList)
-        })
-        .catch(err => {
-          console.log(err)
-        })
+      console.log(process.env.NODE_ENV)
+      if (process.env.NODE_ENV === 'development') {
+        // mock
+        setTimeout(() => {
+          this.stock = stockMock
+          compute(stockMock)
+        }, 0);
+      } else {
+        // 实际
+        queryList(params)
+          .then(res => {
+            console.log(res)
+            this.stock = res.data.result.carTypeList
+            compute(res.data.result.carTypeList)
+          })
+          .catch(err => {
+            console.log(err)
+          })
+      }
 
       const compute = (stock) => {
         // 新能源
@@ -203,7 +210,6 @@ export default {
         this.allNewEnergyCar = allNewEnergyCar
         // 计算最高的舒适车价格
         const comfortCar = stock.filter(item => {
-          console.log(item)
           return item.carTypeItem.carLevelId === this.carLevel['comfortCar'].carLevelId
         })
         const comfortCarPriceSet = new Set()
@@ -214,7 +220,6 @@ export default {
         this.topComfortCarPrice = topComfortCarPrice
         // 计算最高的精英车价格
         const betterCar = stock.filter(item => {
-          console.log(item)
           return item.carTypeItem.carLevelId === this.carLevel['betterCar'].carLevelId
         })
         const betterCarPriceSet = new Set()
@@ -239,8 +244,8 @@ export default {
   top: 0;
   height: 100vh;
   // width: 800px;
-  width: 800px;
-  background-color: rgba(255, 255, 255, 0.9);
+  width: 80%;
+  background-color: rgba(255, 255, 255, 1);
   transition: all 0.5s;
   box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, .1);
 }
