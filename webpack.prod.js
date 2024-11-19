@@ -3,9 +3,9 @@ const common = require('./webpack.common')
 
 module.exports = merge(common(), {
   mode: 'production',
-  optimization: {
-    minimize: false
-  },
+  // optimization: {
+  //   minimize: true
+  // },
   externals: {
     // use @require in header to import vue
     vue: 'Vue',

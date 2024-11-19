@@ -1,17 +1,35 @@
 <template>
   <div class="card" :class="{ 'card--hide': isHide }">
     <Header />
-    <div class="app-container">
+    <!-- <div class="app-container">
       <p>TemperMonkey UserScript</p>
       <p>使用Vue3.0 + Antd-Design-Vue开发油猴插件。</p>
       <p>Antd-Design-Vue需要按需引入以减少脚本打包体积，可在<a-tag>utils/antd.js</a-tag>引入需要的UI组件。</p>
       <a-button type="primary">从这里开始探索吧！</a-button>
-    </div>
+    </div> -->
 
     <a-divider />
 
-    <a-select v-model:value="store" show-search placeholder="Select a person" style="width: 200px"
-      :options="storeOptios" :filter-option="filterOption" @change="handleChange" @select="handleChange"></a-select>
+    <a-select v-model:value="storeId" show-search placeholder="Select a person" style="width: 100%;"
+      :options="storeOptions" :filter-option="filterOption" @change="handleChange" @select="handleChange"></a-select>
+    <br>
+    <br>
+    <div style="display: flex;column-gap: 10px;">
+      <a-date-picker v-model:value="pickupDate" style="width: 100%;" valueFormat="YYYY-MM-DD" />
+      <a-time-picker v-model:value="pickupHour" format="HH" value-format="HH:00" style="width: 100%;" />
+    </div>
+    <br>
+    <a-input-number v-model:value="usageDays" :min="1" :max="5" />
+    <br>
+    <br>
+    <a-button type="primary" @click="confirm">确认</a-button>
+    <br>
+    <br>
+    <div>
+      还车时间：{{ this.returnTime }}
+    </div>
+    <a-divider />
+    <a-table :columns="newEnergyTableColumns" :data-source="allNewEnergyCar"></a-table>
 
     <div class="card__btn" @click="hide">
       <svg t="1589962875590" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +44,9 @@
 
 <script>
 import Header from './Header.vue'
-import stores from './stores.json'
+import stockMock from './stockMock.json'
+import queryList from './queryList';
+import dayjs from 'dayjs'
 
 export default {
   name: 'Card',
@@ -34,36 +54,193 @@ export default {
   data() {
     return {
       isHide: false,
+      // 门店列表
+      storeList: [],
+      // 车型列表
+      carLevel: [],
+      // 门店数据
       store: undefined,
-      storeOptios: stores.map(item => {
-        return { label: item.name, value: item.id }
+      // 库存
+      stock: [],
+      // 门店ID
+      storeId: 2596,
+      // 取车日期
+      pickupDate: dayjs().add(1, 'day').format('YYYY-MM-DD'),
+      // 取车时刻
+      pickupHour: dayjs().format('HH:00:00'),
+      // 使用天数
+      usageDays: 1,
+      // 最高的舒适车价格
+      topComfortCarPrice: 0,
+      // 最高的精英车价格
+      topBetterCarPrice: 0,
+      // 基础服务费（基本保障服务费+车辆整备费）
+      basicServicePrice: 120,
+      // 
+      allNewEnergyCar: [],
+      newEnergyTableColumns: [
+        {
+          title: '【新能源】',
+          dataIndex: 'carType',
+          key: 'carType',
+          customRender: ({ _, record }) => {
+            return record.carTypeItem.name
+          }
+        },
+        {
+          title: '总价',
+          dataIndex: 'totalPrice',
+          key: 'totalPrice',
+          customRender: ({ _, record }) => {
+            return record.priceItemList[0].totalPrice + this.basicServicePrice
+          }
+        },
+        {
+          title: '从舒适升级',
+          dataIndex: 'upgradeFromComfort',
+          key: 'upgradeFromComfort',
+          customRender: ({ _, record }) => {
+            const cost = record.priceItemList[0].totalPrice - this.topComfortCarPrice + 127 * this.usageDays + 20
+            const addMoney = record.priceItemList[0].totalPrice - this.topComfortCarPrice
+            return `${cost + basicServicePrice}（+${addMoney}）`
+          }
+        },
+        {
+          title: '从精英升级',
+          key: 'upgradeFromBetter',
+          dataIndex: 'upgradeFromBetter',
+          customRender: ({ _, record }) => {
+            const cost = record.priceItemList[0].totalPrice - this.topBetterCarPrice + 187 * this.usageDays + 20
+            const addMoney = record.priceItemList[0].totalPrice - this.topBetterCarPrice
+            return `${cost + basicServicePrice}（+${addMoney}）`
+          }
+        },
+      ]
+    }
+  },
+  mounted() {
+    this.queryStoreList()
+    this.queryCarLevel()
+  },
+  computed: {
+    // 门店选项
+    storeOptions() {
+      return this.storeList.map(item => {
+        return {
+          ...item,
+          label: item.name,
+          value: item.id,
+        }
       })
+    },
+    // 取车时间
+    pickupTime() {
+      const pickupTime = `${this.pickupDate} ${this.pickupHour}`
+      return dayjs(pickupTime).format('YYYY-MM-DD HH:mm')
+    },
+    // 还车时间
+    returnTime() {
+      const returnTime = dayjs(this.pickupTime).add(this.usageDays, 'day').format('YYYY-MM-DD HH:mm')
+      return returnTime
     }
   },
   methods: {
+    // 查询门店列表
+    queryStoreList() {
+      fetch('https://dev.usemock.com/673c8274f92800c9ae107bc0/storeList')
+        .then(res => res.json())
+        .then(resJson => {
+          this.storeList = resJson
+          const store = resJson.find(item => {
+            return item.id === 2596
+          })
+          this.store = store
+        })
+    },
+    // 查询车型列表
+    queryCarLevel() {
+      fetch('https://dev.usemock.com/673c8274f92800c9ae107bc0/carLevel')
+        .then(res => res.json())
+        .then(resJson => {
+          this.carLevel = resJson
+        })
+    },
     hide() {
       this.isHide = !this.isHide
     },
     filterOption(input, option) {
       return option.label.indexOf(input) >= 0
     },
-    handleChange(value) {
-      console.log(value)
-      this.store = value
-    }
+    handleChange(storeId, option) {
+      this.storeId = storeId
+      this.store = option
+    },
+    confirm() {
+      const params = {
+        cityId: this.store.cityId,
+        storeId: this.storeId,
+        pickupTime: this.pickupTime,
+        returnTime: this.returnTime,
+      }
+      // mock
+      // this.stock = stockMock
+      // 实际
+      queryList(params)
+        .then(res => {
+          console.log(res)
+          this.stock = res.data.result.carTypeList
+          compute(res.data.result.carTypeList)
+        })
+        .catch(err => {
+          console.log(err)
+        })
+
+      const compute = (stock) => {
+        // 新能源
+        const allNewEnergyCar = stock.filter(item => {
+          return item.carTypeItem.carLevelId === this.carLevel['newEnergy'].carLevelId
+        })
+        this.allNewEnergyCar = allNewEnergyCar
+        // 计算最高的舒适车价格
+        const comfortCar = stock.filter(item => {
+          console.log(item)
+          return item.carTypeItem.carLevelId === this.carLevel['comfortCar'].carLevelId
+        })
+        const comfortCarPriceSet = new Set()
+        comfortCar.forEach(item => {
+          comfortCarPriceSet.add(item.priceItemList[0].totalPrice)
+        })
+        const topComfortCarPrice = Math.max(...comfortCarPriceSet)
+        this.topComfortCarPrice = topComfortCarPrice
+        // 计算最高的精英车价格
+        const betterCar = stock.filter(item => {
+          console.log(item)
+          return item.carTypeItem.carLevelId === this.carLevel['betterCar'].carLevelId
+        })
+        const betterCarPriceSet = new Set()
+        betterCar.forEach(item => {
+          betterCarPriceSet.add(item.priceItemList[0].totalPrice)
+        })
+        const topBetterCarPriceSet = Math.max(...betterCarPriceSet)
+        this.topBetterCarPrice = topBetterCarPriceSet
+      }
+    },
+
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .card {
+  padding: 10px;
   position: fixed;
-  z-index: 9999;
+  z-index: 1000;
   left: 0;
   top: 0;
   height: 100vh;
-  width: 420px;
-  background-color: rgba(255, 255, 255, 0.5);
+  // width: 800px;
+  width: 800px;
+  background-color: rgba(255, 255, 255, 0.9);
   transition: all 0.5s;
   box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, .1);
 }

@@ -39,6 +39,7 @@
   "dependencies": {
     "ant-design-vue": "^3.0.0-alpha.14",
     "axios": "^0.21.0",
+    "dayjs": "^1.11.13",
     "vue": "^3.2.24"
   }
 }
