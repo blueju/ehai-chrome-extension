@@ -3,21 +3,20 @@
     <div style="display: flex;align-items: center">
       <div>城市：</div>
       <a-select v-model:value="cityId" show-search placeholder="Select a person" style="width: 200px"
-                :options="cityOptions" :filter-option="filterOption" @change="handleChange"
-                @select="handleChange"></a-select>
+        :options="cityOptions" :filter-option="filterOption" @change="handleChange" @select="handleChange"></a-select>
     </div>
     <br>
     <br>
     <div style="display: flex;column-gap: 10px;">
-      <a-date-picker v-model:value="pickupDate" valueFormat="YYYY-MM-DD" :disabledDate="disabledDate"/>
+      <a-date-picker v-model:value="pickupDate" valueFormat="YYYY-MM-DD" :disabledDate="disabledDate" />
       <a-time-picker v-model:value="pickupHour" format="HH" :minuteStep="30" :showNow="false"
-                     :disabledHours="disabledHours" allowClear value-format="HH:mm"/>
+        :disabledHours="disabledHours" allowClear value-format="HH:mm" />
     </div>
     <br>
     <div style="display: flex;column-gap: 20px;align-items: center;">
       <div>
         使用天数：
-        <a-input-number v-model:value="usageDays" :min="1" :max="5" style="margin-right: 20px;"/>
+        <a-input-number v-model:value="usageDays" :min="1" :max="5" style="margin-right: 20px;" />
       </div>
       <a-checkbox v-model:checked="isWednesday">周三下单88折扣</a-checkbox>
       <a-checkbox v-model:checked="isAdd51">总价+51保障</a-checkbox>
@@ -29,15 +28,15 @@
     <div>
       还车时间：{{ this.returnTime }}
     </div>
-    <a-divider/>
+    <a-divider />
     <a-table :columns="newEnergyTableColumns" :data-source="stock" :pagination="false"></a-table>
 
     <div class="card__btn" @click="hide">
       <svg t="1589962875590" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-           p-id="2601">
+        p-id="2601">
         <path
-            d="M730.020653 1018.946715l91.277028-89.978692a16.760351 16.760351 0 0 0 5.114661-11.803064 15.343983 15.343983 0 0 0-5.114661-11.803064l-400.123871-393.435467L821.691117 118.254899a17.075099 17.075099 0 0 0 0-23.606129L730.020653 4.670079a17.232473 17.232473 0 0 0-23.999564 0L202.030255 500.08402a16.445603 16.445603 0 0 0-4.721226 11.803064 15.265296 15.265296 0 0 0 5.114661 11.803064l503.597399 495.413941a17.153786 17.153786 0 0 0 23.999564 0z m0 0"
-            fill="#FFFFFF" p-id="2602"></path>
+          d="M730.020653 1018.946715l91.277028-89.978692a16.760351 16.760351 0 0 0 5.114661-11.803064 15.343983 15.343983 0 0 0-5.114661-11.803064l-400.123871-393.435467L821.691117 118.254899a17.075099 17.075099 0 0 0 0-23.606129L730.020653 4.670079a17.232473 17.232473 0 0 0-23.999564 0L202.030255 500.08402a16.445603 16.445603 0 0 0-4.721226 11.803064 15.265296 15.265296 0 0 0 5.114661 11.803064l503.597399 495.413941a17.153786 17.153786 0 0 0 23.999564 0z m0 0"
+          fill="#FFFFFF" p-id="2602"></path>
       </svg>
     </div>
   </div>
@@ -51,7 +50,7 @@ import dayjs from 'dayjs'
 
 export default {
   name: 'Card',
-  components: {Header},
+  components: { Header },
   data() {
     return {
       isHide: false,
@@ -97,7 +96,7 @@ export default {
           title: '车型',
           dataIndex: 'carType',
           key: 'carType',
-          customRender: ({_, record}) => {
+          customRender: ({ _, record }) => {
             return record.carTypeItem.name
           }
         },
@@ -105,7 +104,7 @@ export default {
           title: '门店',
           dataIndex: 'storeName',
           key: 'storeName',
-          customRender: ({_, record}) => {
+          customRender: ({ _, record }) => {
             return record.carTypeItem.name
           }
         },
@@ -117,17 +116,17 @@ export default {
             const totalPrice = record.priceItemList[0].totalPrice
             return {
               title: this.isWednesday
-                  ? `${totalPrice}-${Math.floor(totalPrice * 0.12)}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` + (this.isAdd51 ? `+${51 * this.usageDays}` : 0)
-                  : `${totalPrice}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` + (this.isAdd51 ? `+${51 * this.usageDays}` : 0)
+                ? `${totalPrice}-${Math.floor(totalPrice * 0.12)}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` + (this.isAdd51 ? `+${51 * this.usageDays}` : 0)
+                : `${totalPrice}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` + (this.isAdd51 ? `+${51 * this.usageDays}` : 0)
             }
           },
-          customRender: ({_, record}) => {
+          customRender: ({ _, record }) => {
             const totalPrice = record.priceItemList[0].totalPrice
             return this.isWednesday
-                // 总价-周三88折折扣+基本保障服务费*使用天数+车辆整备费+51保障
-                ? record.priceItemList[0].totalPrice - Math.floor(totalPrice * 0.12) + this.basicServicePrice * this.usageDays + this.preparePrice + (this.isAdd51 ? (51 * this.usageDays) : 0)
-                // 总价+基本保障服务费*使用天数+车辆整备费+51保障
-                : record.priceItemList[0].totalPrice + this.basicServicePrice * this.usageDays + this.preparePrice + (this.isAdd51 ? (51 * this.usageDays) : 0)
+              // 总价-周三88折折扣+基本保障服务费*使用天数+车辆整备费+51保障
+              ? record.priceItemList[0].totalPrice - Math.floor(totalPrice * 0.12) + this.basicServicePrice * this.usageDays + this.preparePrice + (this.isAdd51 ? (51 * this.usageDays) : 0)
+              // 总价+基本保障服务费*使用天数+车辆整备费+51保障
+              : record.priceItemList[0].totalPrice + this.basicServicePrice * this.usageDays + this.preparePrice + (this.isAdd51 ? (51 * this.usageDays) : 0)
           }
         },
       ]
@@ -187,35 +186,35 @@ export default {
     // 查询门店列表
     queryStoreList() {
       fetch('https://dev.usemock.com/673c8274f92800c9ae107bc0/storeList')
-          .then(res => res.json())
-          .then(resJson => {
-            this.storeList = resJson
-            const store = resJson.find(item => {
-              return item.id === 2596
-            })
-            this.store = store
+        .then(res => res.json())
+        .then(resJson => {
+          this.storeList = resJson
+          const store = resJson.find(item => {
+            return item.id === 2596
           })
+          this.store = store
+        })
     },
     // 查询门店列表
     queryCityList() {
       fetch('https://dev.usemock.com/673c8274f92800c9ae107bc0/cityList')
-          .then(res => res.json())
-          .then(resJson => {
-            this.cityList = resJson
-            const city = resJson.find(item => {
-              // 21 深圳
-              return item.id === 21
-            })
-            this.city = city
+        .then(res => res.json())
+        .then(resJson => {
+          this.cityList = resJson
+          const city = resJson.find(item => {
+            // 21 深圳
+            return item.id === 21
           })
+          this.city = city
+        })
     },
     // 查询车型列表
     queryCarLevel() {
       fetch('https://dev.usemock.com/673c8274f92800c9ae107bc0/carLevel')
-          .then(res => res.json())
-          .then(resJson => {
-            this.carLevel = resJson
-          })
+        .then(res => res.json())
+        .then(resJson => {
+          this.carLevel = resJson
+        })
     },
     hide() {
       this.isHide = !this.isHide
@@ -267,14 +266,14 @@ export default {
       } else {
         // 实际
         queryList(params)
-            .then(res => {
-              console.log(res)
-              this.stock = res.data.result.carTypeList
-              compute(res.data.result.carTypeList)
-            })
-            .catch(err => {
-              console.log(err)
-            })
+          .then(res => {
+            console.log(res)
+            this.stock = res.data.result.carTypeList
+            compute(res.data.result.carTypeList)
+          })
+          .catch(err => {
+            console.log(err)
+          })
       }
 
       const compute = (stock) => {
