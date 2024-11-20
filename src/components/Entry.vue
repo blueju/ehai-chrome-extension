@@ -35,9 +35,15 @@ export default {
   },
   data() {
     return {
-      activeKey: '1'
+      activeKey: '1',
+      isHide: true
     }
   },
+  methods: {
+    hide() {
+      this.isHide = !this.isHide
+    },
+  }
 }
 </script>
 
@@ -79,7 +85,7 @@ export default {
 }
 
 .card--hide {
-  left: -420px;
+  left: -100%;
 
   .card__btn {
     border-radius: 0 30px 30px 0;
