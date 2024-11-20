@@ -35,8 +35,8 @@ export default {
   },
   data() {
     return {
-      activeKey: '1',
-      isHide: true
+      activeKey: '2',
+      isHide: false
     }
   },
   methods: {
