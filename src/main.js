@@ -1,4 +1,4 @@
-loadStyle('https://unpkg.com/ant-design-vue@3.0.0-alpha.14/dist/antd.css')
+loadStyle('https://cdn.jsdelivr.net/npm/ant-design-vue@3.2.20/dist/antd.min.css')
 
 import App from './app.vue'
 import { isDev } from './config'
