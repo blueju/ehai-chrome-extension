@@ -24,6 +24,7 @@
         使用天数：<a-input-number v-model:value="usageDays" :min="1" :max="5" style="margin-right: 20px;" />
       </div>
       <a-checkbox v-model:checked="isWednesday">周三下单88折扣</a-checkbox>
+      <a-checkbox v-model:checked="isAdd51">总价+51保障</a-checkbox>
     </div>
     <br>
     <a-button type="primary" @click="confirm">确认</a-button>
@@ -59,6 +60,7 @@ export default {
     return {
       isHide: false,
       isWednesday: dayjs().day() === 3 ? true : false,
+      isAdd51: true,
       // 门店列表
       storeList: [],
       // 车型列表
@@ -101,15 +103,17 @@ export default {
             const totalPrice = record.priceItemList[0].totalPrice
             return {
               title: this.isWednesday
-                ? `${totalPrice}-${Math.floor(totalPrice * 0.12)}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}`
-                : `${totalPrice}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}`
+                ? `${totalPrice}-${Math.floor(totalPrice * 0.12)}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` + (this.isAdd51 ? `+${51 * this.usageDays}` : 0)
+                : `${totalPrice}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` + (this.isAdd51 ? `+${51 * this.usageDays}` : 0)
             }
           },
           customRender: ({ _, record }) => {
             const totalPrice = record.priceItemList[0].totalPrice
             return this.isWednesday
-              ? record.priceItemList[0].totalPrice - Math.floor(totalPrice * 0.12) + this.basicServicePrice * this.usageDays + this.preparePrice
-              : record.priceItemList[0].totalPrice + this.basicServicePrice * this.usageDays + this.preparePrice
+              // 总价-周三88折折扣+基本保障服务费*使用天数+车辆整备费+51保障
+              ? record.priceItemList[0].totalPrice - Math.floor(totalPrice * 0.12) + this.basicServicePrice * this.usageDays + this.preparePrice + (this.isAdd51 ? (51 * this.usageDays) : 0)
+              // 总价+基本保障服务费*使用天数+车辆整备费+51保障
+              : record.priceItemList[0].totalPrice + this.basicServicePrice * this.usageDays + this.preparePrice + (this.isAdd51 ? (51 * this.usageDays) : 0)
           }
         },
         {
