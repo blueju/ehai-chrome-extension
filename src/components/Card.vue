@@ -77,7 +77,7 @@ export default {
       // 取车时刻
       pickupHour: dayjs().add(1, 'hour').format('HH:00'),
       // 使用天数
-      usageDays: 2,
+      usageDays: 1,
       // 最高的舒适车价格
       topComfortCarPrice: 0,
       // 最高的精英车价格
@@ -87,6 +87,16 @@ export default {
       basicServicePrice: 50,
       // 新能源车列表
       allNewEnergyCar: [],
+
+      // 舒适车列表
+      allComfortCar: [],
+      // 舒适车价格集合
+      comfortCarPriceSet: new Set(),
+      // 精英车列表
+      allBetterCar: [],
+      // 精英车价格集合
+      betterCarPriceSet: new Set(),
+
       newEnergyTableColumns: [
         {
           title: '【新能源】',
@@ -122,9 +132,13 @@ export default {
           dataIndex: 'upgradeFromComfort',
           key: 'upgradeFromComfort',
           customRender: ({ _, record }) => {
+            if (this.allComfortCar.length === 0) {
+              return '/'
+            }
             const totalPrice = record.priceItemList[0].totalPrice
+            const topSuitablePrice = this.findTopSuitablePrice(totalPrice, [...this.comfortCarPriceSet])
             // 差价
-            const priceDifference = totalPrice - this.topComfortCarPrice
+            const priceDifference = totalPrice - topSuitablePrice
             // 成本
             const cost = priceDifference + 127 * this.usageDays
             return `${cost}（+${priceDifference}）`
@@ -135,9 +149,13 @@ export default {
           key: 'upgradeFromBetter',
           dataIndex: 'upgradeFromBetter',
           customRender: ({ _, record }) => {
+            if (this.allBetterCar.length === 0) {
+              return '/'
+            }
             const totalPrice = record.priceItemList[0].totalPrice
+            const topSuitablePrice = this.findTopSuitablePrice(totalPrice, [...this.betterCarPriceSet])
             // 差价
-            const priceDifference = totalPrice - this.topBetterCarPrice
+            const priceDifference = totalPrice - topSuitablePrice
             const cost = priceDifference + 187 * this.usageDays
             return `${cost}（+${priceDifference}）`
           }
@@ -172,6 +190,27 @@ export default {
     }
   },
   methods: {
+    // 查找最高合适的价格
+    // eg.如果海口新速腾比新能源还贵，总不能让一嗨倒贴钱吧，所以此时要跟第二贵的车价比，再补差价
+    findTopSuitablePrice(totalPrice, prices) {
+      // 先对价格数组进行排序
+      const sortedPrices = [...prices].sort((x, y) => y - x); // 从大到小排序
+      // 找到最大值
+      const maxPrice = sortedPrices[0];
+      // 如果价格 totalPrice 小于最大值
+      if (totalPrice < maxPrice) {
+        for (let i = 1; i < sortedPrices.length; i++) {
+          // 找到第一个小于 totalPrice 的价格
+          if (sortedPrices[i] < totalPrice) {
+            return sortedPrices[i]; // 返回第一个比 totalPrice 小的价格
+          }
+        }
+        // 如果没有找到比 totalPrice 小的价格，返回 null 或其他值
+        return null;
+      }
+      // 如果 totalPrice 大于等于最大值，返回最大值
+      return maxPrice;
+    },
     disabledDate(current) {
       return current < dayjs();
     },
@@ -266,22 +305,31 @@ export default {
         const comfortCar = stock.filter(item => {
           return item.carTypeItem.carLevelId === this.carLevel['comfortCar'].carLevelId
         })
-        const comfortCarPriceSet = new Set()
-        comfortCar.forEach(item => {
-          comfortCarPriceSet.add(item.priceItemList[0].totalPrice)
-        })
-        const topComfortCarPrice = Math.max(...comfortCarPriceSet)
-        this.topComfortCarPrice = topComfortCarPrice
+        this.allComfortCar = comfortCar
+        if (comfortCar.length) {
+          const comfortCarPriceSet = new Set()
+          comfortCar.forEach(item => {
+            comfortCarPriceSet.add(item.priceItemList[0].totalPrice)
+          })
+          this.comfortCarPriceSet = comfortCarPriceSet
+          const topComfortCarPrice = Math.max(...comfortCarPriceSet)
+          this.topComfortCarPrice = topComfortCarPrice
+        }
         // 计算最高的精英车价格
         const betterCar = stock.filter(item => {
           return item.carTypeItem.carLevelId === this.carLevel['betterCar'].carLevelId
         })
-        const betterCarPriceSet = new Set()
-        betterCar.forEach(item => {
-          betterCarPriceSet.add(item.priceItemList[0].totalPrice)
-        })
-        const topBetterCarPriceSet = Math.max(...betterCarPriceSet)
-        this.topBetterCarPrice = topBetterCarPriceSet
+        this.allBetterCar = betterCar
+        if (betterCar.length) {
+          const betterCarPriceSet = new Set()
+          betterCar.forEach(item => {
+            betterCarPriceSet.add(item.priceItemList[0].totalPrice)
+          })
+          this.betterCarPriceSet = betterCarPriceSet
+          const topBetterCarPriceSet = Math.max(...betterCarPriceSet)
+          this.topBetterCarPrice = topBetterCarPriceSet
+        }
+
       }
     },
 
