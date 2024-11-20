@@ -1,12 +1,18 @@
 <template>
-  <div class="app">
-    <div class="app-info">Hello {{ AppName }} v{{ AppVersion }} !</div>
-    <Card />
-  </div>
+  <a-config-provider :locale="locale">
+    <div class="app">
+      <div class="app-info">Hello {{ AppName }} v{{ AppVersion }} !</div>
+      <Card />
+    </div>
+  </a-config-provider>
 </template>
 
 <script>
 import Card from '@/components/Card.vue'
+import zhCN from 'ant-design-vue/es/locale/zh_CN';
+import dayjs from 'dayjs';
+import 'dayjs/locale/zh-cn';
+dayjs.locale('zh-cn');
 import { AppName, AppVersion } from './config'
 
 export default {
@@ -18,6 +24,7 @@ export default {
     return {
       AppName,
       AppVersion,
+      locale: zhCN,
     }
   },
 }
@@ -28,6 +35,7 @@ export default {
   margin: 0;
   padding: 0;
 }
+
 .app-info {
   position: fixed;
   top: 0;

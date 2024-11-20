@@ -6,7 +6,8 @@ import {
   TimePicker,
   InputNumber,
   Checkbox,
-  Table
+  Table,
+  ConfigProvider
 } from 'ant-design-vue'
 
 const Antd = {
@@ -19,6 +20,7 @@ const Antd = {
     Vue.component('a-input-number', InputNumber)
     Vue.component('a-checkbox', Checkbox)
     Vue.component('a-table', Table)
+    Vue.component('a-config-provider', ConfigProvider)
   }
 }
 

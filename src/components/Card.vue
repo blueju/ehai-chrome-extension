@@ -269,8 +269,7 @@ export default {
   left: 0;
   top: 0;
   height: 100vh;
-  // width: 800px;
-  width: 80%;
+  width: 100%;
   background-color: rgba(255, 255, 255, 1);
   transition: all 0.5s;
   box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, .1);
