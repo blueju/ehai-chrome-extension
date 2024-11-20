@@ -19,8 +19,12 @@
       <a-time-picker v-model:value="pickupHour" format="HH" value-format="HH:00" style="width: 100%;" />
     </div>
     <br>
-    使用天数：<a-input-number v-model:value="usageDays" :min="1" :max="5" />
-    <br>
+    <div style="display: flex;column-gap: 20px;align-items: center;">
+      <div>
+        使用天数：<a-input-number v-model:value="usageDays" :min="1" :max="5" style="margin-right: 20px;" />
+      </div>
+      <a-checkbox v-model:checked="isWednesday">周三下单88折扣</a-checkbox>
+    </div>
     <br>
     <a-button type="primary" @click="confirm">确认</a-button>
     <br>
@@ -29,7 +33,7 @@
       还车时间：{{ this.returnTime }}
     </div>
     <a-divider />
-    <a-table :columns="newEnergyTableColumns" :data-source="allNewEnergyCar"></a-table>
+    <a-table :columns="newEnergyTableColumns" :data-source="allNewEnergyCar" :pagination="false"></a-table>
 
     <div class="card__btn" @click="hide">
       <svg t="1589962875590" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -54,6 +58,7 @@ export default {
   data() {
     return {
       isHide: false,
+      isWednesday: dayjs().day() === 3 ? true : false,
       // 门店列表
       storeList: [],
       // 车型列表
@@ -65,18 +70,19 @@ export default {
       // 门店ID
       storeId: 2596,
       // 取车日期
-      pickupDate: dayjs().add(1, 'day').format('YYYY-MM-DD'),
+      pickupDate: dayjs('2024-11-21').add(1, 'day').format('YYYY-MM-DD'),
       // 取车时刻
-      pickupHour: dayjs().format('HH:00:00'),
+      pickupHour: dayjs('2024-11-22 19:00:00').format('HH:00:00'),
       // 使用天数
-      usageDays: 1,
+      usageDays: 3,
       // 最高的舒适车价格
       topComfortCarPrice: 0,
       // 最高的精英车价格
       topBetterCarPrice: 0,
-      // 基础服务费（基本保障服务费+车辆整备费）
-      basicServicePrice: 120,
-      // 
+      // 基础费用（基本保障服务费+车辆整备费）
+      preparePrice: 20,
+      basicServicePrice: 50,
+      // 新能源车列表
       allNewEnergyCar: [],
       newEnergyTableColumns: [
         {
@@ -91,8 +97,19 @@ export default {
           title: '总价',
           dataIndex: 'totalPrice',
           key: 'totalPrice',
+          customCell: (record, rowIndex, column) => {
+            const totalPrice = record.priceItemList[0].totalPrice
+            return {
+              title: this.isWednesday
+                ? `${totalPrice}-${Math.floor(totalPrice * 0.12)}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}`
+                : `${totalPrice}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}`
+            }
+          },
           customRender: ({ _, record }) => {
-            return record.priceItemList[0].totalPrice + this.basicServicePrice
+            const totalPrice = record.priceItemList[0].totalPrice
+            return this.isWednesday
+              ? record.priceItemList[0].totalPrice - Math.floor(totalPrice * 0.12) + this.basicServicePrice * this.usageDays + this.preparePrice
+              : record.priceItemList[0].totalPrice + this.basicServicePrice * this.usageDays + this.preparePrice
           }
         },
         {
@@ -100,9 +117,12 @@ export default {
           dataIndex: 'upgradeFromComfort',
           key: 'upgradeFromComfort',
           customRender: ({ _, record }) => {
-            const cost = record.priceItemList[0].totalPrice - this.topComfortCarPrice + 127 * this.usageDays + 20
-            const addMoney = record.priceItemList[0].totalPrice - this.topComfortCarPrice
-            return `${cost + this.basicServicePrice}（+${addMoney}）`
+            const totalPrice = record.priceItemList[0].totalPrice
+            // 差价
+            const priceDifference = totalPrice - this.topComfortCarPrice
+            // 成本
+            const cost = priceDifference + 127 * this.usageDays
+            return `${cost}（+${priceDifference}）`
           }
         },
         {
@@ -110,9 +130,11 @@ export default {
           key: 'upgradeFromBetter',
           dataIndex: 'upgradeFromBetter',
           customRender: ({ _, record }) => {
-            const cost = record.priceItemList[0].totalPrice - this.topBetterCarPrice + 187 * this.usageDays + 20
-            const addMoney = record.priceItemList[0].totalPrice - this.topBetterCarPrice
-            return `${cost + this.basicServicePrice}（+${addMoney}）`
+            const totalPrice = record.priceItemList[0].totalPrice
+            // 差价
+            const priceDifference = totalPrice - this.topBetterCarPrice
+            const cost = priceDifference + 187 * this.usageDays
+            return `${cost}（+${priceDifference}）`
           }
         },
       ]

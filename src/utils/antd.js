@@ -5,7 +5,7 @@ import {
   DatePicker,
   TimePicker,
   InputNumber,
-  Card,
+  Checkbox,
   Table
 } from 'ant-design-vue'
 
@@ -17,7 +17,7 @@ const Antd = {
     Vue.component('a-date-picker', DatePicker)
     Vue.component('a-time-picker', TimePicker)
     Vue.component('a-input-number', InputNumber)
-    // Vue.component('a-card', Card)
+    Vue.component('a-checkbox', Checkbox)
     Vue.component('a-table', Table)
   }
 }
