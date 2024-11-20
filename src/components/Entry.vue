@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/deep/ .ant-tabs-content {
+:deep(.ant-tabs-content) {
   height: 100%;
 }
 
