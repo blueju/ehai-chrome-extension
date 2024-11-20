@@ -2,13 +2,13 @@
   <a-config-provider :locale="locale">
     <div class="app">
       <div class="app-info">Hello {{ AppName }} v{{ AppVersion }} !</div>
-      <Card />
+      <Entry />
     </div>
   </a-config-provider>
 </template>
 
 <script>
-import Card from '@/components/Card.vue'
+import Entry from '@/components/Entry.vue'
 import zhCN from 'ant-design-vue/es/locale/zh_CN';
 import dayjs from 'dayjs';
 import 'dayjs/locale/zh-cn';
@@ -18,7 +18,7 @@ import { AppName, AppVersion } from './config'
 export default {
   name: 'app',
   components: {
-    Card,
+    Entry,
   },
   data() {
     return {

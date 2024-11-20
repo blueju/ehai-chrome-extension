@@ -7,7 +7,9 @@ import {
   InputNumber,
   Checkbox,
   Table,
-  ConfigProvider
+  ConfigProvider,
+  Tabs,
+  TabPane,
 } from 'ant-design-vue'
 
 const Antd = {
@@ -21,6 +23,8 @@ const Antd = {
     Vue.component('a-checkbox', Checkbox)
     Vue.component('a-table', Table)
     Vue.component('a-config-provider', ConfigProvider)
+    Vue.component('a-tabs', Tabs)
+    Vue.component('a-tab-pane', TabPane)
   }
 }
 

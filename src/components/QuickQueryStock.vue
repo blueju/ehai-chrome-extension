@@ -1,15 +1,5 @@
 <template>
-  <div class="card" :class="{ 'card--hide': isHide }">
-    <Header />
-    <!-- <div class="app-container">
-      <p>TemperMonkey UserScript</p>
-      <p>使用Vue3.0 + Antd-Design-Vue开发油猴插件。</p>
-      <p>Antd-Design-Vue需要按需引入以减少脚本打包体积，可在<a-tag>utils/antd.js</a-tag>引入需要的UI组件。</p>
-      <a-button type="primary">从这里开始探索吧！</a-button>
-    </div> -->
-
-    <a-divider />
-
+  <div class="QuickQueryStock">
     <a-select v-model:value="storeId" show-search placeholder="Select a person" style="width: 100%;"
       :options="storeOptions" :filter-option="filterOption" @change="handleChange" @select="handleChange"></a-select>
     <br>
@@ -338,52 +328,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card {
-  padding: 10px;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 1);
-  transition: all 0.5s;
-  box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, .1);
-}
-
-.card__btn {
-  transition: all 0.5s;
-  border-radius: 30px 0 0 30px;
-  width: 30px;
-  height: 60px;
-  background-color: rgb(178, 94, 239);
-  cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-
-  svg {
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    right: 5px;
-    top: 20px;
-    transition: all 0.5s;
-  }
-}
-
-.card--hide {
-  left: -420px;
-
-  .card__btn {
-    border-radius: 0 30px 30px 0;
-    right: -30px;
-
-    svg {
-      transform: rotate(180deg);
-    }
-  }
+.QuickQueryStock {
+  position: relative;
 }
 </style>
