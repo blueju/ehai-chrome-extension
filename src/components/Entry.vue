@@ -1,11 +1,11 @@
 <template>
   <div class="card" :class="{ 'card--hide': isHide }">
     <!-- <Header></Header> -->
-    <a-tabs v-model:activeKey="activeKey">
+    <a-tabs v-model:activeKey="activeKey" style="height: 100%;">
       <a-tab-pane key="1" tab="快速查价">
         <QuickQueryPrice></QuickQueryPrice>
       </a-tab-pane>
-      <a-tab-pane key="2" tab="快速查库存">
+      <a-tab-pane key="2" tab="快速查库存" style="height: 100%;">
         <QuickQueryStock></QuickQueryStock>
       </a-tab-pane>
     </a-tabs>
@@ -48,6 +48,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/deep/ .ant-tabs-content {
+  height: 100%;
+}
+
 .card {
   padding: 10px;
   position: fixed;

@@ -10,6 +10,7 @@ import {
   ConfigProvider,
   Tabs,
   TabPane,
+  Input,
 } from 'ant-design-vue'
 
 const Antd = {
@@ -25,6 +26,7 @@ const Antd = {
     Vue.component('a-config-provider', ConfigProvider)
     Vue.component('a-tabs', Tabs)
     Vue.component('a-tab-pane', TabPane)
+    Vue.component('a-input', Input)
   }
 }
 

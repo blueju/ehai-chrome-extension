@@ -6,7 +6,6 @@
         :options="cityOptions" :filter-option="filterOption" @change="handleChange" @select="handleChange"></a-select>
     </div>
     <br>
-    <br>
     <div style="display: flex;column-gap: 10px;">
       <a-date-picker v-model:value="pickupDate" valueFormat="YYYY-MM-DD" :disabledDate="disabledDate" />
       <a-time-picker v-model:value="pickupHour" format="HH" :minuteStep="30" :showNow="false"
@@ -22,14 +21,13 @@
       <a-checkbox v-model:checked="isAdd51">总价+51保障</a-checkbox>
     </div>
     <br>
-    <a-button type="primary" @click="confirm">确认</a-button>
-    <br>
-    <br>
-    <div>
-      还车时间：{{ this.returnTime }}
+    <div style="display: flex; column-gap: 20px;align-items: center;">
+      <a-button type="primary" @click="confirm">确认</a-button>
+      <div>还车时间：{{ this.returnTime }}</div>
     </div>
     <a-divider />
-    <a-table :columns="newEnergyTableColumns" :data-source="stock" :pagination="false"></a-table>
+    <a-input v-model:value="carNameSearchInput" style="width: 250px;margin-bottom: 10px;" placeholder="输入车型"></a-input>
+    <a-table :columns="newEnergyTableColumns" :data-source="filterCityStock" :pagination="false"></a-table>
 
   </div>
 </template>
@@ -41,7 +39,7 @@ import queryList from './queryList';
 import dayjs from 'dayjs'
 
 export default {
-  name: 'Card',
+  name: 'QuickQueryStock',
   components: { Header },
   data() {
     return {
@@ -59,7 +57,8 @@ export default {
       city: undefined,
       // 整个城市的车辆库存
       cityStock: [],
-
+      carNameSearchInput: '',
+      // filterCityStock: [],
       // 库存
       stock: [],
       // 城市ID（默认深圳）
@@ -95,7 +94,7 @@ export default {
           dataIndex: 'carType',
           key: 'carType',
           customRender: ({ _, record }) => {
-            return record.carTypeItem.name
+            return record.carName
           }
         },
         {
@@ -103,7 +102,7 @@ export default {
           dataIndex: 'storeName',
           key: 'storeName',
           customRender: ({ _, record }) => {
-            return record.carTypeItem.name
+            return record.storeName
           }
         },
         {
@@ -111,7 +110,7 @@ export default {
           dataIndex: 'totalPrice',
           key: 'totalPrice',
           customCell: (record, rowIndex, column) => {
-            const totalPrice = record.priceItemList[0].totalPrice
+            const totalPrice = record.totalPrice
             return {
               title: this.isWednesday
                 ? `${totalPrice}-${Math.floor(totalPrice * 0.12)}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` + (this.isAdd51 ? `+${51 * this.usageDays}` : 0)
@@ -119,12 +118,12 @@ export default {
             }
           },
           customRender: ({ _, record }) => {
-            const totalPrice = record.priceItemList[0].totalPrice
+            const totalPrice = record.totalPrice
             return this.isWednesday
               // 总价-周三88折折扣+基本保障服务费*使用天数+车辆整备费+51保障
-              ? record.priceItemList[0].totalPrice - Math.floor(totalPrice * 0.12) + this.basicServicePrice * this.usageDays + this.preparePrice + (this.isAdd51 ? (51 * this.usageDays) : 0)
+              ? totalPrice - Math.floor(totalPrice * 0.12) + this.basicServicePrice * this.usageDays + this.preparePrice + (this.isAdd51 ? (51 * this.usageDays) : 0)
               // 总价+基本保障服务费*使用天数+车辆整备费+51保障
-              : record.priceItemList[0].totalPrice + this.basicServicePrice * this.usageDays + this.preparePrice + (this.isAdd51 ? (51 * this.usageDays) : 0)
+              : totalPrice + this.basicServicePrice * this.usageDays + this.preparePrice + (this.isAdd51 ? (51 * this.usageDays) : 0)
           }
         },
       ]
@@ -136,6 +135,12 @@ export default {
     this.queryCarLevel()
   },
   computed: {
+    filterCityStock() {
+      console.log(222);
+      return this.cityStock.filter(item => {
+        return item.carName.includes(this.carNameSearchInput)
+      })
+    },
     // 门店选项
     cityOptions() {
       return this.cityList.map(item => {
@@ -231,44 +236,58 @@ export default {
         return (item.cityId === this.cityId) && (item.type === 1)
       })
       console.log(cityStoreList)
-
-      function getRandomDelay() {
-        // 返回 1 到 3 秒之间的随机延迟（以毫秒为单位）
-        return Math.floor(Math.random() * 3000);
-      }
-
-      const requestQueue = cityStoreList.map(item => {
-        const params = {
-          cityId: this.cityId,
-          storeId: item.id,
-          pickupTime: this.pickupTime,
-          returnTime: this.returnTime,
-        }
-        return new Promise(async (resolve, reject) => {
-          try {
-            setTimeout(async () => {
-              const response = await queryList(params)
-              console.log(response)
-              resolve(response)
-            }, getRandomDelay());
-          } catch (error) {
-            debugger
-            reject(error)
-          }
-        })
-      })
       console.log(process.env.NODE_ENV)
+      const handleCityStock = (cityStock) => {
+        const handledCityStock = []
+        cityStock.forEach(item => {
+          const carTypeList = item.stock.carTypeList
+          carTypeList.forEach(item2 => {
+            handledCityStock.push({
+              carId: item2.carTypeItem.carType,
+              carName: item2.carTypeItem.name,
+              totalPrice: item2.priceItemList[0].totalPrice,
+              storeId: item.storeId,
+              storeName: item.storeName,
+            })
+          })
+        })
+        console.log("cityStock", handledCityStock);
+        this.cityStock = handledCityStock
+      }
       if (process.env.NODE_ENV === 'development') {
         // mock
         setTimeout(() => {
-          this.cityStock = cityStockMock
+          handleCityStock(cityStockMock)
         }, 0);
       } else {
+        function getRandomDelay() {
+          // 返回 1 到 3 秒之间的随机延迟（以毫秒为单位）
+          return Math.floor(Math.random() * 3000);
+        }
+        const requestQueue = cityStoreList.map(item => {
+          const params = {
+            cityId: this.cityId,
+            storeId: item.id,
+            pickupTime: this.pickupTime,
+            returnTime: this.returnTime,
+          }
+          return new Promise(async (resolve, reject) => {
+            try {
+              setTimeout(async () => {
+                const response = await queryList(params)
+                resolve(response)
+              }, getRandomDelay());
+            } catch (error) {
+              debugger
+              reject(error)
+            }
+          })
+        })
+
         // 实际
         Promise
           .allSettled(requestQueue)
           .then(results => {
-            console.log(results)
             const cityStock = results
               .filter(item => {
                 return item.status === 'fulfilled'
@@ -287,8 +306,7 @@ export default {
                   stock: item.data.result
                 }
               })
-            console.log(cityStock);
-            this.cityStock = cityStock
+            handleCityStock(cityStock)
           })
       }
     },
@@ -299,5 +317,7 @@ export default {
 <style lang="scss" scoped>
 .QuickQueryStock {
   position: relative;
+  overflow: auto;
+  height: 100%;
 }
 </style>
