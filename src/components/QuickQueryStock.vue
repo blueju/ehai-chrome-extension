@@ -31,20 +31,12 @@
     <a-divider />
     <a-table :columns="newEnergyTableColumns" :data-source="stock" :pagination="false"></a-table>
 
-    <div class="card__btn" @click="hide">
-      <svg t="1589962875590" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-        p-id="2601">
-        <path
-          d="M730.020653 1018.946715l91.277028-89.978692a16.760351 16.760351 0 0 0 5.114661-11.803064 15.343983 15.343983 0 0 0-5.114661-11.803064l-400.123871-393.435467L821.691117 118.254899a17.075099 17.075099 0 0 0 0-23.606129L730.020653 4.670079a17.232473 17.232473 0 0 0-23.999564 0L202.030255 500.08402a16.445603 16.445603 0 0 0-4.721226 11.803064 15.265296 15.265296 0 0 0 5.114661 11.803064l503.597399 495.413941a17.153786 17.153786 0 0 0 23.999564 0z m0 0"
-          fill="#FFFFFF" p-id="2602"></path>
-      </svg>
-    </div>
   </div>
 </template>
 
 <script>
 import Header from './Header.vue'
-import stockMock from './stockMock.json'
+import cityStockMock from './cityStockMock.json'
 import queryList from './queryList';
 import dayjs from 'dayjs'
 
@@ -53,18 +45,24 @@ export default {
   components: { Header },
   data() {
     return {
-      isHide: false,
       isWednesday: dayjs().day() === 3 ? true : false,
       isAdd51: true,
+      // 城市ID与城市名映射集合
+      cityMap: new Map(),
+      // 门店ID与门店名映射集合
+      storeMap: new Map(),
       // 门店列表
       cityList: [],
       // 车型列表
       carLevel: [],
       // 门店数据
       city: undefined,
+      // 整个城市的车辆库存
+      cityStock: [],
+
       // 库存
       stock: [],
-      // 城市ID
+      // 城市ID（默认深圳）
       cityId: 21,
       // 取车日期
       pickupDate: dayjs().format('YYYY-MM-DD'),
@@ -187,25 +185,29 @@ export default {
     queryStoreList() {
       fetch('https://dev.usemock.com/673c8274f92800c9ae107bc0/storeList')
         .then(res => res.json())
-        .then(resJson => {
-          this.storeList = resJson
-          const store = resJson.find(item => {
-            return item.id === 2596
+        .then(storeList => {
+          this.storeList = storeList
+          storeList.forEach(store => {
+            if (store.id === 2596) {
+              this.store = store
+            }
+            this.storeMap.set(store.id, store.name)
           })
-          this.store = store
         })
     },
-    // 查询门店列表
+    // 查询城市列表
     queryCityList() {
       fetch('https://dev.usemock.com/673c8274f92800c9ae107bc0/cityList')
         .then(res => res.json())
-        .then(resJson => {
-          this.cityList = resJson
-          const city = resJson.find(item => {
-            // 21 深圳
-            return item.id === 21
+        .then(cityList => {
+          this.cityList = cityList
+          cityList.forEach(city => {
+            if (city.id === 21) {
+              // 21 深圳
+              this.city = city
+            }
+            this.cityMap.set(city.id, city.city)
           })
-          this.city = city
         })
     },
     // 查询车型列表
@@ -216,9 +218,6 @@ export default {
           this.carLevel = resJson
         })
     },
-    hide() {
-      this.isHide = !this.isHide
-    },
     filterOption(input, option) {
       return option.label.indexOf(input) >= 0
     },
@@ -227,11 +226,16 @@ export default {
       this.city = option
     },
     confirm() {
-      // 城市门店
+      // 城市门店（仅看门店）
       const cityStoreList = this.storeList.filter(item => {
-        return item.cityId === this.cityId
+        return (item.cityId === this.cityId) && (item.type === 1)
       })
       console.log(cityStoreList)
+
+      function getRandomDelay() {
+        // 返回 1 到 3 秒之间的随机延迟（以毫秒为单位）
+        return Math.floor(Math.random() * 3000);
+      }
 
       const requestQueue = cityStoreList.map(item => {
         const params = {
@@ -240,80 +244,54 @@ export default {
           pickupTime: this.pickupTime,
           returnTime: this.returnTime,
         }
-        return queryList(params)
+        return new Promise(async (resolve, reject) => {
+          try {
+            setTimeout(async () => {
+              const response = await queryList(params)
+              console.log(response)
+              resolve(response)
+            }, getRandomDelay());
+          } catch (error) {
+            debugger
+            reject(error)
+          }
+        })
       })
-      console.log(requestQueue)
-
-      requestQueue.allSettled().then(value => {
-        console.log(value)
-      })
-
-
-      return
-      const params = {
-        cityId: this.city.cityId,
-        storeId: this.cityId,
-        pickupTime: this.pickupTime,
-        returnTime: this.returnTime,
-      }
       console.log(process.env.NODE_ENV)
       if (process.env.NODE_ENV === 'development') {
         // mock
         setTimeout(() => {
-          this.stock = stockMock
-          compute(stockMock)
+          this.cityStock = cityStockMock
         }, 0);
       } else {
         // 实际
-        queryList(params)
-          .then(res => {
-            console.log(res)
-            this.stock = res.data.result.carTypeList
-            compute(res.data.result.carTypeList)
+        Promise
+          .allSettled(requestQueue)
+          .then(results => {
+            console.log(results)
+            const cityStock = results
+              .filter(item => {
+                return item.status === 'fulfilled'
+              })
+              .map(item => {
+                return item.value
+              })
+              .map(item => {
+                const cityId = item.config.param.pickupDto.cityId
+                const storeId = item.config.param.pickupDto.storeId
+                return {
+                  cityId,
+                  cityName: this.cityMap.get(cityId),
+                  storeId,
+                  storeName: this.storeMap.get(storeId),
+                  stock: item.data.result
+                }
+              })
+            console.log(cityStock);
+            this.cityStock = cityStock
           })
-          .catch(err => {
-            console.log(err)
-          })
-      }
-
-      const compute = (stock) => {
-        // 新能源
-        const allNewEnergyCar = stock.filter(item => {
-          return item.carTypeItem.carLevelId === this.carLevel['newEnergy'].carLevelId
-        })
-        this.allNewEnergyCar = allNewEnergyCar
-        // 计算最高的舒适车价格
-        const comfortCar = stock.filter(item => {
-          return item.carTypeItem.carLevelId === this.carLevel['comfortCar'].carLevelId
-        })
-        this.allComfortCar = comfortCar
-        if (comfortCar.length) {
-          const comfortCarPriceSet = new Set()
-          comfortCar.forEach(item => {
-            comfortCarPriceSet.add(item.priceItemList[0].totalPrice)
-          })
-          this.comfortCarPriceSet = comfortCarPriceSet
-          const topComfortCarPrice = Math.max(...comfortCarPriceSet)
-          this.topComfortCarPrice = topComfortCarPrice
-        }
-        // 计算最高的精英车价格
-        const betterCar = stock.filter(item => {
-          return item.carTypeItem.carLevelId === this.carLevel['betterCar'].carLevelId
-        })
-        this.allBetterCar = betterCar
-        if (betterCar.length) {
-          const betterCarPriceSet = new Set()
-          betterCar.forEach(item => {
-            betterCarPriceSet.add(item.priceItemList[0].totalPrice)
-          })
-          this.betterCarPriceSet = betterCarPriceSet
-          const topBetterCarPriceSet = Math.max(...betterCarPriceSet)
-          this.topBetterCarPrice = topBetterCarPriceSet
-        }
-
       }
     },
-
   },
 }
 </script>

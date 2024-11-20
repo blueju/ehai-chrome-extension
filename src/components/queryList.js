@@ -38,10 +38,11 @@ export default function queryList(params) {
                     "isEnterprise": false
                 }
             }
-        }).then(res => {
-            console.log(res)
+        }).then((res => {
+            debugger
             resolve(res)
-        }).catch(err => {
+        })).catch(err => {
+            debugger
             reject(err)
         })
     })
