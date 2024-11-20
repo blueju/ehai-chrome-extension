@@ -15,8 +15,9 @@
     <br>
     <br>
     <div style="display: flex;column-gap: 10px;">
-      <a-date-picker v-model:value="pickupDate" style="width: 100%;" valueFormat="YYYY-MM-DD" />
-      <a-time-picker v-model:value="pickupHour" format="HH" value-format="HH:00" style="width: 100%;" />
+      <a-date-picker v-model:value="pickupDate" valueFormat="YYYY-MM-DD" :disabledDate="disabledDate" />
+      <a-time-picker v-model:value="pickupHour" format="HH" :minuteStep="30" :showNow="false"
+        :disabledHours="disabledHours" allowClear value-format="HH:mm" />
     </div>
     <br>
     <div style="display: flex;column-gap: 20px;align-items: center;">
@@ -72,11 +73,11 @@ export default {
       // 门店ID
       storeId: 2596,
       // 取车日期
-      pickupDate: dayjs('2024-11-21').add(1, 'day').format('YYYY-MM-DD'),
+      pickupDate: dayjs().format('YYYY-MM-DD'),
       // 取车时刻
-      pickupHour: dayjs('2024-11-22 19:00:00').format('HH:00:00'),
+      pickupHour: dayjs().add(1, 'hour').format('HH:00'),
       // 使用天数
-      usageDays: 3,
+      usageDays: 2,
       // 最高的舒适车价格
       topComfortCarPrice: 0,
       // 最高的精英车价格
@@ -171,6 +172,33 @@ export default {
     }
   },
   methods: {
+    disabledDate(current) {
+      return current < dayjs();
+    },
+    disabledHours() {
+      const currentHour = dayjs().hour();
+      const currentDate = dayjs().format('YYYY-MM-DD');
+      // 如果是今天
+      if (currentDate === this.pickupDate) {
+        const hours = [];
+        // 禁用当前时间之前的小时
+        for (let i = 0; i < currentHour; i++) {
+          hours.push(i);
+        }
+        // 禁用当前小时内的小时（即当前小时的下一个小时）
+        if (currentHour < 23) {
+          hours.push(currentHour + 1);
+        }
+        return hours;
+      } else {
+        // 如果不是今天，返回空数组
+        return [];
+      }
+    },
+    pickupHourChange(e) {
+      console.log(e);
+
+    },
     // 查询门店列表
     queryStoreList() {
       fetch('https://dev.usemock.com/673c8274f92800c9ae107bc0/storeList')
