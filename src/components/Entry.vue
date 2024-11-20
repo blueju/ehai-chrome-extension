@@ -53,6 +53,7 @@ export default {
 }
 
 .card {
+  overflow: hidden;
   padding: 10px;
   position: fixed;
   z-index: 1000;

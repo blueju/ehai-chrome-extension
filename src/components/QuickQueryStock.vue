@@ -26,7 +26,8 @@
       <div>还车时间：{{ this.returnTime }}</div>
     </div>
     <a-divider />
-    <a-input v-model:value="carNameSearchInput" style="width: 250px;margin-bottom: 10px;" placeholder="输入车型"></a-input>
+    <a-input :value="carNameSearchInput" @change="seachInputChange" style="width: 250px;margin-bottom: 10px;"
+      placeholder="输入车型"></a-input>
     <a-table :columns="newEnergyTableColumns" :data-source="filterCityStock" :pagination="false"></a-table>
 
   </div>
@@ -163,6 +164,9 @@ export default {
     }
   },
   methods: {
+    seachInputChange(e) {
+      this.carNameSearchInput = e.target.value
+    },
     disabledDate(current) {
       return current < dayjs();
     },
@@ -317,7 +321,7 @@ export default {
 <style lang="scss" scoped>
 .QuickQueryStock {
   position: relative;
-  overflow: auto;
+  overflow-y: auto;
   height: 100%;
 }
 </style>
