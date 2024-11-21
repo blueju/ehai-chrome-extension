@@ -52,6 +52,10 @@ export default {
   height: 100%;
 }
 
+:deep(body) {
+  overflow: hidden
+}
+
 .card {
   overflow: hidden;
   padding: 10px;

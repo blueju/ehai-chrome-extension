@@ -15,7 +15,7 @@
     <div style="display: flex;column-gap: 20px;align-items: center;">
       <div>
         使用天数：
-        <a-input-number v-model:value="usageDays" :min="1" :max="5" style="margin-right: 20px;" />
+        <a-input-number v-model:value="usageDays" :min="1" :max="60" style="margin-right: 20px;" />
       </div>
       <a-checkbox v-model:checked="isWednesday">周三下单88折扣</a-checkbox>
       <a-checkbox v-model:checked="isAdd51">总价+51保障</a-checkbox>
