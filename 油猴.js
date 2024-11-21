@@ -5,7 +5,7 @@
 // @description  try to take over the world!
 // @author       You
 // @match        https://booking.1hai.cn/order/firstStep
-// @require      https://cdn.jsdelivr.net/npm/dayjs@1.10.6/dayjs.min.js
+// @require      https://cdn.bootcdn.net/ajax/libs/dayjs/1.11.12/dayjs.min.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=1hai.cn
 // @grant        none
 // ==/UserScript==

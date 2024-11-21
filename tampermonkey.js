@@ -15,9 +15,9 @@
 // @grant        GM.setClipboard
 // @grant        GM_info
 // @grant        GM.xmlHttpRequest
-// @require      https://cdn.jsdelivr.net/npm/vue@3.5.13/dist/vue.global.min.js
+// @require      https://cdn.bootcdn.net/ajax/libs/vue/3.4.33/vue.global.min.js
 // @require      https://cdn.bootcdn.net/ajax/libs/axios/0.21.0/axios.min.js
-// @require      https://cdn.jsdelivr.net/npm/dayjs@1.10.6/dayjs.min.js
+// @require      https://cdn.bootcdn.net/ajax/libs/dayjs/1.11.12/dayjs.min.js
 // @match        https://booking.1hai.cn/order/firstStep*
 // @match        https://booking.1hai.cn/order/firststep*
 // ==/UserScript==

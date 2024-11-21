@@ -52,7 +52,7 @@ export default {
   height: 100%;
 }
 
-:deep(body) {
+:global(body) {
   overflow: hidden
 }
 

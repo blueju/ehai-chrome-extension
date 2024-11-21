@@ -125,7 +125,9 @@ export default {
               ? totalPrice - Math.floor(totalPrice * 0.12) + this.basicServicePrice * this.usageDays + this.preparePrice + (this.isAdd51 ? (51 * this.usageDays) : 0)
               // 总价+基本保障服务费*使用天数+车辆整备费+51保障
               : totalPrice + this.basicServicePrice * this.usageDays + this.preparePrice + (this.isAdd51 ? (51 * this.usageDays) : 0)
-          }
+          },
+          sorter: (a, b) => a.totalPrice - b.totalPrice,
+          sortDirections: ['descend'],
         },
       ]
     }
