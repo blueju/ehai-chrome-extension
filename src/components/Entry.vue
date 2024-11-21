@@ -43,7 +43,7 @@ export default {
   },
   data() {
     return {
-      activeKey: '2',
+      activeKey: '1',
       isHide: false,
     };
   },
@@ -75,6 +75,10 @@ export default {
   background-color: rgba(255, 255, 255, 1);
   transition: all 0.5s;
   box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, 0.1);
+
+  :deep(.ant-tabs-content) {
+    overflow-y: auto;
+  }
 }
 
 .card__btn {
