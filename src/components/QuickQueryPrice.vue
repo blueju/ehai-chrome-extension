@@ -63,7 +63,7 @@ export default {
       // 取车日期
       pickupDate: dayjs().format('YYYY-MM-DD'),
       // 取车时刻
-      pickupHour: dayjs().add(1, 'hour').format('HH:00'),
+      pickupHour: dayjs().add(2, 'hour').format('HH:00'),
       // 使用天数
       usageDays: 1,
       // 最高的舒适车价格
