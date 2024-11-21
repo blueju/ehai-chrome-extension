@@ -2,10 +2,10 @@
   <div class="card" :class="{ 'card--hide': isHide }">
     <!-- <Header></Header> -->
     <a-tabs v-model:activeKey="activeKey" style="height: 100%;">
-      <a-tab-pane key="1" tab="快速查价">
+      <a-tab-pane key="1" tab="门店库存/付费升级">
         <QuickQueryPrice></QuickQueryPrice>
       </a-tab-pane>
-      <a-tab-pane key="2" tab="快速查库存" style="height: 100%;">
+      <a-tab-pane key="2" tab="城市库存" style="height: 100%;">
         <QuickQueryStock></QuickQueryStock>
       </a-tab-pane>
     </a-tabs>
@@ -57,7 +57,6 @@ export default {
 }
 
 .card {
-  overflow: hidden;
   padding: 10px;
   position: fixed;
   z-index: 1000;
