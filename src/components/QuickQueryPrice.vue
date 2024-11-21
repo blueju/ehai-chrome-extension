@@ -26,33 +26,30 @@
     </div>
     <br />
     <div style="display: flex; column-gap: 20px; align-items: center">
-      <div>使用天数：<a-input-number v-model:value="usageDays" :min="1" :max="60" style="margin-right: 20px" /></div>
+      <div>
+        使用天数：
+        <a-input-number v-model:value="usageDays" :min="1" :max="60" style="margin-right: 20px" />
+      </div>
       <a-checkbox v-model:checked="isWednesday">周三下单88折扣</a-checkbox>
       <a-checkbox v-model:checked="isAdd51">总价+51保障</a-checkbox>
     </div>
     <br />
-    <a-button type="primary" @click="confirm">确认</a-button>
-    <br />
-    <br />
-    <div>还车时间：{{ this.returnTime }}</div>
+    <div style="display: flex; column-gap: 20px; align-items: center">
+      <a-button type="primary" @click="confirm">确认</a-button>
+      <div>还车时间：{{ this.returnTime }}</div>
+    </div>
     <a-divider />
-    <a-table :columns="newEnergyTableColumns" :data-source="allNewEnergyCar" :pagination="false"></a-table>
+    <div v-if="stock.length">
+      <a-select
+        v-model:value="filters.carLevel"
+        show-search
+        placeholder="选择车型"
+        style="width: 200px; margin-bottom: 16px"
+        :options="carTypeOption"
+        :filter-option="filterOption"
+      ></a-select>
 
-    <div class="card__btn" @click="hide">
-      <svg
-        t="1589962875590"
-        class="icon"
-        viewBox="0 0 1024 1024"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        p-id="2601"
-      >
-        <path
-          d="M730.020653 1018.946715l91.277028-89.978692a16.760351 16.760351 0 0 0 5.114661-11.803064 15.343983 15.343983 0 0 0-5.114661-11.803064l-400.123871-393.435467L821.691117 118.254899a17.075099 17.075099 0 0 0 0-23.606129L730.020653 4.670079a17.232473 17.232473 0 0 0-23.999564 0L202.030255 500.08402a16.445603 16.445603 0 0 0-4.721226 11.803064 15.265296 15.265296 0 0 0 5.114661 11.803064l503.597399 495.413941a17.153786 17.153786 0 0 0 23.999564 0z m0 0"
-          fill="#FFFFFF"
-          p-id="2602"
-        ></path>
-      </svg>
+      <a-table :columns="stockTableColumns" :data-source="filteredStock" :pagination="false"></a-table>
     </div>
   </div>
 </template>
@@ -66,13 +63,16 @@ export default {
   name: 'QuickQueryPrice',
   data() {
     return {
+      filters: {
+        carLevel: 5,
+      },
       isHide: false,
       isWednesday: dayjs().day() === 3 ? true : false,
       isAdd51: true,
       // 门店列表
       storeList: [],
       // 车型列表
-      carLevel: [],
+      carLevel: {},
       // 门店数据
       store: undefined,
       // 库存
@@ -93,7 +93,7 @@ export default {
       preparePrice: 20,
       basicServicePrice: 50,
       // 新能源车列表
-      allNewEnergyCar: [],
+      filteredStock: [],
 
       // 舒适车列表
       allComfortCar: [],
@@ -104,9 +104,9 @@ export default {
       // 精英车价格集合
       betterCarPriceSet: new Set(),
 
-      newEnergyTableColumns: [
+      stockTableColumns: [
         {
-          title: '【新能源】',
+          title: '车型',
           dataIndex: 'carType',
           key: 'carType',
           customRender: ({ _, record }) => {
@@ -122,25 +122,25 @@ export default {
             return {
               title: this.isWednesday
                 ? `${totalPrice}-${Math.floor(totalPrice * 0.12)}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` +
-                  (this.isAdd51 ? `+${51 * this.usageDays}` : 0)
+                (this.isAdd51 ? `+${51 * this.usageDays}` : 0)
                 : `${totalPrice}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` +
-                  (this.isAdd51 ? `+${51 * this.usageDays}` : 0),
+                (this.isAdd51 ? `+${51 * this.usageDays}` : 0),
             };
           },
           customRender: ({ _, record }) => {
             const totalPrice = record.priceItemList[0].totalPrice;
             return this.isWednesday
               ? // 总价-周三88折折扣+基本保障服务费*使用天数+车辆整备费+51保障
-                record.priceItemList[0].totalPrice -
-                  Math.floor(totalPrice * 0.12) +
-                  this.basicServicePrice * this.usageDays +
-                  this.preparePrice +
-                  (this.isAdd51 ? 51 * this.usageDays : 0)
+              record.priceItemList[0].totalPrice -
+              Math.floor(totalPrice * 0.12) +
+              this.basicServicePrice * this.usageDays +
+              this.preparePrice +
+              (this.isAdd51 ? 51 * this.usageDays : 0)
               : // 总价+基本保障服务费*使用天数+车辆整备费+51保障
-                record.priceItemList[0].totalPrice +
-                  this.basicServicePrice * this.usageDays +
-                  this.preparePrice +
-                  (this.isAdd51 ? 51 * this.usageDays : 0);
+              record.priceItemList[0].totalPrice +
+              this.basicServicePrice * this.usageDays +
+              this.preparePrice +
+              (this.isAdd51 ? 51 * this.usageDays : 0);
           },
         },
         {
@@ -184,6 +184,22 @@ export default {
     this.queryCarLevel();
   },
   computed: {
+    carTypeOption() {
+      if (Object.keys(this.carLevel).length) {
+        return [
+          {
+            label: this.carLevel['newEnergy'].name,
+            value: this.carLevel['newEnergy'].carLevelId,
+          },
+          {
+            label: this.carLevel['suv'].name,
+            value: this.carLevel['suv'].carLevelId,
+          },
+        ];
+      } else {
+        return [];
+      }
+    },
     // 门店选项
     storeOptions() {
       return this.storeList.map((item) => {
@@ -273,9 +289,6 @@ export default {
           this.carLevel = resJson;
         });
     },
-    hide() {
-      this.isHide = !this.isHide;
-    },
     filterOption(input, option) {
       return option.label.indexOf(input) >= 0;
     },
@@ -311,11 +324,12 @@ export default {
       }
 
       const compute = (stock) => {
-        // 新能源
-        const allNewEnergyCar = stock.filter((item) => {
-          return item.carTypeItem.carLevelId === this.carLevel['newEnergy'].carLevelId;
+        this.filteredStock = stock.filter((item) => {
+          return (
+            item.carTypeItem.carLevelId === this.filters.carLevel.carLevelId ||
+            item.carTypeItem.carLevelId === this.carLevel['suv'].carLevelId
+          );
         });
-        this.allNewEnergyCar = allNewEnergyCar;
         // 计算最高的舒适车价格
         const comfortCar = stock.filter((item) => {
           return item.carTypeItem.carLevelId === this.carLevel['comfortCar'].carLevelId;
