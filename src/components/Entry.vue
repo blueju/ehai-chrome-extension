@@ -1,21 +1,29 @@
 <template>
   <div class="card" :class="{ 'card--hide': isHide }">
     <!-- <Header></Header> -->
-    <a-tabs v-model:activeKey="activeKey" style="height: 100%;">
+    <a-tabs v-model:activeKey="activeKey" style="height: 100%">
       <a-tab-pane key="1" tab="门店库存/付费升级">
         <QuickQueryPrice></QuickQueryPrice>
       </a-tab-pane>
-      <a-tab-pane key="2" tab="城市库存" style="height: 100%;">
+      <a-tab-pane key="2" tab="城市库存" style="height: 100%">
         <QuickQueryStock></QuickQueryStock>
       </a-tab-pane>
     </a-tabs>
 
     <div class="card__btn" @click="hide">
-      <svg t="1589962875590" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-        p-id="2601">
+      <svg
+        t="1589962875590"
+        class="icon"
+        viewBox="0 0 1024 1024"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        p-id="2601"
+      >
         <path
           d="M730.020653 1018.946715l91.277028-89.978692a16.760351 16.760351 0 0 0 5.114661-11.803064 15.343983 15.343983 0 0 0-5.114661-11.803064l-400.123871-393.435467L821.691117 118.254899a17.075099 17.075099 0 0 0 0-23.606129L730.020653 4.670079a17.232473 17.232473 0 0 0-23.999564 0L202.030255 500.08402a16.445603 16.445603 0 0 0-4.721226 11.803064 15.265296 15.265296 0 0 0 5.114661 11.803064l503.597399 495.413941a17.153786 17.153786 0 0 0 23.999564 0z m0 0"
-          fill="#FFFFFF" p-id="2602"></path>
+          fill="#FFFFFF"
+          p-id="2602"
+        ></path>
       </svg>
     </div>
   </div>
@@ -23,8 +31,8 @@
 
 <script>
 // import Header from './Header.vue'
-import QuickQueryPrice from './QuickQueryPrice.vue'
-import QuickQueryStock from './QuickQueryStock.vue'
+import QuickQueryPrice from './QuickQueryPrice.vue';
+import QuickQueryStock from './QuickQueryStock.vue';
 
 export default {
   name: 'Entry',
@@ -36,15 +44,15 @@ export default {
   data() {
     return {
       activeKey: '2',
-      isHide: false
-    }
+      isHide: false,
+    };
   },
   methods: {
     hide() {
-      this.isHide = !this.isHide
+      this.isHide = !this.isHide;
     },
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -53,7 +61,7 @@ export default {
 }
 
 :global(body) {
-  overflow: hidden
+  overflow: hidden;
 }
 
 .card {
@@ -66,7 +74,7 @@ export default {
   width: 100%;
   background-color: rgba(255, 255, 255, 1);
   transition: all 0.5s;
-  box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, .1);
+  box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 .card__btn {

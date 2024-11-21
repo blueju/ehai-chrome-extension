@@ -1,6 +1,6 @@
 /**
  * load style file
- * @param {String} url 
+ * @param {String} url
  */
 export const loadStyle = (url) => {
   const head = document.getElementsByTagName('head')[0];
@@ -10,4 +10,4 @@ export const loadStyle = (url) => {
   link.href = url;
   link.media = 'all';
   head.appendChild(link);
-}
+};

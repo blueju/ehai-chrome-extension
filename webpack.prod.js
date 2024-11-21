@@ -1,5 +1,5 @@
-const { merge } = require('webpack-merge')
-const common = require('./webpack.common')
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common');
 
 module.exports = merge(common(), {
   mode: 'production',
@@ -10,5 +10,5 @@ module.exports = merge(common(), {
     // use @require in header to import vue
     vue: 'Vue',
     // 'ant-design-vue': 'ant-design-vue'
-  }
-})
+  },
+});
