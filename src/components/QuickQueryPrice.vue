@@ -54,10 +54,11 @@
   </div>
 </template>
 
-<script>
-import stockMock from './stockMock.json';
+<script lang="ts">
+import stockMock from './StoreStockMock.json';
 import queryList from './queryList';
 import dayjs from 'dayjs';
+import { IStoreStockResponseResult } from './queryList';
 
 export default {
   name: 'QuickQueryPrice',
@@ -308,7 +309,7 @@ export default {
       if (process.env.NODE_ENV === 'development') {
         // mock
         setTimeout(() => {
-          this.stock = stockMock;
+          this.stock = stockMock as IStoreStockResponseResult;
           compute(stockMock);
         }, 0);
       } else {
@@ -316,15 +317,15 @@ export default {
         queryList(params)
           .then((res) => {
             console.log(res);
-            this.stock = res.data.result.carTypeList;
-            compute(res.data.result.carTypeList);
+            this.stock = res.carTypeList;
+            compute(res.carTypeList);
           })
           .catch((err) => {
             console.log(err);
           });
       }
 
-      const compute = (stock) => {
+      const compute = (stock: IStoreStockResponseResult) => {
         this.filteredStock = stock.filter((item) => {
           return (
             item.carTypeItem.carLevelId === this.filters.carLevel.carLevelId ||

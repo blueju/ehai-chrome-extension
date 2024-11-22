@@ -403,7 +403,6 @@
           K = R[0],
           z = R[1],
           B = Object(s.k)();
-        window.ehai = p.a;
         Object(a.useEffect)(function () {
           p.a.postEncrypt('/Rule/Descriptions', '', [1012027]).then(function (e) {
             var t,
@@ -25095,7 +25094,10 @@
                     r.setState({
                       isCompleteMoreLoading: !1,
                     })),
+                  console.log(111)
+                  window.ehai = A.a;
                   A.a.postEncrypt(c, '', l).then(function (e) {
+                    console.log(222)
                     r.setState({
                       isCompleteLoading: !0,
                       isCompleteMoreLoading: !0,

@@ -42,7 +42,10 @@
       "brandId": 32,
       "carLevelId": 2,
       "carLevelTag": 2,
-      "carLevelTags": [0, 2],
+      "carLevelTags": [
+        0,
+        2
+      ],
       "fuelTankVolumn": 47,
       "fuleType": "汽油",
       "structureName": "三厢",
@@ -186,7 +189,10 @@
       "brandId": 2,
       "carLevelId": 2,
       "carLevelTag": 2,
-      "carLevelTags": [0, 2],
+      "carLevelTags": [
+        0,
+        2
+      ],
       "fuelTankVolumn": 42,
       "fuleType": "汽油",
       "structureName": "三厢",
@@ -330,7 +336,10 @@
       "brandId": 32,
       "carLevelId": 2,
       "carLevelTag": 2,
-      "carLevelTags": [0, 2],
+      "carLevelTags": [
+        0,
+        2
+      ],
       "fuelTankVolumn": 47,
       "fuleType": "汽油",
       "structureName": "三厢",
@@ -460,7 +469,10 @@
       "brandId": 5,
       "carLevelId": 2,
       "carLevelTag": 2,
-      "carLevelTags": [0, 2],
+      "carLevelTags": [
+        0,
+        2
+      ],
       "fuelTankVolumn": 50,
       "fuleType": "汽油",
       "structureName": "三厢",
@@ -597,7 +609,10 @@
       "brandId": 2,
       "carLevelId": 2,
       "carLevelTag": 2,
-      "carLevelTags": [0, 2],
+      "carLevelTags": [
+        0,
+        2
+      ],
       "fuelTankVolumn": 51,
       "fuleType": "汽油",
       "structureName": "两厢",
@@ -748,7 +763,10 @@
       "brandId": 2,
       "carLevelId": 2,
       "carLevelTag": 2,
-      "carLevelTags": [0, 2],
+      "carLevelTags": [
+        0,
+        2
+      ],
       "fuelTankVolumn": 50,
       "fuleType": "汽油",
       "structureName": "三厢",
@@ -899,7 +917,10 @@
       "brandId": 2,
       "carLevelId": 2,
       "carLevelTag": 2,
-      "carLevelTags": [0, 2],
+      "carLevelTags": [
+        0,
+        2
+      ],
       "fuelTankVolumn": 50,
       "fuleType": "汽油",
       "structureName": "三厢",
@@ -1029,7 +1050,10 @@
       "brandId": 5,
       "carLevelId": 4,
       "carLevelTag": 8,
-      "carLevelTags": [0, 8],
+      "carLevelTags": [
+        0,
+        8
+      ],
       "fuelTankVolumn": 60,
       "fuleType": "汽油",
       "structureName": "三厢",
@@ -1173,7 +1197,10 @@
       "brandId": 2,
       "carLevelId": 6,
       "carLevelTag": 32,
-      "carLevelTags": [0, 32],
+      "carLevelTags": [
+        0,
+        32
+      ],
       "fuelTankVolumn": 51,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -1331,7 +1358,10 @@
       "brandId": 2,
       "carLevelId": 6,
       "carLevelTag": 32,
-      "carLevelTags": [0, 32],
+      "carLevelTags": [
+        0,
+        32
+      ],
       "fuelTankVolumn": 40,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -1454,7 +1484,10 @@
       "brandId": 2,
       "carLevelId": 6,
       "carLevelTag": 32,
-      "carLevelTags": [0, 32],
+      "carLevelTags": [
+        0,
+        32
+      ],
       "fuelTankVolumn": 40,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -1598,7 +1631,10 @@
       "brandId": 32,
       "carLevelId": 4,
       "carLevelTag": 8,
-      "carLevelTags": [0, 8],
+      "carLevelTags": [
+        0,
+        8
+      ],
       "fuelTankVolumn": 56,
       "fuleType": "汽油",
       "structureName": "三厢",
@@ -1742,7 +1778,10 @@
       "brandId": 32,
       "carLevelId": 4,
       "carLevelTag": 8,
-      "carLevelTags": [0, 8],
+      "carLevelTags": [
+        0,
+        8
+      ],
       "fuelTankVolumn": 56,
       "fuleType": "汽油",
       "structureName": "三厢",
@@ -1900,7 +1939,10 @@
       "brandId": 2,
       "carLevelId": 6,
       "carLevelTag": 32,
-      "carLevelTags": [0, 32],
+      "carLevelTags": [
+        0,
+        32
+      ],
       "fuelTankVolumn": 51,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -2023,7 +2065,10 @@
       "brandId": 2,
       "carLevelId": 2,
       "carLevelTag": 2,
-      "carLevelTags": [0, 2],
+      "carLevelTags": [
+        0,
+        2
+      ],
       "fuelTankVolumn": 51,
       "fuleType": "汽油",
       "structureName": "两厢",
@@ -2146,7 +2191,10 @@
       "brandId": 2,
       "carLevelId": 2,
       "carLevelTag": 2,
-      "carLevelTags": [0, 2],
+      "carLevelTags": [
+        0,
+        2
+      ],
       "fuelTankVolumn": 50,
       "fuleType": "汽油",
       "structureName": "三厢",
@@ -2283,7 +2331,11 @@
       "brandId": 5,
       "carLevelId": 6,
       "carLevelTag": 160,
-      "carLevelTags": [0, 32, 128],
+      "carLevelTags": [
+        0,
+        32,
+        128
+      ],
       "fuelTankVolumn": 55,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -2441,7 +2493,10 @@
       "brandId": 5,
       "carLevelId": 6,
       "carLevelTag": 32,
-      "carLevelTags": [0, 32],
+      "carLevelTags": [
+        0,
+        32
+      ],
       "fuelTankVolumn": 55,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -2592,7 +2647,10 @@
       "brandId": 2,
       "carLevelId": 6,
       "carLevelTag": 32,
-      "carLevelTags": [0, 32],
+      "carLevelTags": [
+        0,
+        32
+      ],
       "fuelTankVolumn": 60,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -2743,7 +2801,10 @@
       "brandId": 2,
       "carLevelId": 6,
       "carLevelTag": 32,
-      "carLevelTags": [0, 32],
+      "carLevelTags": [
+        0,
+        32
+      ],
       "fuelTankVolumn": 60,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -2901,7 +2962,10 @@
       "brandId": 2,
       "carLevelId": 6,
       "carLevelTag": 32,
-      "carLevelTags": [0, 32],
+      "carLevelTags": [
+        0,
+        32
+      ],
       "fuelTankVolumn": 60,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -3024,7 +3088,10 @@
       "brandId": 2,
       "carLevelId": 6,
       "carLevelTag": 32,
-      "carLevelTags": [0, 32],
+      "carLevelTags": [
+        0,
+        32
+      ],
       "fuelTankVolumn": 60,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -3147,7 +3214,10 @@
       "brandId": 2,
       "carLevelId": 4,
       "carLevelTag": 8,
-      "carLevelTags": [0, 8],
+      "carLevelTags": [
+        0,
+        8
+      ],
       "fuelTankVolumn": 66,
       "fuleType": "汽油",
       "structureName": "三厢",
@@ -3291,7 +3361,12 @@
       "brandId": 2,
       "carLevelId": 3,
       "carLevelTag": 100,
-      "carLevelTags": [0, 4, 32, 64],
+      "carLevelTags": [
+        0,
+        4,
+        32,
+        64
+      ],
       "fuelTankVolumn": 73,
       "fuleType": "汽油",
       "structureName": "MPV",
@@ -3368,7 +3443,9 @@
       "sizeMovieFifteen": 23560173,
       "sizeMovieNinety": 17051437,
       "vrVideoUrl": null,
-      "headImageUrls": ["https://externalimage.1hai.cn/411/20f4ed028a624a6f8d358c7509e13e5d.jpg"]
+      "headImageUrls": [
+        "https://externalimage.1hai.cn/411/20f4ed028a624a6f8d358c7509e13e5d.jpg"
+      ]
     }
   },
   {
@@ -3442,7 +3519,10 @@
       "brandId": 88,
       "carLevelId": 6,
       "carLevelTag": 32,
-      "carLevelTags": [0, 32],
+      "carLevelTags": [
+        0,
+        32
+      ],
       "fuelTankVolumn": 75,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -3593,7 +3673,11 @@
       "brandId": 57,
       "carLevelId": 6,
       "carLevelTag": 96,
-      "carLevelTags": [0, 32, 64],
+      "carLevelTags": [
+        0,
+        32,
+        64
+      ],
       "fuelTankVolumn": 73,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -3670,7 +3754,9 @@
       "sizeMovieFifteen": null,
       "sizeMovieNinety": null,
       "vrVideoUrl": null,
-      "headImageUrls": ["https://externalimage.1hai.cn/411/fddcfad286c241f4ac20ca81323d9677.jpg"]
+      "headImageUrls": [
+        "https://externalimage.1hai.cn/411/fddcfad286c241f4ac20ca81323d9677.jpg"
+      ]
     }
   },
   {
@@ -3723,7 +3809,10 @@
       "brandId": 9,
       "carLevelId": 3,
       "carLevelTag": 4,
-      "carLevelTags": [0, 4],
+      "carLevelTags": [
+        0,
+        4
+      ],
       "fuelTankVolumn": 66,
       "fuleType": "汽油",
       "structureName": "MPV",
@@ -3800,7 +3889,9 @@
       "sizeMovieFifteen": 21341308,
       "sizeMovieNinety": 21341308,
       "vrVideoUrl": null,
-      "headImageUrls": ["https://externalimage.1hai.cn/411/a9c105389755492f81b1c4b7dbfe1b25.jpg"]
+      "headImageUrls": [
+        "https://externalimage.1hai.cn/411/a9c105389755492f81b1c4b7dbfe1b25.jpg"
+      ]
     }
   },
   {
@@ -3874,7 +3965,10 @@
       "brandId": 2,
       "carLevelId": 6,
       "carLevelTag": 32,
-      "carLevelTags": [0, 32],
+      "carLevelTags": [
+        0,
+        32
+      ],
       "fuelTankVolumn": 79,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -4025,7 +4119,10 @@
       "brandId": 2,
       "carLevelId": 6,
       "carLevelTag": 32,
-      "carLevelTags": [0, 32],
+      "carLevelTags": [
+        0,
+        32
+      ],
       "fuelTankVolumn": 79,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -4169,7 +4266,10 @@
       "brandId": 5,
       "carLevelId": 6,
       "carLevelTag": 32,
-      "carLevelTags": [0, 32],
+      "carLevelTags": [
+        0,
+        32
+      ],
       "fuelTankVolumn": 65,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -4334,7 +4434,10 @@
       "brandId": 2,
       "carLevelId": 6,
       "carLevelTag": 32,
-      "carLevelTags": [0, 32],
+      "carLevelTags": [
+        0,
+        32
+      ],
       "fuelTankVolumn": 74,
       "fuleType": "汽油",
       "structureName": "SUV",
@@ -4492,7 +4595,11 @@
       "brandId": 5,
       "carLevelId": 3,
       "carLevelTag": 68,
-      "carLevelTags": [0, 4, 64],
+      "carLevelTags": [
+        0,
+        4,
+        64
+      ],
       "fuelTankVolumn": 68,
       "fuleType": "汽油",
       "structureName": "MPV",
@@ -4569,7 +4676,9 @@
       "sizeMovieFifteen": null,
       "sizeMovieNinety": null,
       "vrVideoUrl": null,
-      "headImageUrls": ["https://externalimage.1hai.cn/411/a40dad6ed751461f94ae56221e897b96.jpg"]
+      "headImageUrls": [
+        "https://externalimage.1hai.cn/411/a40dad6ed751461f94ae56221e897b96.jpg"
+      ]
     }
   }
 ]
