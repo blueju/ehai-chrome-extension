@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "My Chrome Extension",
+    "version": "1.0",
+    "permissions": [
+        "declarativeNetRequest"
+    ],
+    "host_permissions": [
+        "https://booking.1hai.cn/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "inject.js"
+            ],
+            "all_frames": true
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "lib/vue.global.min.js",
+                "lib/axios.min.js",
+                "lib/dayjs.min.js",
+                "content.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
