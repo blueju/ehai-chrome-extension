@@ -19,9 +19,16 @@ if (isDev) {
   app.use(Antd);
   app.mount(`#${id}`);
 } else {
-  const app = Vue.createApp(App);
-  // const Antd = require('ant-design-vue');
-  // app.use(Antd)
-  app.use(Antd);
-  app.mount(`#${id}`);
+  const timer = setInterval(() => {
+    if (window.ehai) {
+      clearInterval(timer);
+      const app = Vue.createApp(App);
+      // const Antd = require('ant-design-vue');
+      // app.use(Antd)
+      app.use(Antd);
+      app.mount(`#${id}`);
+    } else {
+      console.log('等待下一次检查');
+    }
+  }, 1000);
 }
