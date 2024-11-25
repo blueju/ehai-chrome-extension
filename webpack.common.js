@@ -3,19 +3,19 @@ const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // 最新的 vue-loader 中，VueLoaderPlugin 插件的位置有所改变
 const { VueLoaderPlugin } = require('vue-loader/dist/index');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const pathResolve = (dir) => {
   return path.resolve(__dirname, '..', dir);
 };
 
 module.exports = () => {
-  const entryFile = process.env.TAMPERMONKEY_ENTRY_FILE;
   return {
     entry: {
       app: './src/main.js',
     },
     output: {
-      filename: entryFile,
+      filename: 'ehai-helper.js',
       path: path.resolve(__dirname, 'dist'),
     },
     resolve: {
@@ -51,6 +51,14 @@ module.exports = () => {
     plugins: [
       new VueLoaderPlugin(),
       new CleanWebpackPlugin(),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: path.resolve(__dirname, './chrome-extension-template'), // 源文件夹
+            to: path.resolve(__dirname, './dist'),   // 目标文件夹
+          },
+        ],
+      }),
       new webpack.DefinePlugin({
         __APP_NAME__: JSON.stringify(process.env.TAMPERMONKEY_APP_NAME),
         __APP_ENVIRONMENT__: JSON.stringify(process.env.TAMPERMONKEY_APP_ENVIRONMENT),

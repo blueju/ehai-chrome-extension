@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "My Chrome Extension",
+    "name": "嗨车助手",
     "version": "1.0",
     "permissions": [
         "declarativeNetRequest"
@@ -14,7 +14,7 @@
                 "<all_urls>"
             ],
             "js": [
-                "inject.js"
+                "content_scripts.js"
             ],
             "all_frames": true
         }
@@ -28,7 +28,7 @@
                 "lib/vue.global.min.js",
                 "lib/axios.min.js",
                 "lib/dayjs.min.js",
-                "content.js"
+                "ehai-helper.js"
             ],
             "matches": [
                 "<all_urls>"

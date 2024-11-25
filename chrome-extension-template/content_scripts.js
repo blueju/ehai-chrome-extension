@@ -38,5 +38,5 @@ injectScript(chrome.runtime.getURL('/lib/axios.min.js'), 'body');
 injectScript(chrome.runtime.getURL('/lib/dayjs.min.js'), 'body');
 
 setTimeout(() => {
-    injectScript(chrome.runtime.getURL('content.js'), 'body');
+    injectScript(chrome.runtime.getURL('ehai-helper.js'), 'body');
 }, 2000)
