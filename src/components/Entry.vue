@@ -5,7 +5,7 @@
         <QuickQueryPrice></QuickQueryPrice>
       </el-tab-pane>
       <el-tab-pane name="2" label="城市库存" style="height: 100%">
-        <QuickQueryStock></QuickQueryStock>
+        <!-- <QuickQueryStock></QuickQueryStock> -->
       </el-tab-pane>
     </el-tabs>
 
@@ -30,18 +30,20 @@
 
 <script>
 import QuickQueryPrice from './QuickQueryPrice.vue';
-import QuickQueryStock from './QuickQueryStock.vue';
+// import QuickQueryStock from './QuickQueryStock.vue';
+import dayjs from "dayjs";
 
 export default {
   name: 'Entry',
   components: {
     QuickQueryPrice,
-    QuickQueryStock,
+    // QuickQueryStock,
   },
   data() {
     return {
       activeName: '1',
       isHide: false,
+      isWednesday: dayjs().day() === 3 ? true : false,
     };
   },
   methods: {
@@ -49,6 +51,9 @@ export default {
       this.isHide = !this.isHide;
     },
   },
+  mounted() {
+    console.log(dayjs())
+  }
 };
 </script>
 

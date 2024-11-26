@@ -1,7 +1,7 @@
 <template>
   <el-config-provider :locale="locale">
     <div class="ehai-helper">
-      <Entry />
+      <Entry/>
     </div>
   </el-config-provider>
 </template>
@@ -9,11 +9,8 @@
 <script>
 import Entry from '@/components/Entry.vue';
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
-import { ElConfigProvider } from 'element-plus'
-
-import dayjs from 'dayjs';
+import {ElConfigProvider} from 'element-plus'
 import 'dayjs/locale/zh-cn';
-dayjs.locale('zh-cn');
 
 export default {
   name: 'App',
@@ -26,6 +23,7 @@ export default {
       locale: zhCn,
     };
   },
+  mounted() {}
 };
 </script>
 

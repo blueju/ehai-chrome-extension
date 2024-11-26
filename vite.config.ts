@@ -8,7 +8,7 @@ import { viteStaticCopy } from 'vite-plugin-static-copy'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-
+// import { viteMockServe } from 'vite-plugin-mock';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -43,6 +43,10 @@ export default defineConfig({
         }
       ]
     }),
+    // viteMockServe({
+    //   mockPath: 'mock',
+    //   enable: true,
+    // }),
   ],
   resolve: {
     alias: {

@@ -1,68 +1,75 @@
 <template>
   <div class="QuickQueryPrice">
-    <el-select
-      v-model:value="storeId"
-      show-search
-      placeholder="Select a person"
-      style="width: 100%"
-      :options="storeOptions"
-      :filter-option="filterOption"
-      @change="handleChange"
-      @select="handleChange"
-    ></el-select>
-    <br />
-    <br />
-    <div style="display: flex; column-gap: 10px">
-      <el-date-picker v-model:value="pickupDate" valueFormat="YYYY-MM-DD" :disabledDate="disabledDate" />
-      <el-time-picker
-        v-model:value="pickupHour"
-        format="HH"
-        :minuteStep="30"
-        :showNow="false"
-        :disabledHours="disabledHours"
-        allowClear
-        value-format="HH:mm"
-      />
-    </div>
-    <br />
-    <div style="display: flex; column-gap: 20px; align-items: center">
-      <div>
-        使用天数：
-        <el-input-number v-model:value="usageDays" :min="1" :max="60" style="margin-right: 20px" />
-      </div>
-      <el-checkbox v-model:checked="isWednesday">周三下单88折扣</el-checkbox>
-      <el-checkbox v-model:checked="isAdd51">总价+51保障</el-checkbox>
-    </div>
-    <br />
-    <div style="display: flex; column-gap: 20px; align-items: center">
-      <el-button type="primary" @click="confirm">确认</el-button>
-      <div>还车时间：{{ this.returnTime }}</div>
-    </div>
-    <el-divider />
+    <el-row>
+      <el-col>
+        <div>取车门店：</div>
+        <a-select
+            v-model:value="storeId"
+            style="width: 100%"
+            :filter-option="filterOption"
+            @change="handleChange"
+            @select="handleChange"
+        >
+          <a-select-option v-for="item in storeOptions" :key="item.value" :value="item.value">
+            {{ item.label }}
+          </a-select-option>
+        </a-select>
+        <!--        <el-select v-model="storeId" filterable placeholder="选择门店" style="width: 100%" :filter-option="filterOption"-->
+        <!--                   @change="handleChange" @select="handleChange">-->
+        <!--          <el-option v-for="item in storeOptions" :key="item.value" :label="item.label" :value="item.value"/>-->
+        <!--        </el-select>-->
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col>
+        <div>取车时间：</div>
+        <div style="display: flex; column-gap: 10px;justify-content: space-between;">
+          <el-date-picker v-model="pickupDate" type="date" placeholder="选择取车日期"
+                          style="width: 100%;"/>
+          <el-time-select v-model="pickupHour" start="00:00" step="01:00" end="23:30"
+                          clearable format="HH:mm" style="width: 100%;"/>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row gutter="40">
+      <el-col :span="12">
+        <div>取车时间：</div>
+        <el-input-number v-model="usageDays" :min="1" :max="60" style="width: 100%"/>
+      </el-col>
+      <el-col :span="12">
+        <el-checkbox v-model:checked="isWednesday">周三下单88折扣</el-checkbox>
+        <el-checkbox v-model:checked="isAdd51">总价+51保障</el-checkbox>
+      </el-col>
+    </el-row>
+    <el-row :gutter="20" justify="start" align="middle">
+      <el-col span="auto">
+        <el-button type="primary" @click="confirm">确认</el-button>
+      </el-col>
+      <el-col span="auto">
+        还车时间：{{ returnTime }}
+      </el-col>
+    </el-row>
+    <el-divider/>
     <div v-if="stock.length">
-      <el-select
-        v-model:value="filters.carLevel"
-        show-search
-        placeholder="选择车型"
-        style="width: 200px; margin-bottom: 16px"
-        :options="carTypeOption"
-        :filter-option="filterOption"
-      ></el-select>
+      <el-select v-model:value="filters.carLevel" show-search placeholder="选择车型"
+                 style="width: 200px; margin-bottom: 16px" :options="carTypeOption"
+                 :filter-option="filterOption"></el-select>
 
       <el-table :columns="stockTableColumns" :data-source="filteredStock" :pagination="false"></el-table>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import stockMock from './stockMock.json';
 import queryList from './queryList';
-import dayjs from 'dayjs';
+import dayjs from "dayjs";
 
 export default {
   name: 'QuickQueryPrice',
   data() {
     return {
+      storeOptions: [],
       filters: {
         // 默认新能源
         carLevel: 5,
@@ -110,7 +117,7 @@ export default {
           title: '车型',
           dataIndex: 'carType',
           key: 'carType',
-          customRender: ({ _, record }) => {
+          customRender: ({_, record}) => {
             return record.carTypeItem.name;
           },
         },
@@ -122,33 +129,33 @@ export default {
             const totalPrice = record.priceItemList[0].totalPrice;
             return {
               title: this.isWednesday
-                ? `${totalPrice}-${Math.floor(totalPrice * 0.12)}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` +
-                (this.isAdd51 ? `+${51 * this.usageDays}` : 0)
-                : `${totalPrice}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` +
-                (this.isAdd51 ? `+${51 * this.usageDays}` : 0),
+                  ? `${totalPrice}-${Math.floor(totalPrice * 0.12)}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` +
+                  (this.isAdd51 ? `+${51 * this.usageDays}` : 0)
+                  : `${totalPrice}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` +
+                  (this.isAdd51 ? `+${51 * this.usageDays}` : 0),
             };
           },
-          customRender: ({ _, record }) => {
+          customRender: ({_, record}) => {
             const totalPrice = record.priceItemList[0].totalPrice;
             return this.isWednesday
-              ? // 总价-周三88折折扣+基本保障服务费*使用天数+车辆整备费+51保障
-              record.priceItemList[0].totalPrice -
-              Math.floor(totalPrice * 0.12) +
-              this.basicServicePrice * this.usageDays +
-              this.preparePrice +
-              (this.isAdd51 ? 51 * this.usageDays : 0)
-              : // 总价+基本保障服务费*使用天数+车辆整备费+51保障
-              record.priceItemList[0].totalPrice +
-              this.basicServicePrice * this.usageDays +
-              this.preparePrice +
-              (this.isAdd51 ? 51 * this.usageDays : 0);
+                ? // 总价-周三88折折扣+基本保障服务费*使用天数+车辆整备费+51保障
+                record.priceItemList[0].totalPrice -
+                Math.floor(totalPrice * 0.12) +
+                this.basicServicePrice * this.usageDays +
+                this.preparePrice +
+                (this.isAdd51 ? 51 * this.usageDays : 0)
+                : // 总价+基本保障服务费*使用天数+车辆整备费+51保障
+                record.priceItemList[0].totalPrice +
+                this.basicServicePrice * this.usageDays +
+                this.preparePrice +
+                (this.isAdd51 ? 51 * this.usageDays : 0);
           },
         },
         {
           title: '从舒适升级',
           dataIndex: 'upgradeFromComfort',
           key: 'upgradeFromComfort',
-          customRender: ({ _, record }) => {
+          customRender: ({_, record}) => {
             if (this.allComfortCar.length === 0) {
               return '/';
             }
@@ -165,7 +172,7 @@ export default {
           title: '从精英升级',
           key: 'upgradeFromBetter',
           dataIndex: 'upgradeFromBetter',
-          customRender: ({ _, record }) => {
+          customRender: ({_, record}) => {
             if (this.allBetterCar.length === 0) {
               return '/';
             }
@@ -180,9 +187,9 @@ export default {
       ],
     };
   },
-  mounted() {
+  created() {
     this.queryStoreList();
-    this.queryCarLevel();
+    // this.queryCarLevel();
   },
   computed: {
     carTypeOption() {
@@ -200,16 +207,6 @@ export default {
       } else {
         return [];
       }
-    },
-    // 门店选项
-    storeOptions() {
-      return this.storeList.map((item) => {
-        return {
-          ...item,
-          label: item.name,
-          value: item.id,
-        };
-      });
     },
     // 取车时间
     pickupTime() {
@@ -273,22 +270,30 @@ export default {
     // 查询门店列表
     queryStoreList() {
       fetch('https://dev.usemock.com/673c8274f92800c9ae107bc0/storeList')
-        .then((res) => res.json())
-        .then((resJson) => {
-          this.storeList = resJson;
-          const store = resJson.find((item) => {
-            return item.id === 2596;
+          .then((res) => res.json())
+          .then((resJson) => {
+            console.log(222)
+            this.storeList = resJson;
+            this.storeOptions = resJson.map((item) => {
+              return {
+                // ...item,
+                label: item.name,
+                value: item.id,
+              };
+            });
+            // const store = resJson.find((item) => {
+            //   return item.id === 2596;
+            // });
+            // this.store = store;
           });
-          this.store = store;
-        });
     },
     // 查询车型列表
     queryCarLevel() {
       fetch('https://dev.usemock.com/673c8274f92800c9ae107bc0/carLevel')
-        .then((res) => res.json())
-        .then((resJson) => {
-          this.carLevel = resJson;
-        });
+          .then((res) => res.json())
+          .then((resJson) => {
+            this.carLevel = resJson;
+          });
     },
     filterOption(input, option) {
       return option.label.indexOf(input) >= 0;
@@ -314,21 +319,21 @@ export default {
       } else {
         // 实际
         queryList(params)
-          .then((res) => {
-            console.log(res);
-            this.stock = res.data.result.carTypeList;
-            compute(res.data.result.carTypeList);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
+            .then((res) => {
+              console.log(res);
+              this.stock = res.data.result.carTypeList;
+              compute(res.data.result.carTypeList);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
       }
 
       const compute = (stock) => {
         this.filteredStock = stock.filter((item) => {
           return (
-            item.carTypeItem.carLevelId === this.filters.carLevel.carLevelId ||
-            item.carTypeItem.carLevelId === this.carLevel['suv'].carLevelId
+              item.carTypeItem.carLevelId === this.filters.carLevel.carLevelId ||
+              item.carTypeItem.carLevelId === this.carLevel['suv'].carLevelId
           );
         });
         // 计算最高的舒适车价格
@@ -368,5 +373,9 @@ export default {
 <style lang="less" scoped>
 .QuickQueryPrice {
   position: relative;
+
+  :deep(.el-row) {
+    margin-bottom: 10px;
+  }
 }
 </style>

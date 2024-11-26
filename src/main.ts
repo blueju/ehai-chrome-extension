@@ -1,12 +1,14 @@
 import './assets/main.css'
 
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+// import { createPinia } from 'pinia'
 import App from './App.vue'
+import { Select } from 'ant-design-vue';
+
 
 const app = createApp(App)
-
-app.use(createPinia())
+app.use(Select)
+// app.use(createPinia())
 
 const isDev = import.meta.env.MODE === 'development';
 const id = `ehai-helper-${Date.now()}`;
@@ -14,7 +16,8 @@ const root = document.createElement('div');
 root.id = id;
 document.body.appendChild(root);
 
-if (isDev) {
+
+if (true) {
     app.mount(`#${id}`);
 } else {
     const timer = setInterval(() => {
