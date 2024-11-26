@@ -1,47 +1,47 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <el-config-provider :locale="locale">
+    <div class="ehai-helper">
+      <Entry />
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  </el-config-provider>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<script>
+import Entry from '@/components/Entry.vue';
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
+import { ElConfigProvider } from 'element-plus'
+
+import dayjs from 'dayjs';
+import 'dayjs/locale/zh-cn';
+dayjs.locale('zh-cn');
+
+export default {
+  name: 'App',
+  components: {
+    Entry,
+    ElConfigProvider
+  },
+  data() {
+    return {
+      locale: zhCn,
+    };
+  },
+};
+</script>
+
+<style lang="less" scoped>
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.app-info {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(178, 94, 239, 0.5);
+  padding: 10px;
+  z-index: 999;
 }
 </style>

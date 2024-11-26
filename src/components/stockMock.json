@@ -1,0 +1,4575 @@
+[
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4301,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 2,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.6666666666666667,
+      "priceGroupId": 4
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 32,
+      "carLevelId": 2,
+      "carLevelTag": 2,
+      "carLevelTags": [0, 2],
+      "fuelTankVolumn": 47,
+      "fuleType": "汽油",
+      "structureName": "三厢",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "L",
+      "intakeName": "自然吸气",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": false,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 1925,
+      "isMonitor": false,
+      "carTypeTag": 20,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4301,
+        "minCarIntakeId": 1,
+        "minCarIntakeValue": "L",
+        "minCarDisplacementId": 12,
+        "minCarDisplacementValue": "1.6",
+        "maxCarIntakeId": 1,
+        "maxCarIntakeValue": "L",
+        "maxCarDisplacementId": 12,
+        "maxCarDisplacementValue": "1.6"
+      },
+      "carLevel": 4301,
+      "name": "日产新轩逸",
+      "brandName": "日产",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/5a16d6402220460581735abd4e2e3e76.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/17965c82d03d4f7db2a64bd456a057f6.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4301,
+        "name": "日产新轩逸",
+        "brandName": "日产",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/5a16d6402220460581735abd4e2e3e76.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/17965c82d03d4f7db2a64bd456a057f6.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 89,
+        "totalPrice": 178,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 89,
+        "originalTotalPrice": 178
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4301,
+      "carTypeName": "日产新轩逸（可自助取还）/自动/三厢/1.6L",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/1358750fdca14eeba988d8a8a244e9f8.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/372f0a448a734ec1afe436c4b949d2b5.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/mRTDo5",
+      "shortMovieUrlNinety": "https://k.1hai.cn/h8evMs",
+      "sizeMovieFifteen": 11644002,
+      "sizeMovieNinety": 23222565,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4222,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 2,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.6,
+      "priceGroupId": 4
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 2,
+      "carLevelTag": 2,
+      "carLevelTags": [0, 2],
+      "fuelTankVolumn": 42,
+      "fuleType": "汽油",
+      "structureName": "三厢",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "L",
+      "intakeName": "自然吸气",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": false,
+      "panoramaImagePath": null,
+      "carSeriesId": 1921,
+      "isMonitor": false,
+      "carTypeTag": 8,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4222,
+        "minCarIntakeId": 1,
+        "minCarIntakeValue": "L",
+        "minCarDisplacementId": 11,
+        "minCarDisplacementValue": "1.5",
+        "maxCarIntakeId": 1,
+        "maxCarIntakeValue": "L",
+        "maxCarDisplacementId": 11,
+        "maxCarDisplacementValue": "1.5"
+      },
+      "carLevel": 4222,
+      "name": "大众朗逸新锐",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/c37bbd7761c6492b893c8826ca034c83.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/e020931a6f01437188056ef8e138443b.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4222,
+        "name": "大众朗逸新锐",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/c37bbd7761c6492b893c8826ca034c83.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/e020931a6f01437188056ef8e138443b.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 89,
+        "totalPrice": 178,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 89,
+        "originalTotalPrice": 178
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4222,
+      "carTypeName": "大众朗逸新锐/自动/三厢/1.5L",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/9e823b0d6b354375ba7527fc70ce75ce.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/298f554a1b754cebb4f6094485579ed1.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/cjW4o8",
+      "shortMovieUrlNinety": "https://k.1hai.cn/hdAaMj",
+      "sizeMovieFifteen": 20310522,
+      "sizeMovieNinety": 21358333,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4224,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 2,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.5,
+      "priceGroupId": 4
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 32,
+      "carLevelId": 2,
+      "carLevelTag": 2,
+      "carLevelTags": [0, 2],
+      "fuelTankVolumn": 47,
+      "fuleType": "汽油",
+      "structureName": "三厢",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "L",
+      "intakeName": "自然吸气",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": false,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 1925,
+      "isMonitor": false,
+      "carTypeTag": 16,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4224,
+        "minCarIntakeId": 1,
+        "minCarIntakeValue": "L",
+        "minCarDisplacementId": 12,
+        "minCarDisplacementValue": "1.6",
+        "maxCarIntakeId": 1,
+        "maxCarIntakeValue": "L",
+        "maxCarDisplacementId": 12,
+        "maxCarDisplacementValue": "1.6"
+      },
+      "carLevel": 4224,
+      "name": "日产新轩逸",
+      "brandName": "日产",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/5a16d6402220460581735abd4e2e3e76.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/17965c82d03d4f7db2a64bd456a057f6.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4224,
+        "name": "日产新轩逸",
+        "brandName": "日产",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/5a16d6402220460581735abd4e2e3e76.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/17965c82d03d4f7db2a64bd456a057f6.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 89,
+        "totalPrice": 178,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 89,
+        "originalTotalPrice": 178
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4224,
+      "carTypeName": "日产新轩逸/自动/三厢/1.6L",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/1358750fdca14eeba988d8a8a244e9f8.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/372f0a448a734ec1afe436c4b949d2b5.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/mRTDo5",
+      "shortMovieUrlNinety": "https://k.1hai.cn/h8evMs",
+      "sizeMovieFifteen": 11644002,
+      "sizeMovieNinety": 23222565,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 3950,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 2,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0.2,
+      "priceGroupId": 4
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 5,
+      "carLevelId": 2,
+      "carLevelTag": 2,
+      "carLevelTags": [0, 2],
+      "fuelTankVolumn": 50,
+      "fuleType": "汽油",
+      "structureName": "三厢",
+      "gearId": 4,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": false,
+      "isRearCamera": false,
+      "panoramaImagePath": null,
+      "carSeriesId": 789,
+      "isMonitor": false,
+      "carTypeTag": 4,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 3950,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 8,
+        "minCarDisplacementValue": "1.2",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 8,
+        "maxCarDisplacementValue": "1.2"
+      },
+      "carLevel": 3950,
+      "name": "丰田卡罗拉",
+      "brandName": "丰田",
+      "maxPassenger": 5,
+      "gearName": "无级变速",
+      "smallImagePath": "https://externalimage.1hai.cn/411/03f91c8409ab46568e07c065d6aeb267.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/3604bc9da15b43508549bd0319d0e0ec.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 3950,
+        "name": "丰田卡罗拉",
+        "brandName": "丰田",
+        "maxPassenger": 5,
+        "gearName": "无级变速",
+        "smallImagePath": "https://externalimage.1hai.cn/411/03f91c8409ab46568e07c065d6aeb267.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/3604bc9da15b43508549bd0319d0e0ec.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 89,
+        "totalPrice": 178,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 89,
+        "originalTotalPrice": 178
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 3950,
+      "carTypeName": "丰田卡罗拉（可自助取还）/无级变速/三厢/1.2T",
+      "longMovieUrlFifteen": null,
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": null,
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": null,
+      "sizeMovieNinety": null,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 3895,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 3,
+      "levelId": 2,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0,
+      "priceGroupId": 4
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 2,
+      "carLevelTag": 2,
+      "carLevelTags": [0, 2],
+      "fuelTankVolumn": 51,
+      "fuleType": "汽油",
+      "structureName": "两厢",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": false,
+      "panoramaImagePath": null,
+      "carSeriesId": 2044,
+      "isMonitor": false,
+      "carTypeTag": 12,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 3895,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 8,
+        "minCarDisplacementValue": "1.2",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 8,
+        "maxCarDisplacementValue": "1.2"
+      },
+      "carLevel": 3895,
+      "name": "大众8代高尔夫",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/6730e92af13e44c79127fb194593834d.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/2580b17405b0478989978eec443af729.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 3895,
+        "name": "大众8代高尔夫",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/6730e92af13e44c79127fb194593834d.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/2580b17405b0478989978eec443af729.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 89,
+        "totalPrice": 178,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 89,
+        "originalTotalPrice": 178
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 3895,
+      "carTypeName": "大众8代高尔夫（可自助取还）/自动/两厢/1.2T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/007c45760b0a459cbf06e290cdf10ab6.mp4",
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": "https://k.1hai.cn/a7cx2D",
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": 20433151,
+      "sizeMovieNinety": 0,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 3949,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 3,
+      "levelId": 2,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0.75,
+      "priceGroupId": 4
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 2,
+      "carLevelTag": 2,
+      "carLevelTags": [0, 2],
+      "fuelTankVolumn": 50,
+      "fuleType": "汽油",
+      "structureName": "三厢",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 931,
+      "isMonitor": false,
+      "carTypeTag": 28,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 3949,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 8,
+        "minCarDisplacementValue": "1.2",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 8,
+        "maxCarDisplacementValue": "1.2"
+      },
+      "carLevel": 3949,
+      "name": "大众速腾",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/336e855cd3c7466685e22fef98f34afd.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/17e0f819f1454ef7887b880be6524682.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 3949,
+        "name": "大众速腾",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/336e855cd3c7466685e22fef98f34afd.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/17e0f819f1454ef7887b880be6524682.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 98,
+        "totalPrice": 196,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 98,
+        "originalTotalPrice": 196
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 3949,
+      "carTypeName": "大众速腾（可自助取还）/自动/三厢/1.2T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/52f0acf735c7468ca12f38696318fca8.mp4",
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": "https://k.1hai.cn/h4Wqv9",
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": 6963034,
+      "sizeMovieNinety": 0,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4223,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 2,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.5,
+      "priceGroupId": 4
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 2,
+      "carLevelTag": 2,
+      "carLevelTags": [0, 2],
+      "fuelTankVolumn": 50,
+      "fuleType": "汽油",
+      "structureName": "三厢",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 1922,
+      "isMonitor": false,
+      "carTypeTag": 24,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4223,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 8,
+        "minCarDisplacementValue": "1.2",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 8,
+        "maxCarDisplacementValue": "1.2"
+      },
+      "carLevel": 4223,
+      "name": "大众新宝来",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/ae80525ec10044af983ca64dd65658fc.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/29a78c0e330c4bc88ec78b03ccffb8b2.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4223,
+        "name": "大众新宝来",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/ae80525ec10044af983ca64dd65658fc.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/29a78c0e330c4bc88ec78b03ccffb8b2.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 98,
+        "totalPrice": 196,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 98,
+        "originalTotalPrice": 196
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4223,
+      "carTypeName": "大众新宝来/自动/三厢/1.2T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/c0c5066a3d794f848dda7fe7f2ed3910.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/a2b35764281446c1938bebc5bb618b9c.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/gpPYwt",
+      "shortMovieUrlNinety": "https://k.1hai.cn/jdySaD",
+      "sizeMovieFifteen": 19961101,
+      "sizeMovieNinety": 22176268,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 3958,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 8,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0.8333333333333334,
+      "priceGroupId": 26
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 5,
+      "carLevelId": 4,
+      "carLevelTag": 8,
+      "carLevelTags": [0, 8],
+      "fuelTankVolumn": 60,
+      "fuleType": "汽油",
+      "structureName": "三厢",
+      "gearId": 4,
+      "emission": 0,
+      "emissionUnit": "L",
+      "intakeName": "自然吸气",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": false,
+      "isRearCamera": false,
+      "panoramaImagePath": null,
+      "carSeriesId": 1239,
+      "isMonitor": false,
+      "carTypeTag": 4,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 3958,
+        "minCarIntakeId": 1,
+        "minCarIntakeValue": "L",
+        "minCarDisplacementId": 16,
+        "minCarDisplacementValue": "2.0",
+        "maxCarIntakeId": 1,
+        "maxCarIntakeValue": "L",
+        "maxCarDisplacementId": 16,
+        "maxCarDisplacementValue": "2.0"
+      },
+      "carLevel": 3958,
+      "name": "丰田亚洲龙",
+      "brandName": "丰田",
+      "maxPassenger": 5,
+      "gearName": "无级变速",
+      "smallImagePath": "https://externalimage.1hai.cn/411/052caeb60dcb4411a3442a507b5ae104.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/66a2a166e7bf4194871d1455db4600d1.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 3958,
+        "name": "丰田亚洲龙",
+        "brandName": "丰田",
+        "maxPassenger": 5,
+        "gearName": "无级变速",
+        "smallImagePath": "https://externalimage.1hai.cn/411/052caeb60dcb4411a3442a507b5ae104.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/66a2a166e7bf4194871d1455db4600d1.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 108,
+        "totalPrice": 216,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 108,
+        "originalTotalPrice": 216
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 3958,
+      "carTypeName": "丰田亚洲龙（可自助取还）/无级变速/三厢/2.0L",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/6edfc53110c449da9388c997ee18431c.mp4",
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": "https://k.1hai.cn/gV3Xrx",
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": 20320507,
+      "sizeMovieNinety": 0,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 3927,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 3,
+      "levelId": 32,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0.5,
+      "priceGroupId": 25
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 6,
+      "carLevelTag": 32,
+      "carLevelTags": [0, 32],
+      "fuelTankVolumn": 51,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": false,
+      "panoramaImagePath": null,
+      "carSeriesId": 1060,
+      "isMonitor": false,
+      "carTypeTag": 12,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 3927,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 10,
+        "minCarDisplacementValue": "1.4",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 10,
+        "maxCarDisplacementValue": "1.4"
+      },
+      "carLevel": 3927,
+      "name": "大众探歌",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/41660355126e453a85d27d27394495b9.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/e5d37d761a7247d38302e89b4cdaa602.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 3927,
+        "name": "大众探歌",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/41660355126e453a85d27d27394495b9.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/e5d37d761a7247d38302e89b4cdaa602.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 108,
+        "totalPrice": 216,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 108,
+        "originalTotalPrice": 216
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 3927,
+      "carTypeName": "大众探歌（可自助取还）/自动/SUV/1.4T",
+      "longMovieUrlFifteen": null,
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": null,
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": null,
+      "sizeMovieNinety": null,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4449,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 32,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.8571428571428572,
+      "priceGroupId": 25
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 6,
+      "carLevelTag": 32,
+      "carLevelTags": [0, 32],
+      "fuelTankVolumn": 40,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 2023,
+      "isMonitor": false,
+      "carTypeTag": 24,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4449,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 8,
+        "minCarDisplacementValue": "1.2",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 8,
+        "maxCarDisplacementValue": "1.2"
+      },
+      "carLevel": 4449,
+      "name": "大众新探影",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/0a56ff5e4436472f922d7d7a8db1c0d2.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/ae1bb6fce88b49ecba97039a619786c2.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4449,
+        "name": "大众新探影",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/0a56ff5e4436472f922d7d7a8db1c0d2.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/ae1bb6fce88b49ecba97039a619786c2.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 118,
+        "totalPrice": 236,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 118,
+        "originalTotalPrice": 236
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4449,
+      "carTypeName": "大众新探影/自动/SUV/1.2T",
+      "longMovieUrlFifteen": null,
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": null,
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": null,
+      "sizeMovieNinety": null,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4674,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 32,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.6666666666666667,
+      "priceGroupId": 25
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 6,
+      "carLevelTag": 32,
+      "carLevelTags": [0, 32],
+      "fuelTankVolumn": 40,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 2023,
+      "isMonitor": false,
+      "carTypeTag": 28,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4674,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 8,
+        "minCarDisplacementValue": "1.2",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 8,
+        "maxCarDisplacementValue": "1.2"
+      },
+      "carLevel": 4674,
+      "name": "大众新探影",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/0a56ff5e4436472f922d7d7a8db1c0d2.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/ae1bb6fce88b49ecba97039a619786c2.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4674,
+        "name": "大众新探影",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/0a56ff5e4436472f922d7d7a8db1c0d2.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/ae1bb6fce88b49ecba97039a619786c2.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 118,
+        "totalPrice": 236,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 118,
+        "originalTotalPrice": 236
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4674,
+      "carTypeName": "大众新探影（可自助取还）/自动/SUV/1.2T",
+      "longMovieUrlFifteen": null,
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": null,
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": null,
+      "sizeMovieNinety": null,
+      "vrVideoUrl": null,
+      "headImageUrls": null
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4043,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 8,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0.5,
+      "priceGroupId": 26
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 32,
+      "carLevelId": 4,
+      "carLevelTag": 8,
+      "carLevelTags": [0, 8],
+      "fuelTankVolumn": 56,
+      "fuleType": "汽油",
+      "structureName": "三厢",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "L",
+      "intakeName": "自然吸气",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 794,
+      "isMonitor": false,
+      "carTypeTag": 28,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4043,
+        "minCarIntakeId": 1,
+        "minCarIntakeValue": "L",
+        "minCarDisplacementId": 16,
+        "minCarDisplacementValue": "2.0",
+        "maxCarIntakeId": 1,
+        "maxCarIntakeValue": "L",
+        "maxCarDisplacementId": 16,
+        "maxCarDisplacementValue": "2.0"
+      },
+      "carLevel": 4043,
+      "name": "日产天籁",
+      "brandName": "日产",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/57c4189961974211adf9108d0ed97b2e.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/d91e46eb6d6f4eaaafed24b04132a0ef.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4043,
+        "name": "日产天籁",
+        "brandName": "日产",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/57c4189961974211adf9108d0ed97b2e.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/d91e46eb6d6f4eaaafed24b04132a0ef.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 118,
+        "totalPrice": 236,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 118,
+        "originalTotalPrice": 236
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4043,
+      "carTypeName": "日产天籁（可自助取还）/自动/三厢/2.0L",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/a4f436f99299497db69507a93215fc9d.mp4",
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": "https://k.1hai.cn/iACgO8",
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": 9177910,
+      "sizeMovieNinety": 24116237,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4042,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 8,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0.5,
+      "priceGroupId": 26
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 32,
+      "carLevelId": 4,
+      "carLevelTag": 8,
+      "carLevelTags": [0, 8],
+      "fuelTankVolumn": 56,
+      "fuleType": "汽油",
+      "structureName": "三厢",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "L",
+      "intakeName": "自然吸气",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 794,
+      "isMonitor": false,
+      "carTypeTag": 24,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4042,
+        "minCarIntakeId": 1,
+        "minCarIntakeValue": "L",
+        "minCarDisplacementId": 16,
+        "minCarDisplacementValue": "2.0",
+        "maxCarIntakeId": 1,
+        "maxCarIntakeValue": "L",
+        "maxCarDisplacementId": 16,
+        "maxCarDisplacementValue": "2.0"
+      },
+      "carLevel": 4042,
+      "name": "日产天籁",
+      "brandName": "日产",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/57c4189961974211adf9108d0ed97b2e.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/d91e46eb6d6f4eaaafed24b04132a0ef.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4042,
+        "name": "日产天籁",
+        "brandName": "日产",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/57c4189961974211adf9108d0ed97b2e.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/d91e46eb6d6f4eaaafed24b04132a0ef.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 118,
+        "totalPrice": 236,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 118,
+        "originalTotalPrice": 236
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4042,
+      "carTypeName": "日产天籁/自动/三厢/2.0L",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/333883a1f26044e38c578ea2d96eaa39.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/a2289c6061504e65a5804af2c53c62b4.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/i8ZGSI",
+      "shortMovieUrlNinety": "https://k.1hai.cn/goFC1Y",
+      "sizeMovieFifteen": 9177910,
+      "sizeMovieNinety": 24116237,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4334,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 32,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.875,
+      "priceGroupId": 25
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 6,
+      "carLevelTag": 32,
+      "carLevelTags": [0, 32],
+      "fuelTankVolumn": 51,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 1769,
+      "isMonitor": false,
+      "carTypeTag": 28,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4334,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 10,
+        "minCarDisplacementValue": "1.4",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 10,
+        "maxCarDisplacementValue": "1.4"
+      },
+      "carLevel": 4334,
+      "name": "大众新探歌",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/68d0ca9cd5264e569c707414a47445d9.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/411dd27ce9bc4b38a61fa410e4a0c857.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4334,
+        "name": "大众新探歌",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/68d0ca9cd5264e569c707414a47445d9.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/411dd27ce9bc4b38a61fa410e4a0c857.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 119,
+        "totalPrice": 237,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 119,
+        "originalTotalPrice": 237
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4334,
+      "carTypeName": "大众新探歌（可自助取还）/自动/SUV/1.4T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/90fb79a2dabf40b49e73a416baa69c43.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/22a7f5c8ce9c4887a4b1f6829004328f.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/mrHgui",
+      "shortMovieUrlNinety": "https://k.1hai.cn/cy8ADz",
+      "sizeMovieFifteen": 21125516,
+      "sizeMovieNinety": 21302072,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4332,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 2,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.5,
+      "priceGroupId": 4
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 2,
+      "carLevelTag": 2,
+      "carLevelTags": [0, 2],
+      "fuelTankVolumn": 51,
+      "fuleType": "汽油",
+      "structureName": "两厢",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 1771,
+      "isMonitor": false,
+      "carTypeTag": 28,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4332,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 10,
+        "minCarDisplacementValue": "1.4",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 10,
+        "maxCarDisplacementValue": "1.4"
+      },
+      "carLevel": 4332,
+      "name": "大众新8代高尔夫",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/1f09867112434c56b9ebc17910ae860a.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/af04c53ecfcb4ddcac75dafe4f731b7a.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4332,
+        "name": "大众新8代高尔夫",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/1f09867112434c56b9ebc17910ae860a.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/af04c53ecfcb4ddcac75dafe4f731b7a.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 129,
+        "totalPrice": 258,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 129,
+        "originalTotalPrice": 258
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4332,
+      "carTypeName": "大众新8代高尔夫（可自助取还）/自动/两厢/1.4T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/f1f747d8f45d48d8b8643b6a1ac5e22b.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/fdbddfc69c4f45d998bdb24653bed106.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/c0O8wo",
+      "shortMovieUrlNinety": "https://k.1hai.cn/hV5WZc",
+      "sizeMovieFifteen": 21571388,
+      "sizeMovieNinety": 21764785,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4321,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 2,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.7777777777777779,
+      "priceGroupId": 4
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 2,
+      "carLevelTag": 2,
+      "carLevelTags": [0, 2],
+      "fuelTankVolumn": 50,
+      "fuleType": "汽油",
+      "structureName": "三厢",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": false,
+      "panoramaImagePath": null,
+      "carSeriesId": 1767,
+      "isMonitor": false,
+      "carTypeTag": 12,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4321,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 11,
+        "minCarDisplacementValue": "1.5",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 11,
+        "maxCarDisplacementValue": "1.5"
+      },
+      "carLevel": 4321,
+      "name": "大众新速腾",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/d2050e2126454b23af168cc043e91c6a.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/0653a9df6f3e44d59674140664ba5abe.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4321,
+        "name": "大众新速腾",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/d2050e2126454b23af168cc043e91c6a.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/0653a9df6f3e44d59674140664ba5abe.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 129,
+        "totalPrice": 258,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 129,
+        "originalTotalPrice": 258
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4321,
+      "carTypeName": "大众新速腾（可自助取还）/自动/三厢/1.5T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/106b9eba841845efaff9a60eabc359fb.mp4",
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": "https://k.1hai.cn/kTYVoj",
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": 6963034,
+      "sizeMovieNinety": 0,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 3565,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 160,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0.4,
+      "priceGroupId": 6
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 5,
+      "carLevelId": 6,
+      "carLevelTag": 160,
+      "carLevelTags": [0, 32, 128],
+      "fuelTankVolumn": 55,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "L",
+      "intakeName": "自然吸气",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": false,
+      "isRearCamera": false,
+      "panoramaImagePath": null,
+      "carSeriesId": 442,
+      "isMonitor": false,
+      "carTypeTag": 4,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 3565,
+        "minCarIntakeId": 1,
+        "minCarIntakeValue": "L",
+        "minCarDisplacementId": 16,
+        "minCarDisplacementValue": "2.0",
+        "maxCarIntakeId": 1,
+        "maxCarIntakeValue": "L",
+        "maxCarDisplacementId": 16,
+        "maxCarDisplacementValue": "2.0"
+      },
+      "carLevel": 3565,
+      "name": "丰田RAV4荣放",
+      "brandName": "丰田",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/412/ecb610e0294946a88c0d7a2fdebb85e3.png",
+      "bigImagePath": "https://externalimage.1hai.cn/412/5aa72e786bb84e59b6eb9ee08b0cc105.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 3565,
+        "name": "丰田RAV4荣放",
+        "brandName": "丰田",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/412/ecb610e0294946a88c0d7a2fdebb85e3.png",
+        "bigImagePath": "https://externalimage.1hai.cn/412/5aa72e786bb84e59b6eb9ee08b0cc105.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 129,
+        "totalPrice": 258,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 129,
+        "originalTotalPrice": 258
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 3565,
+      "carTypeName": "丰田RAV4荣放（可自助取还）/自动/SUV/2.0L",
+      "longMovieUrlFifteen": "https://cardesc.1hai.cn/d41c8527vodtranscq1400261960/9a5339755285890808181948543/v.f100030.mp4",
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": null,
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": 1499464,
+      "sizeMovieNinety": 0,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 3934,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 32,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0.75,
+      "priceGroupId": 6
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 5,
+      "carLevelId": 6,
+      "carLevelTag": 32,
+      "carLevelTags": [0, 32],
+      "fuelTankVolumn": 55,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "L",
+      "intakeName": "自然吸气",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 1819,
+      "isMonitor": false,
+      "carTypeTag": 24,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 3934,
+        "minCarIntakeId": 1,
+        "minCarIntakeValue": "L",
+        "minCarDisplacementId": 16,
+        "minCarDisplacementValue": "2.0",
+        "maxCarIntakeId": 1,
+        "maxCarIntakeValue": "L",
+        "maxCarDisplacementId": 16,
+        "maxCarDisplacementValue": "2.0"
+      },
+      "carLevel": 3934,
+      "name": "丰田新RAV4荣放",
+      "brandName": "丰田",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/53f9d8bbf2d44439bd362df0f983183e.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/6569ee0dd8984aeea88eff1ab2f2733e.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 3934,
+        "name": "丰田新RAV4荣放",
+        "brandName": "丰田",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/53f9d8bbf2d44439bd362df0f983183e.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/6569ee0dd8984aeea88eff1ab2f2733e.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 139,
+        "totalPrice": 278,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 139,
+        "originalTotalPrice": 278
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 3934,
+      "carTypeName": "丰田新RAV4荣放/自动/SUV/2.0L",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/4930c5d5b6e0488d93d10b409daf5570.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/21c1289de7e144cb8405b849123c3f4b.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/hxFPXc",
+      "shortMovieUrlNinety": "https://k.1hai.cn/i1dJEv",
+      "sizeMovieFifteen": 9184226,
+      "sizeMovieNinety": 24135626,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 3933,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 32,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0.8260869565217392,
+      "priceGroupId": 6
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 6,
+      "carLevelTag": 32,
+      "carLevelTags": [0, 32],
+      "fuelTankVolumn": 60,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 2028,
+      "isMonitor": false,
+      "carTypeTag": 24,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 3933,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 16,
+        "minCarDisplacementValue": "2.0",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 16,
+        "maxCarDisplacementValue": "2.0"
+      },
+      "carLevel": 3933,
+      "name": "大众探岳",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/fded5f98523c44428eac781aa62b5a4c.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/ef6f3257c0b64d09aff2863b96628f61.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 3933,
+        "name": "大众探岳",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/fded5f98523c44428eac781aa62b5a4c.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/ef6f3257c0b64d09aff2863b96628f61.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 149,
+        "totalPrice": 298,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 149,
+        "originalTotalPrice": 298
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 3933,
+      "carTypeName": "大众探岳/自动/SUV/2.0T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/9359156687214189bd18648f48c0bf2c.mp4",
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": "https://k.1hai.cn/kw10iz",
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": 22879102,
+      "sizeMovieNinety": 0,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4108,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 32,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0.7272727272727273,
+      "priceGroupId": 6
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 6,
+      "carLevelTag": 32,
+      "carLevelTags": [0, 32],
+      "fuelTankVolumn": 60,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 2028,
+      "isMonitor": false,
+      "carTypeTag": 28,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4108,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 16,
+        "minCarDisplacementValue": "2.0",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 16,
+        "maxCarDisplacementValue": "2.0"
+      },
+      "carLevel": 4108,
+      "name": "大众探岳",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/fded5f98523c44428eac781aa62b5a4c.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/ef6f3257c0b64d09aff2863b96628f61.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4108,
+        "name": "大众探岳",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/fded5f98523c44428eac781aa62b5a4c.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/ef6f3257c0b64d09aff2863b96628f61.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 149,
+        "totalPrice": 298,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 149,
+        "originalTotalPrice": 298
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4108,
+      "carTypeName": "大众探岳（可自助取还）/自动/SUV/2.0T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/9359156687214189bd18648f48c0bf2c.mp4",
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": "https://k.1hai.cn/kw10iz",
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": 22879102,
+      "sizeMovieNinety": 0,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4230,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 32,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.7142857142857143,
+      "priceGroupId": 6
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 6,
+      "carLevelTag": 32,
+      "carLevelTags": [0, 32],
+      "fuelTankVolumn": 60,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 1929,
+      "isMonitor": false,
+      "carTypeTag": 24,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4230,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 11,
+        "minCarDisplacementValue": "1.5",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 11,
+        "maxCarDisplacementValue": "1.5"
+      },
+      "carLevel": 4230,
+      "name": "大众新途观L",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/5369bacc26d74d099af7823b66a44bff.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/8222cee1efdf454bb2a06bc595bb19f7.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4230,
+        "name": "大众新途观L",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/5369bacc26d74d099af7823b66a44bff.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/8222cee1efdf454bb2a06bc595bb19f7.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 149,
+        "totalPrice": 298,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 149,
+        "originalTotalPrice": 298
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4230,
+      "carTypeName": "大众新途观L/自动/SUV/1.5T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/70f7cd502b7543fd8881d664fb3d2cac.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/61396577067b40dc99e96b6e5628e62e.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/gbM4WY",
+      "shortMovieUrlNinety": "https://k.1hai.cn/j4xbEo",
+      "sizeMovieFifteen": 19115212,
+      "sizeMovieNinety": 25558887,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4329,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 32,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.28571428571428575,
+      "priceGroupId": 6
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 6,
+      "carLevelTag": 32,
+      "carLevelTags": [0, 32],
+      "fuelTankVolumn": 60,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 1929,
+      "isMonitor": false,
+      "carTypeTag": 28,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4329,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 11,
+        "minCarDisplacementValue": "1.5",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 11,
+        "maxCarDisplacementValue": "1.5"
+      },
+      "carLevel": 4329,
+      "name": "大众新途观L",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/5369bacc26d74d099af7823b66a44bff.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/8222cee1efdf454bb2a06bc595bb19f7.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4329,
+        "name": "大众新途观L",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/5369bacc26d74d099af7823b66a44bff.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/8222cee1efdf454bb2a06bc595bb19f7.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 149,
+        "totalPrice": 298,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 149,
+        "originalTotalPrice": 298
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4329,
+      "carTypeName": "大众新途观L（可自助取还）/自动/SUV/1.5T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/70f7cd502b7543fd8881d664fb3d2cac.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/61396577067b40dc99e96b6e5628e62e.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/gbM4WY",
+      "shortMovieUrlNinety": "https://k.1hai.cn/j4xbEo",
+      "sizeMovieFifteen": 19115212,
+      "sizeMovieNinety": 25558887,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4333,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 8,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.5,
+      "priceGroupId": 26
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 4,
+      "carLevelTag": 8,
+      "carLevelTags": [0, 8],
+      "fuelTankVolumn": 66,
+      "fuleType": "汽油",
+      "structureName": "三厢",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 1924,
+      "isMonitor": false,
+      "carTypeTag": 28,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4333,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 16,
+        "minCarDisplacementValue": "2.0",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 16,
+        "maxCarDisplacementValue": "2.0"
+      },
+      "carLevel": 4333,
+      "name": "大众新迈腾",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/afcc5c4a5d15455bb28b12b80cf60f77.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/48c96af71f8345f5bd5b76e9af5d4293.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4333,
+        "name": "大众新迈腾",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/afcc5c4a5d15455bb28b12b80cf60f77.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/48c96af71f8345f5bd5b76e9af5d4293.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 158,
+        "totalPrice": 316,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 158,
+        "originalTotalPrice": 316
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4333,
+      "carTypeName": "大众新迈腾（可自助取还）/自动/三厢/2.0T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/629cc0b02edb4c329f21344447328bb7.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/2dc81e3dac104dbca86b77feb215ad3a.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/8MSYTS",
+      "shortMovieUrlNinety": "https://k.1hai.cn/mZs3mt",
+      "sizeMovieFifteen": 18345664,
+      "sizeMovieNinety": 21242910,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 2441,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 100,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0.6,
+      "priceGroupId": 10
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 3,
+      "carLevelTag": 100,
+      "carLevelTags": [0, 4, 32, 64],
+      "fuelTankVolumn": 73,
+      "fuleType": "汽油",
+      "structureName": "MPV",
+      "gearId": 2,
+      "emission": 2,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": true,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": false,
+      "panoramaImagePath": null,
+      "carSeriesId": 1374,
+      "isMonitor": false,
+      "carTypeTag": 9,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 2441,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 16,
+        "minCarDisplacementValue": "2.0",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 16,
+        "maxCarDisplacementValue": "2.0"
+      },
+      "carLevel": 2441,
+      "name": "大众威然",
+      "brandName": "大众",
+      "maxPassenger": 7,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/efb9e7f0521c4546a0d1cad3bee32707.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/64218e1cfbab44d6b91a4f5a747f4981.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 2441,
+        "name": "大众威然",
+        "brandName": "大众",
+        "maxPassenger": 7,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/efb9e7f0521c4546a0d1cad3bee32707.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/64218e1cfbab44d6b91a4f5a747f4981.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 229,
+        "totalPrice": 458,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 229,
+        "originalTotalPrice": 458
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 2441,
+      "carTypeName": "大众威然/自动/MPV/2.0T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/c995ba3b031e4994b21a43c38b367766.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/69d5086505544a089b96ab5da8053fac.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/lfGNcU",
+      "shortMovieUrlNinety": "https://k.1hai.cn/aytGRc",
+      "sizeMovieFifteen": 23560173,
+      "sizeMovieNinety": 17051437,
+      "vrVideoUrl": null,
+      "headImageUrls": ["https://externalimage.1hai.cn/411/20f4ed028a624a6f8d358c7509e13e5d.jpg"]
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 3471,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 32,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "四驱",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0,
+      "priceGroupId": 27
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 88,
+      "carLevelId": 6,
+      "carLevelTag": 32,
+      "carLevelTags": [0, 32],
+      "fuelTankVolumn": 75,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 2,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 1998,
+      "isMonitor": false,
+      "carTypeTag": 24,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 3471,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 26,
+        "minCarDisplacementValue": "3.0",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 26,
+        "maxCarDisplacementValue": "3.0"
+      },
+      "carLevel": 3471,
+      "name": "红旗HS7四驱",
+      "brandName": "红旗",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/f72faf3e33d1455f86272fbd92863df2.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/3d37445240044d1d8e67d648a7c80beb.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 3471,
+        "name": "红旗HS7四驱",
+        "brandName": "红旗",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/f72faf3e33d1455f86272fbd92863df2.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/3d37445240044d1d8e67d648a7c80beb.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 238,
+        "totalPrice": 475,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 238,
+        "originalTotalPrice": 475
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 3471,
+      "carTypeName": "红旗HS7四驱/自动/SUV/3.0T",
+      "longMovieUrlFifteen": null,
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": null,
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": null,
+      "sizeMovieNinety": null,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4315,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 96,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.736842105263158,
+      "priceGroupId": 42
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 57,
+      "carLevelId": 6,
+      "carLevelTag": 96,
+      "carLevelTags": [0, 32, 64],
+      "fuelTankVolumn": 73,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": true,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 1965,
+      "isMonitor": false,
+      "carTypeTag": 25,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4315,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 16,
+        "minCarDisplacementValue": "2.0",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 16,
+        "maxCarDisplacementValue": "2.0"
+      },
+      "carLevel": 4315,
+      "name": "凯迪拉克新XT5",
+      "brandName": "凯迪拉克",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/9b1043a09036430f847ae6912f840d06.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/dc4e1ca4aec44748be7c5bff98bfd018.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4315,
+        "name": "凯迪拉克新XT5",
+        "brandName": "凯迪拉克",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/9b1043a09036430f847ae6912f840d06.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/dc4e1ca4aec44748be7c5bff98bfd018.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 238,
+        "totalPrice": 476,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 238,
+        "originalTotalPrice": 476
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4315,
+      "carTypeName": "凯迪拉克新XT5/自动/SUV/2.0T",
+      "longMovieUrlFifteen": null,
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": null,
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": null,
+      "sizeMovieNinety": null,
+      "vrVideoUrl": null,
+      "headImageUrls": ["https://externalimage.1hai.cn/411/fddcfad286c241f4ac20ca81323d9677.jpg"]
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4135,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 4,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0.9545454545454546,
+      "priceGroupId": 10
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 9,
+      "carLevelId": 3,
+      "carLevelTag": 4,
+      "carLevelTags": [0, 4],
+      "fuelTankVolumn": 66,
+      "fuleType": "汽油",
+      "structureName": "MPV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": false,
+      "panoramaImagePath": null,
+      "carSeriesId": 668,
+      "isMonitor": false,
+      "carTypeTag": 8,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4135,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 16,
+        "minCarDisplacementValue": "2.0",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 16,
+        "maxCarDisplacementValue": "2.0"
+      },
+      "carLevel": 4135,
+      "name": "别克GL8",
+      "brandName": "别克",
+      "maxPassenger": 7,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/a2797a7c26de48fba8402dd98988e52c.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/7ac253afbc644f34a1610c0f777240dc.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4135,
+        "name": "别克GL8",
+        "brandName": "别克",
+        "maxPassenger": 7,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/a2797a7c26de48fba8402dd98988e52c.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/7ac253afbc644f34a1610c0f777240dc.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 248,
+        "totalPrice": 496,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 248,
+        "originalTotalPrice": 496
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4135,
+      "carTypeName": "别克GL8/自动/MPV/2.0T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/3a3ca583f6414febbc2405e11857755e.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/59e91c112fef4dfc8a1c2eede9a3bfe6.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/iABKrx",
+      "shortMovieUrlNinety": "https://k.1hai.cn/gEpEYI",
+      "sizeMovieFifteen": 21341308,
+      "sizeMovieNinety": 21341308,
+      "vrVideoUrl": null,
+      "headImageUrls": ["https://externalimage.1hai.cn/411/a9c105389755492f81b1c4b7dbfe1b25.jpg"]
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 3932,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 32,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0.27586206896551724,
+      "priceGroupId": 27
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 6,
+      "carLevelTag": 32,
+      "carLevelTags": [0, 32],
+      "fuelTankVolumn": 79,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 1785,
+      "isMonitor": false,
+      "carTypeTag": 24,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 3932,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 16,
+        "minCarDisplacementValue": "2.0",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 16,
+        "maxCarDisplacementValue": "2.0"
+      },
+      "carLevel": 3932,
+      "name": "大众揽巡",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/9dbe9e97e51b4c0f9c03889b5327c9de.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/5bfb9e13d6214dec8e07e20b31b7a2ce.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 3932,
+        "name": "大众揽巡",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/9dbe9e97e51b4c0f9c03889b5327c9de.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/5bfb9e13d6214dec8e07e20b31b7a2ce.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 249,
+        "totalPrice": 498,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 249,
+        "originalTotalPrice": 498
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 3932,
+      "carTypeName": "大众揽巡/自动/SUV/2.0T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/440894b3c25a4f2abe7d62d537aad4f5.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/43b44751c8ac4ba889e246d7ae002b1b.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/gX9Aui",
+      "shortMovieUrlNinety": "https://k.1hai.cn/kiGwgr",
+      "sizeMovieFifteen": 20843968,
+      "sizeMovieNinety": 22068742,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4131,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 32,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": true,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        }
+      ],
+      "rateRental": 0.36363636363636365,
+      "priceGroupId": 27
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 6,
+      "carLevelTag": 32,
+      "carLevelTags": [0, 32],
+      "fuelTankVolumn": 79,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": true,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 1785,
+      "isMonitor": false,
+      "carTypeTag": 28,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4131,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 16,
+        "minCarDisplacementValue": "2.0",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 16,
+        "maxCarDisplacementValue": "2.0"
+      },
+      "carLevel": 4131,
+      "name": "大众揽巡",
+      "brandName": "大众",
+      "maxPassenger": 5,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/9dbe9e97e51b4c0f9c03889b5327c9de.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/5bfb9e13d6214dec8e07e20b31b7a2ce.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4131,
+        "name": "大众揽巡",
+        "brandName": "大众",
+        "maxPassenger": 5,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/9dbe9e97e51b4c0f9c03889b5327c9de.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/5bfb9e13d6214dec8e07e20b31b7a2ce.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 249,
+        "totalPrice": 498,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 249,
+        "originalTotalPrice": 498
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4131,
+      "carTypeName": "大众揽巡（可自助取还）/自动/SUV/2.0T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/440894b3c25a4f2abe7d62d537aad4f5.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/43b44751c8ac4ba889e246d7ae002b1b.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/gX9Aui",
+      "shortMovieUrlNinety": "https://k.1hai.cn/kiGwgr",
+      "sizeMovieFifteen": 20843968,
+      "sizeMovieNinety": 22068742,
+      "vrVideoUrl": null,
+      "headImageUrls": null
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4228,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 32,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "四驱",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.37931034482758624,
+      "priceGroupId": 27
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 5,
+      "carLevelId": 6,
+      "carLevelTag": 32,
+      "carLevelTags": [0, 32],
+      "fuelTankVolumn": 65,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "L",
+      "intakeName": "自然吸气",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": false,
+      "isRearCamera": false,
+      "panoramaImagePath": null,
+      "carSeriesId": 2000,
+      "isMonitor": false,
+      "carTypeTag": 0,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4228,
+        "minCarIntakeId": 1,
+        "minCarIntakeValue": "L",
+        "minCarDisplacementId": 21,
+        "minCarDisplacementValue": "2.5",
+        "maxCarIntakeId": 1,
+        "maxCarIntakeValue": "L",
+        "maxCarDisplacementId": 21,
+        "maxCarDisplacementValue": "2.5"
+      },
+      "carLevel": 4228,
+      "name": "丰田皇冠陆放四驱",
+      "brandName": "丰田",
+      "maxPassenger": 7,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/3a707ed0d71b403d8ee234509790ccab.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/46c8f7ede49343069338cbd96a50adde.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4228,
+        "name": "丰田皇冠陆放四驱",
+        "brandName": "丰田",
+        "maxPassenger": 7,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/3a707ed0d71b403d8ee234509790ccab.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/46c8f7ede49343069338cbd96a50adde.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 259,
+        "totalPrice": 518,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 259,
+        "originalTotalPrice": 518
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4228,
+      "carTypeName": "丰田皇冠陆放四驱/自动/SUV/2.5L",
+      "longMovieUrlFifteen": null,
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": null,
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": null,
+      "sizeMovieNinety": null,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 3761,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 32,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "蓝牙连接",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "倒车雷达",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "四驱",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.2916666666666667,
+      "priceGroupId": 27
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 2,
+      "carLevelId": 6,
+      "carLevelTag": 32,
+      "carLevelTags": [0, 32],
+      "fuelTankVolumn": 74,
+      "fuleType": "汽油",
+      "structureName": "SUV",
+      "gearId": 2,
+      "emission": 2,
+      "emissionUnit": "T",
+      "intakeName": "涡轮增压",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": false,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": false,
+      "panoramaImagePath": null,
+      "carSeriesId": 1999,
+      "isMonitor": false,
+      "carTypeTag": 72,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 3761,
+        "minCarIntakeId": 2,
+        "minCarIntakeValue": "T",
+        "minCarDisplacementId": 16,
+        "minCarDisplacementValue": "2.0",
+        "maxCarIntakeId": 2,
+        "maxCarIntakeValue": "T",
+        "maxCarDisplacementId": 16,
+        "maxCarDisplacementValue": "2.0"
+      },
+      "carLevel": 3761,
+      "name": "大众揽境四驱",
+      "brandName": "大众",
+      "maxPassenger": 7,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/6cdb160b2fe3439c923a09b4101b9979.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/67214fe743564ce79f56a06905654fd7.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 3761,
+        "name": "大众揽境四驱",
+        "brandName": "大众",
+        "maxPassenger": 7,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/6cdb160b2fe3439c923a09b4101b9979.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/67214fe743564ce79f56a06905654fd7.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 268,
+        "totalPrice": 536,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 268,
+        "originalTotalPrice": 536
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 3761,
+      "carTypeName": "大众揽境四驱/自动/SUV/2.0T",
+      "longMovieUrlFifteen": "https://externalimage.1hai.cn/1xVoiB/75205cf361c9428fa5a73abf02a9a0e7.mp4",
+      "longMovieUrlNinety": "https://externalimage.1hai.cn/1xVoiB/f8e697c44b6a4771a60592e8ee4a2e22.mp4",
+      "shortMovieUrlFifteen": "https://k.1hai.cn/mUwzEo",
+      "shortMovieUrlNinety": "https://k.1hai.cn/hnidnc",
+      "sizeMovieFifteen": 21130150,
+      "sizeMovieNinety": 23328903,
+      "vrVideoUrl": null,
+      "headImageUrls": []
+    }
+  },
+  {
+    "stockItem": {
+      "locationId": 2138,
+      "managerId": 0,
+      "isOverBooking": false,
+      "cityStock": 0,
+      "storeStock": 1,
+      "rentalStatus": true
+    },
+    "commonItem": {
+      "carLevel": 4233,
+      "rentalDay": 2,
+      "upRentalDay": 2,
+      "weight": 0,
+      "userLevel": 5,
+      "levelId": 68,
+      "levelName": null,
+      "isQuickRental": false,
+      "guaranteeFee": 0,
+      "isHiCarEnjoy": false,
+      "isIpCar": false,
+      "sortType": 0,
+      "isNewCar": false,
+      "promotionType": 0,
+      "promotionTypeName": null,
+      "tags": [
+        {
+          "tagName": "倒车影像",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "天窗",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "CarPlay",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "轻混",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "电动侧滑门",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#29B7B7"
+        },
+        {
+          "tagName": "一年内车龄",
+          "tagType": 0,
+          "sort": 0,
+          "tagImageUrl": null,
+          "color": "#FF5B00"
+        }
+      ],
+      "rateRental": 0.9,
+      "priceGroupId": 10
+    },
+    "carTypeItem": {
+      "carTypeDesc": null,
+      "subhead": "",
+      "brandId": 5,
+      "carLevelId": 3,
+      "carLevelTag": 68,
+      "carLevelTags": [0, 4, 64],
+      "fuelTankVolumn": 68,
+      "fuleType": "汽油",
+      "structureName": "MPV",
+      "gearId": 2,
+      "emission": 0,
+      "emissionUnit": "L",
+      "intakeName": "自然吸气",
+      "isHotBrand": false,
+      "highVehicleBigImagePath": null,
+      "isEnjoyCar": false,
+      "isHighVehicle": true,
+      "isTourismCarType": false,
+      "isSnowTire": false,
+      "carNoType": 0,
+      "carNoTypeDescription": "",
+      "isParkSensor": true,
+      "isRearCamera": true,
+      "panoramaImagePath": null,
+      "carSeriesId": 1763,
+      "isMonitor": false,
+      "carTypeTag": 25,
+      "carTypeDisplacementInfo": {
+        "carTypeId": 4233,
+        "minCarIntakeId": 1,
+        "minCarIntakeValue": "L",
+        "minCarDisplacementId": 21,
+        "minCarDisplacementValue": "2.5",
+        "maxCarIntakeId": 1,
+        "maxCarIntakeValue": "L",
+        "maxCarDisplacementId": 21,
+        "maxCarDisplacementValue": "2.5"
+      },
+      "carLevel": 4233,
+      "name": "丰田格瑞维亚",
+      "brandName": "丰田",
+      "maxPassenger": 7,
+      "gearName": "自动",
+      "smallImagePath": "https://externalimage.1hai.cn/411/5f1910e40d134741b7fe6c8b9dc984e3.png",
+      "bigImagePath": "https://externalimage.1hai.cn/411/78cf0666b845410c9243949d4e0545e0.png",
+      "forwardImagePath": null
+    },
+    "carTypeInfoList": [
+      {
+        "carLevel": 4233,
+        "name": "丰田格瑞维亚",
+        "brandName": "丰田",
+        "maxPassenger": 7,
+        "gearName": "自动",
+        "smallImagePath": "https://externalimage.1hai.cn/411/5f1910e40d134741b7fe6c8b9dc984e3.png",
+        "bigImagePath": "https://externalimage.1hai.cn/411/78cf0666b845410c9243949d4e0545e0.png",
+        "forwardImagePath": null
+      }
+    ],
+    "priceItemList": [
+      {
+        "isPromotion": false,
+        "isUpRental": false,
+        "avgPrice": 299,
+        "totalPrice": 598,
+        "priceType": 1,
+        "isAvailble": true,
+        "avgBackAmount": 0,
+        "originalAvgPrice": 299,
+        "originalTotalPrice": 598
+      }
+    ],
+    "videoDto": {
+      "carTypeId": 4233,
+      "carTypeName": "丰田格瑞维亚/自动/MPV/2.5L",
+      "longMovieUrlFifteen": null,
+      "longMovieUrlNinety": null,
+      "shortMovieUrlFifteen": null,
+      "shortMovieUrlNinety": null,
+      "sizeMovieFifteen": null,
+      "sizeMovieNinety": null,
+      "vrVideoUrl": null,
+      "headImageUrls": ["https://externalimage.1hai.cn/411/a40dad6ed751461f94ae56221e897b96.jpg"]
+    }
+  }
+]

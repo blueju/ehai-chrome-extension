@@ -8,4 +8,22 @@ const app = createApp(App)
 
 app.use(createPinia())
 
-app.mount('#app')
+const isDev = import.meta.env.MODE === 'development';
+const id = `ehai-helper-${Date.now()}`;
+const root = document.createElement('div');
+root.id = id;
+document.body.appendChild(root);
+
+if (isDev) {
+    app.mount(`#${id}`);
+} else {
+    const timer = setInterval(() => {
+        if (window.ehai) {
+            clearInterval(timer);
+            app.mount(`#${id}`);
+        } else {
+            console.log('等待下一次检查');
+        }
+    }, 1000);
+}
+
