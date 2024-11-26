@@ -20,9 +20,12 @@
     "@vitejs/plugin-vue": "^5.1.4",
     "@vitejs/plugin-vue-jsx": "^4.0.1",
     "@vue/tsconfig": "^0.5.1",
+    "copy-webpack-plugin": "^12.0.2",
     "npm-run-all2": "^7.0.1",
     "typescript": "~5.6.3",
     "vite": "^5.4.10",
+    "vite-plugin-copy": "^0.1.6",
+    "vite-plugin-static-copy": "^2.1.0",
     "vite-plugin-vue-devtools": "^7.5.4",
     "vue-tsc": "^2.1.10"
   }
