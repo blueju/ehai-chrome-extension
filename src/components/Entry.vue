@@ -1,11 +1,10 @@
 <template>
   <div class="card" :class="{ 'card--hide': isHide }">
-    <!-- <Header></Header> -->
-    <el-tabs v-model:activeKey="activeKey" style="height: 100%">
-      <el-tab-pane key="1" tab="门店库存">
+    <el-tabs v-model="activeName" style="height: 100%">
+      <el-tab-pane name="1" label="门店库存">
         <QuickQueryPrice></QuickQueryPrice>
       </el-tab-pane>
-      <el-tab-pane key="2" tab="城市库存" style="height: 100%">
+      <el-tab-pane name="2" label="城市库存" style="height: 100%">
         <QuickQueryStock></QuickQueryStock>
       </el-tab-pane>
     </el-tabs>
@@ -30,20 +29,18 @@
 </template>
 
 <script>
-// import Header from './Header.vue'
 import QuickQueryPrice from './QuickQueryPrice.vue';
 import QuickQueryStock from './QuickQueryStock.vue';
 
 export default {
   name: 'Entry',
   components: {
-    // Header,
     QuickQueryPrice,
     QuickQueryStock,
   },
   data() {
     return {
-      activeKey: '1',
+      activeName: '1',
       isHide: false,
     };
   },
