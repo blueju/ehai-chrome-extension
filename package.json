@@ -1,54 +1,29 @@
 {
-  "name": "tampermonkey-vue",
-  "version": "1.0.0",
-  "description": "使用Vue Element-UI构建油猴TamperMonkey插件",
-  "author": "harry",
+  "name": "ehai-chrome-extension",
+  "version": "0.0.0",
   "private": true,
-  "main": "/src/main.js",
-  "keywords": [
-    "tampermonkey",
-    "webpack",
-    "vue",
-    "element-ui",
-    "axios"
-  ],
+  "type": "module",
   "scripts": {
-    "dev": "dotenv -e .env.dev -- webpack-dev-server --open --config webpack.dev.js",
-    "build": "dotenv -e .env -- webpack --config webpack.prod.js",
-    "build:dev": "dotenv -e .env.dev -- webpack --config webpack.prod.js && dotenv -e .env.dev -- node build.js"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.26.0",
-    "@babel/eslint-parser": "^7.25.9",
-    "@vue/compiler-sfc": "^3.2.24",
-    "babel-plugin-import": "^1.13.3",
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.4.1",
-    "css-loader": "^5.0.1",
-    "dotenv": "^10.0.0",
-    "dotenv-cli": "^4.0.0",
-    "eslint": "^9.15.0",
-    "eslint-config-alloy": "^5.1.2",
-    "eslint-plugin-vue": "^9.31.0",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^4.5.0",
-    "node-sass": "^5.0.0",
-    "prettier": "^3.3.3",
-    "sass-loader": "^10.5.2",
-    "style-loader": "^2.0.0",
-    "vue-eslint-parser": "^9.4.3",
-    "vue-loader": "^16.8.3",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.4.0"
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
-    "ant-design-vue": "^3.0.0-alpha.14",
-    "axios": "^0.21.0",
-    "dayjs": "^1.11.13",
-    "pinyin": "^4.0.0-alpha.2",
-    "vue": "^3.2.24"
+    "pinia": "^2.2.6",
+    "vue": "^3.5.12"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.9.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vitejs/plugin-vue-jsx": "^4.0.1",
+    "@vue/tsconfig": "^0.5.1",
+    "npm-run-all2": "^7.0.1",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.10",
+    "vite-plugin-vue-devtools": "^7.5.4",
+    "vue-tsc": "^2.1.10"
   }
 }

@@ -1,48 +1,47 @@
-<template>
-  <a-config-provider :locale="locale">
-    <div class="app">
-      <div class="app-info">Hello {{ AppName }} v{{ AppVersion }} !</div>
-      <Entry />
-    </div>
-  </a-config-provider>
-</template>
-
-<script>
-import Entry from '@/components/Entry.vue';
-import zhCN from 'ant-design-vue/es/locale/zh_CN';
-import dayjs from 'dayjs';
-import 'dayjs/locale/zh-cn';
-dayjs.locale('zh-cn');
-import { AppName, AppVersion } from './config';
-
-export default {
-  name: 'app',
-  components: {
-    Entry,
-  },
-  data() {
-    return {
-      AppName,
-      AppVersion,
-      locale: zhCN,
-    };
-  },
-};
+<script setup lang="ts">
+import HelloWorld from './components/HelloWorld.vue'
+import TheWelcome from './components/TheWelcome.vue'
 </script>
 
-<style lang="scss" scoped>
-* {
-  margin: 0;
-  padding: 0;
+<template>
+  <header>
+    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+
+    <div class="wrapper">
+      <HelloWorld msg="You did it!" />
+    </div>
+  </header>
+
+  <main>
+    <TheWelcome />
+  </main>
+</template>
+
+<style scoped>
+header {
+  line-height: 1.5;
 }
 
-.app-info {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(178, 94, 239, 0.5);
-  padding: 10px;
-  z-index: 999;
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
 }
 </style>
