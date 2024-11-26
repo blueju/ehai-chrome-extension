@@ -5,7 +5,10 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
-import ElementPlus from 'unplugin-element-plus/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -26,7 +29,12 @@ export default defineConfig({
     vue(),
     vueJsx(),
     vueDevTools(),
-    ElementPlus(),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+    }),
     viteStaticCopy({
       targets: [
         {

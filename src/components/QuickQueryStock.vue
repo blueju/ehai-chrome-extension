@@ -2,7 +2,7 @@
   <div class="QuickQueryStock">
     <div style="display: flex; align-items: center">
       <div>城市：</div>
-      <a-select
+      <el-select
         v-model:value="cityId"
         show-search
         placeholder="Select a person"
@@ -11,12 +11,12 @@
         :filter-option="filterOption"
         @change="handleChange"
         @select="handleChange"
-      ></a-select>
+      ></el-select>
     </div>
     <br />
     <div style="display: flex; column-gap: 10px">
-      <a-date-picker v-model:value="pickupDate" valueFormat="YYYY-MM-DD" :disabledDate="disabledDate" />
-      <a-time-picker
+      <el-date-picker v-model:value="pickupDate" valueFormat="YYYY-MM-DD" :disabledDate="disabledDate" />
+      <el-time-picker
         v-model:value="pickupHour"
         format="HH"
         :minuteStep="30"
@@ -30,24 +30,24 @@
     <div style="display: flex; column-gap: 20px; align-items: center">
       <div>
         使用天数：
-        <a-input-number v-model:value="usageDays" :min="1" :max="60" style="margin-right: 20px" />
+        <el-input-number v-model:value="usageDays" :min="1" :max="60" style="margin-right: 20px" />
       </div>
-      <a-checkbox v-model:checked="isWednesday">周三下单88折扣</a-checkbox>
-      <a-checkbox v-model:checked="isAdd51">总价+51保障</a-checkbox>
+      <el-checkbox v-model:checked="isWednesday">周三下单88折扣</el-checkbox>
+      <el-checkbox v-model:checked="isAdd51">总价+51保障</el-checkbox>
     </div>
     <br />
     <div style="display: flex; column-gap: 20px; align-items: center">
-      <a-button type="primary" @click="confirm">确认</a-button>
+      <el-button type="primary" @click="confirm">确认</el-button>
       <div>还车时间：{{ this.returnTime }}</div>
     </div>
-    <a-divider />
-    <a-input
+    <el-divider />
+    <el-input
       :value="carNameSearchInput"
       @change="seachInputChange"
       style="width: 250px; margin-bottom: 10px"
       placeholder="输入车型"
-    ></a-input>
-    <a-table :columns="newEnergyTableColumns" :data-source="filterCityStock" :pagination="false"></a-table>
+    ></el-input>
+    <el-table :columns="newEnergyTableColumns" :data-source="filterCityStock" :pagination="false"></el-table>
   </div>
 </template>
 
