@@ -1,8 +1,6 @@
 <template>
   <el-config-provider :locale="locale">
-    <div class="ehai-helper">
-      <Entry/>
-    </div>
+    <Entry/>
   </el-config-provider>
 </template>
 
@@ -23,23 +21,19 @@ export default {
       locale: zhCn,
     };
   },
-  mounted() {}
 };
 </script>
 
 <style lang="less" scoped>
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.app-info {
+:global(#ehai-helper) {
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(178, 94, 239, 0.5);
   padding: 10px;
-  z-index: 999;
+  z-index: 9999;
 }
 </style>

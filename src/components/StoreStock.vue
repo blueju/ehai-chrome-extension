@@ -139,7 +139,7 @@ export default {
       const currentDate = dayjs().format('YYYY-MM-DD');
       // 如果是今天
       if (currentDate === this.pickupDate) {
-        const recentlyHour = dayjs().add(1, 'hour').startOf('hour')
+        const recentlyHour = dayjs().add(1, 'hour').startOf('hour').add(1, 'hour')
         if (recentlyHour.isAfter(dayjs(), 'day')) {
           this.pickupDate = dayjs().add(1, 'day').format('YYYY-MM-DD')
         }
