@@ -7,18 +7,21 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    CityStock: typeof import('./src/components/CityStock.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCheckbox: typeof import('element-plus/es')['ElCheckbox']
     ElCol: typeof import('element-plus/es')['ElCol']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElDatePicker: typeof import('element-plus/es')['ElDatePicker']
     ElDivider: typeof import('element-plus/es')['ElDivider']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
     ElInput: typeof import('element-plus/es')['ElInput']
     ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
     ElOption: typeof import('element-plus/es')['ElOption']
     ElRow: typeof import('element-plus/es')['ElRow']
     ElSelect: typeof import('element-plus/es')['ElSelect']
     ElTable: typeof import('element-plus/es')['ElTable']
+    ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
     ElTabPane: typeof import('element-plus/es')['ElTabPane']
     ElTabs: typeof import('element-plus/es')['ElTabs']
     ElTimePicker: typeof import('element-plus/es')['ElTimePicker']
@@ -26,5 +29,6 @@ declare module 'vue' {
     Entry: typeof import('./src/components/Entry.vue')['default']
     QuickQueryPrice: typeof import('./src/components/QuickQueryPrice.vue')['default']
     QuickQueryStock: typeof import('./src/components/QuickQueryStock.vue')['default']
+    StoreStock: typeof import('./src/components/StoreStock.vue')['default']
   }
 }

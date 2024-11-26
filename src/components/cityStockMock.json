@@ -3,7 +3,7 @@
     "cityId": 28,
     "storeId": 525,
     "storeName": "桂林喜来登饭店送车点",
-    "stock": {
+    "storeStock": {
       "discountCarTypeList": [],
       "carTypeList": [
         {
@@ -4651,7 +4651,7 @@
     "cityId": 28,
     "storeId": 14155,
     "storeName": "临桂亚朵酒店送车点",
-    "stock": {
+    "storeStock": {
       "discountCarTypeList": [],
       "carTypeList": [
         {
@@ -9299,7 +9299,7 @@
     "cityId": 28,
     "storeId": 14158,
     "storeName": "临桂太子酒店送车点",
-    "stock": {
+    "storeStock": {
       "discountCarTypeList": [],
       "carTypeList": [
         {
@@ -13947,7 +13947,7 @@
     "cityId": 28,
     "storeId": 14164,
     "storeName": "临桂万达广场送车点",
-    "stock": {
+    "storeStock": {
       "discountCarTypeList": [],
       "carTypeList": [
         {
@@ -18595,7 +18595,7 @@
     "cityId": 28,
     "storeId": 15268,
     "storeName": "临桂南城百货送车点",
-    "stock": {
+    "storeStock": {
       "discountCarTypeList": [],
       "carTypeList": [
         {
@@ -23243,7 +23243,7 @@
     "cityId": 28,
     "storeId": 25738,
     "storeName": "燕子窝送车点",
-    "stock": {
+    "storeStock": {
       "discountCarTypeList": [],
       "carTypeList": [
         {
@@ -27891,7 +27891,7 @@
     "cityId": 28,
     "storeId": 26134,
     "storeName": "临桂美豪丽致酒店送车点",
-    "stock": {
+    "storeStock": {
       "discountCarTypeList": [],
       "carTypeList": [
         {
@@ -32539,7 +32539,7 @@
     "cityId": 28,
     "storeId": 26377,
     "storeName": "临桂国宾半岛送车点",
-    "stock": {
+    "storeStock": {
       "discountCarTypeList": [],
       "carTypeList": [
         {
@@ -37187,7 +37187,7 @@
     "cityId": 28,
     "storeId": 26378,
     "storeName": "临桂维也纳市政万达店送车点",
-    "stock": {
+    "storeStock": {
       "discountCarTypeList": [],
       "carTypeList": [
         {
@@ -41835,7 +41835,7 @@
     "cityId": 28,
     "storeId": 26379,
     "storeName": "临桂铂悦酒店送车点",
-    "stock": {
+    "storeStock": {
       "discountCarTypeList": [],
       "carTypeList": [
         {
@@ -46483,7 +46483,7 @@
     "cityId": 28,
     "storeId": 26487,
     "storeName": "长岛-16区送车点",
-    "stock": {
+    "storeStock": {
       "discountCarTypeList": [],
       "carTypeList": [
         {
@@ -51131,7 +51131,7 @@
     "cityId": 28,
     "storeId": 14329,
     "storeName": "宜尚酒店（高新万达店）送车点",
-    "stock": {
+    "storeStock": {
       "discountCarTypeList": [],
       "carTypeList": [
         {
@@ -55779,7 +55779,7 @@
     "cityId": 28,
     "storeId": 26505,
     "storeName": "桂林高新美居酒店送车点",
-    "stock": {
+    "storeStock": {
       "discountCarTypeList": [],
       "carTypeList": [
         {
@@ -60427,7 +60427,7 @@
     "cityId": 28,
     "storeId": 26506,
     "storeName": "广西北部湾银行接送点",
-    "stock": {
+    "storeStock": {
       "discountCarTypeList": [],
       "carTypeList": [
         {

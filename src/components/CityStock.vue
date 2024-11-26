@@ -53,7 +53,7 @@
 
 <script>
 import cityStockMock from './cityStockMock.json';
-import queryList from './queryList';
+import queryList from './queryList.js';
 import dayjs from 'dayjs';
 
 export default {

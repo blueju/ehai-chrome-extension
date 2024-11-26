@@ -14,10 +14,6 @@
             {{ item.label }}
           </a-select-option>
         </a-select>
-        <!--        <el-select v-model="storeId" filterable placeholder="选择门店" style="width: 100%" :filter-option="filterOption"-->
-        <!--                   @change="handleChange" @select="handleChange">-->
-        <!--          <el-option v-for="item in storeOptions" :key="item.value" :label="item.label" :value="item.value"/>-->
-        <!--        </el-select>-->
       </el-col>
     </el-row>
     <el-row>
@@ -55,7 +51,23 @@
                  style="width: 200px; margin-bottom: 16px" :options="carTypeOption"
                  :filter-option="filterOption"></el-select>
 
-      <el-table :columns="stockTableColumns" :data-source="filteredStock" :pagination="false"></el-table>
+      <el-table :columns="stockTableColumns" size="small" :data="filteredStock" :pagination="false">
+        <el-table-column label="车型" width="180" show-overflow-tooltip>
+          <template #default="scope">
+            {{ scope.row.carTypeItem.name }}
+          </template>
+        </el-table-column>
+        <el-table-column label="总价" width="180" show-overflow-tooltip>
+          <template #default="scope">
+            <div>{{ computeTotalPrice(scope.row) }}</div>
+          </template>
+        </el-table-column>
+        <el-table-column label="从舒适升级" width="180" show-overflow-tooltip>
+          <template #default="scope">
+            <div>{{ computeTotalPrice(scope.row) }}</div>
+          </template>
+        </el-table-column>
+      </el-table>
     </div>
   </div>
 </template>
@@ -69,7 +81,7 @@ export default {
   name: 'QuickQueryPrice',
   data() {
     return {
-      storeOptions: [],
+      storeOptions: [] as Array<{ label: string; value: string }>,
       filters: {
         // 默认新能源
         carLevel: 5,
@@ -98,8 +110,9 @@ export default {
       // 最高的精英车价格
       topBetterCarPrice: 0,
       // 基础费用（基本保障服务费+车辆整备费）
-      preparePrice: 20,
-      basicServicePrice: 50,
+
+      // preparePrice: 20,
+      // basicServicePrice: 50,
       // 新能源车列表
       filteredStock: [],
 
@@ -189,7 +202,7 @@ export default {
   },
   created() {
     this.queryStoreList();
-    // this.queryCarLevel();
+    this.queryCarLevel();
   },
   computed: {
     carTypeOption() {
@@ -220,6 +233,22 @@ export default {
     },
   },
   methods: {
+    computeTotalPrice(record) {
+      // 车辆租赁费用及门店服务费
+      const rent = record.priceItemList[0].totalPrice;
+      // 基础保障服务费
+      const basicPrice = 50 * this.usageDays
+      // 整备费
+      const preparePrice = 20
+      // 保险保障
+      const safeguardPrice = this.isAdd51
+          ? 51 * (this.usageDays > 7 ? 7 : this.usageDays)
+          : 0
+      // 折扣
+      const discount = this.isWednesday ? Math.floor(rent * 0.12) : 0
+      // 最终价
+      return rent + basicPrice + preparePrice + safeguardPrice - discount
+    },
     // 查找最高合适的价格
     // eg.如果海口新速腾比新能源还贵，总不能让一嗨倒贴钱吧，所以此时要跟第二贵的车价比，再补差价
     findTopSuitablePrice(totalPrice, prices) {
@@ -276,15 +305,15 @@ export default {
             this.storeList = resJson;
             this.storeOptions = resJson.map((item) => {
               return {
-                // ...item,
+                ...item,
                 label: item.name,
                 value: item.id,
               };
             });
-            // const store = resJson.find((item) => {
-            //   return item.id === 2596;
-            // });
-            // this.store = store;
+            const store = resJson.find((item) => {
+              return item.id === 2596;
+            });
+            this.store = store;
           });
     },
     // 查询车型列表
@@ -309,8 +338,8 @@ export default {
         pickupTime: this.pickupTime,
         returnTime: this.returnTime,
       };
-      console.log(process.env.NODE_ENV);
-      if (process.env.NODE_ENV === 'development') {
+      debugger
+      if (import.meta.env.MODE === 'development') {
         // mock
         setTimeout(() => {
           this.stock = stockMock;
@@ -332,7 +361,7 @@ export default {
       const compute = (stock) => {
         this.filteredStock = stock.filter((item) => {
           return (
-              item.carTypeItem.carLevelId === this.filters.carLevel.carLevelId ||
+              item.carTypeItem.carLevelId === this.carLevel['newEnergy'].carLevelId ||
               item.carTypeItem.carLevelId === this.carLevel['suv'].carLevelId
           );
         });

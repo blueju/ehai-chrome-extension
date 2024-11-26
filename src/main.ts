@@ -11,13 +11,13 @@ app.use(Select)
 // app.use(createPinia())
 
 const isDev = import.meta.env.MODE === 'development';
-const id = `ehai-helper-${Date.now()}`;
+const id = `ehai-helper`;
 const root = document.createElement('div');
 root.id = id;
 document.body.appendChild(root);
 
 
-if (true) {
+if (isDev) {
     app.mount(`#${id}`);
 } else {
     const timer = setInterval(() => {
