@@ -73,8 +73,8 @@
 </template>
 
 <script lang="ts">
-import stockMock from './stockMock.json';
-import queryList from './queryList';
+import stockMock from '../mock/stockMock.json';
+import queryList from '../http/queryList';
 import dayjs from "dayjs";
 
 export default {
