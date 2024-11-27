@@ -6,6 +6,7 @@
         <a-select
             v-model:value="storeId"
             style="width: 100%"
+            :show-search="true"
             :filter-option="filterOption"
             @change="handleChange"
             @select="handleChange"
@@ -24,12 +25,15 @@
                           type="date"
                           placeholder="选择取车日期"
                           :disabled-date="disabledDate"
+                          :editable="false"
+                          :clearable="false"
+                          value-format="YYYY-MM-DD"
                           style="width: 100%;"/>
           <el-time-select v-model="pickupHour"
                           start="00:00"
                           step="01:00"
                           end="23:30"
-                          clearable
+                          :editable="false"
                           :min-time="startTime"
                           format="HH:mm"
                           style="width: 100%;"/>
@@ -58,9 +62,9 @@
     <el-row>
       <el-col>
         <a-select v-model:value="whichCarLevel"
-                  show-search
                   placeholder="选择车型"
                   style="width: 50%"
+                  :show-search="false"
                   :options="carLevelOptions"
                   :filter-option="filterOption"></a-select>
       </el-col>
@@ -135,6 +139,7 @@ export default {
         return item.carTypeItem.carLevelId === this.whichCarLevel
       })
     },
+    //
     startTime() {
       const currentDate = dayjs().format('YYYY-MM-DD');
       // 如果是今天
@@ -167,6 +172,7 @@ export default {
     },
     // 还车时间
     returnTime() {
+      console.log(111)
       const returnTime = dayjs(this.pickupTime).add(this.usageDays, 'day').format('YYYY-MM-DD HH:mm');
       return returnTime;
     },

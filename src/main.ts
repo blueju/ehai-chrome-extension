@@ -19,7 +19,7 @@ const timer1 = setInterval(() => {
     const root = document.querySelector('#root')
     const app = document.querySelector('#app')
     if (root) {
-        root && root.remove()
+        root.setAttribute('style', 'display:none')
         clearInterval(timer1)
     }
 }, 500)
@@ -27,7 +27,7 @@ const timer1 = setInterval(() => {
 const timer2 = setInterval(() => {
     const app = document.querySelector('#app')
     if (app) {
-        app && app.remove()
+        app.setAttribute('style', 'display:none')
         clearInterval(timer2)
     }
 }, 500)

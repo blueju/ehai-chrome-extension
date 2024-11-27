@@ -46,6 +46,11 @@ export default {
   padding: 10px;
 }
 
+// 隐藏禁用了的时间选择项
+:global(.el-select-dropdown__item.is-disabled) {
+  display: none;
+}
+
 :deep(.el-tabs__content) {
   height: 100%;
   overflow-y: auto;
