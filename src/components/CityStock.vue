@@ -1,66 +1,63 @@
 <template>
-  <div class="QuickQueryStock">
+  <div class="CityStock">
     <div style="display: flex; align-items: center">
       <div>城市：</div>
       <el-select
-        v-model:value="cityId"
-        show-search
-        placeholder="Select a person"
-        style="width: 200px"
-        :options="cityOptions"
-        :filter-option="filterOption"
-        @change="handleChange"
-        @select="handleChange"
+          v-model:value="cityId"
+          show-search
+          placeholder="Select a person"
+          style="width: 200px"
+          :options="cityOptions"
+          :filter-option="filterOption"
+          @change="handleChange"
+          @select="handleChange"
       ></el-select>
     </div>
-    <br />
+    <br/>
     <div style="display: flex; column-gap: 10px">
-      <el-date-picker v-model:value="pickupDate" valueFormat="YYYY-MM-DD" :disabledDate="disabledDate" />
+      <el-date-picker v-model:value="pickupDate" valueFormat="YYYY-MM-DD" :disabledDate="disabledDate"/>
       <el-time-picker
-        v-model:value="pickupHour"
-        format="HH"
-        :minuteStep="30"
-        :showNow="false"
-        :disabledHours="disabledHours"
-        allowClear
-        value-format="HH:mm"
+          v-model:value="pickupHour"
+          format="HH"
+          :minuteStep="30"
+          :showNow="false"
+          :disabledHours="disabledHours"
+          allowClear
+          value-format="HH:mm"
       />
     </div>
-    <br />
+    <br/>
     <div style="display: flex; column-gap: 20px; align-items: center">
       <div>
         使用天数：
-        <el-input-number v-model:value="usageDays" :min="1" :max="60" style="margin-right: 20px" />
+        <el-input-number v-model:value="usageDays" :min="1" :max="60" style="margin-right: 20px"/>
       </div>
       <el-checkbox v-model:checked="isWednesday">周三下单88折扣</el-checkbox>
       <el-checkbox v-model:checked="isAdd51">总价+51保障</el-checkbox>
     </div>
-    <br />
+    <br/>
     <div style="display: flex; column-gap: 20px; align-items: center">
       <el-button type="primary" @click="confirm">确认</el-button>
       <div>还车时间：{{ this.returnTime }}</div>
     </div>
-    <el-divider />
+    <el-divider/>
     <el-input
-      :value="carNameSearchInput"
-      @change="seachInputChange"
-      style="width: 250px; margin-bottom: 10px"
-      placeholder="输入车型"
+        :value="carNameSearchInput"
+        @change="seachInputChange"
+        style="width: 250px; margin-bottom: 10px"
+        placeholder="输入车型"
     ></el-input>
     <el-table :columns="newEnergyTableColumns" :data-source="filterCityStock" :pagination="false"></el-table>
   </div>
 </template>
 
 <script>
-import cityStockMock from './cityStockMock.json';
-import queryList from './queryList.js';
+import cityStockMock from '../mock/cityStockMock.json';
+import queryList from '../http/queryList.ts';
 import dayjs from 'dayjs';
 
 export default {
-  name: 'QuickQueryStock',
-  components: { 
-    
-   },
+  name: 'CityStock',
   data() {
     return {
       isWednesday: dayjs().day() === 3 ? true : false,
@@ -113,7 +110,7 @@ export default {
           title: '车型',
           dataIndex: 'carType',
           key: 'carType',
-          customRender: ({ _, record }) => {
+          customRender: ({_, record}) => {
             return record.carName;
           },
         },
@@ -121,7 +118,7 @@ export default {
           title: '门店',
           dataIndex: 'storeName',
           key: 'storeName',
-          customRender: ({ _, record }) => {
+          customRender: ({_, record}) => {
             return record.storeName;
           },
         },
@@ -133,26 +130,26 @@ export default {
             const totalPrice = record.totalPrice;
             return {
               title: this.isWednesday
-                ? `${totalPrice}-${Math.floor(totalPrice * 0.12)}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` +
+                  ? `${totalPrice}-${Math.floor(totalPrice * 0.12)}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` +
                   (this.isAdd51 ? `+${51 * this.usageDays}` : 0)
-                : `${totalPrice}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` +
+                  : `${totalPrice}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` +
                   (this.isAdd51 ? `+${51 * this.usageDays}` : 0),
             };
           },
-          customRender: ({ _, record }) => {
+          customRender: ({_, record}) => {
             const totalPrice = record.totalPrice;
             return this.isWednesday
-              ? // 总价-周三88折折扣+基本保障服务费*使用天数+车辆整备费+51保障
+                ? // 总价-周三88折折扣+基本保障服务费*使用天数+车辆整备费+51保障
                 totalPrice -
-                  Math.floor(totalPrice * 0.12) +
-                  this.basicServicePrice * this.usageDays +
-                  this.preparePrice +
-                  (this.isAdd51 ? 51 * this.usageDays : 0)
-              : // 总价+基本保障服务费*使用天数+车辆整备费+51保障
+                Math.floor(totalPrice * 0.12) +
+                this.basicServicePrice * this.usageDays +
+                this.preparePrice +
+                (this.isAdd51 ? 51 * this.usageDays : 0)
+                : // 总价+基本保障服务费*使用天数+车辆整备费+51保障
                 totalPrice +
-                  this.basicServicePrice * this.usageDays +
-                  this.preparePrice +
-                  (this.isAdd51 ? 51 * this.usageDays : 0);
+                this.basicServicePrice * this.usageDays +
+                this.preparePrice +
+                (this.isAdd51 ? 51 * this.usageDays : 0);
           },
           sorter: (a, b) => a.totalPrice - b.totalPrice,
           sortDirections: ['descend'],
@@ -223,39 +220,39 @@ export default {
     // 查询门店列表
     queryStoreList() {
       fetch('https://dev.usemock.com/673c8274f92800c9ae107bc0/storeList')
-        .then((res) => res.json())
-        .then((storeList) => {
-          this.storeList = storeList;
-          storeList.forEach((store) => {
-            if (store.id === 2596) {
-              this.store = store;
-            }
-            this.storeMap.set(store.id, store.name);
+          .then((res) => res.json())
+          .then((storeList) => {
+            this.storeList = storeList;
+            storeList.forEach((store) => {
+              if (store.id === 2596) {
+                this.store = store;
+              }
+              this.storeMap.set(store.id, store.name);
+            });
           });
-        });
     },
     // 查询城市列表
     queryCityList() {
       fetch('https://dev.usemock.com/673c8274f92800c9ae107bc0/cityList')
-        .then((res) => res.json())
-        .then((cityList) => {
-          this.cityList = cityList;
-          cityList.forEach((city) => {
-            if (city.id === 21) {
-              // 21 深圳
-              this.city = city;
-            }
-            this.cityMap.set(city.id, city.city);
+          .then((res) => res.json())
+          .then((cityList) => {
+            this.cityList = cityList;
+            cityList.forEach((city) => {
+              if (city.id === 21) {
+                // 21 深圳
+                this.city = city;
+              }
+              this.cityMap.set(city.id, city.city);
+            });
           });
-        });
     },
     // 查询车型列表
     queryCarLevel() {
       fetch('https://dev.usemock.com/673c8274f92800c9ae107bc0/carLevel')
-        .then((res) => res.json())
-        .then((resJson) => {
-          this.carLevel = resJson;
-        });
+          .then((res) => res.json())
+          .then((resJson) => {
+            this.carLevel = resJson;
+          });
     },
     filterOption(input, option) {
       return option.label.indexOf(input) >= 0;
@@ -298,6 +295,7 @@ export default {
           // 返回 1 到 3 秒之间的随机延迟（以毫秒为单位）
           return Math.floor(Math.random() * 3000);
         }
+
         const requestQueue = cityStoreList.map((item) => {
           const params = {
             cityId: this.cityId,
@@ -320,23 +318,23 @@ export default {
         // 实际
         Promise.allSettled(requestQueue).then((results) => {
           const cityStock = results
-            .filter((item) => {
-              return item.status === 'fulfilled';
-            })
-            .map((item) => {
-              return item.value;
-            })
-            .map((item) => {
-              const cityId = item.config.param.pickupDto.cityId;
-              const storeId = item.config.param.pickupDto.storeId;
-              return {
-                cityId,
-                cityName: this.cityMap.get(cityId),
-                storeId,
-                storeName: this.storeMap.get(storeId),
-                stock: item.data.result,
-              };
-            });
+              .filter((item) => {
+                return item.status === 'fulfilled';
+              })
+              .map((item) => {
+                return item.value;
+              })
+              .map((item) => {
+                const cityId = item.config.param.pickupDto.cityId;
+                const storeId = item.config.param.pickupDto.storeId;
+                return {
+                  cityId,
+                  cityName: this.cityMap.get(cityId),
+                  storeId,
+                  storeName: this.storeMap.get(storeId),
+                  stock: item.data.result,
+                };
+              });
           handleCityStock(cityStock);
         });
       }
@@ -346,7 +344,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.QuickQueryStock {
+.CityStock {
   position: relative;
   overflow-y: auto;
   height: 100%;
