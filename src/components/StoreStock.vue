@@ -91,8 +91,8 @@
 <script lang="ts">
 import dayjs, {Dayjs} from "dayjs";
 
-import stockMock from './stockMock.json';
-import queryList from './queryList';
+import stockMock from '../mock/stockMock.json';
+import queryList from '../http/queryList';
 import {isDev} from '../utils/index'
 
 interface ICarLevel {

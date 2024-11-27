@@ -5,7 +5,7 @@
         <StoreStock/>
       </el-tab-pane>
       <el-tab-pane name="2" label="城市库存" style="height: 100%">
-        <!-- <QuickQueryStock></QuickQueryStock> -->
+        <CityStock/>
       </el-tab-pane>
     </el-tabs>
   </el-config-provider>
@@ -15,17 +15,18 @@
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
 
 import StoreStock from "@/components/StoreStock.vue";
-// import QuickQueryStock from './CityStock.vue';
+import CityStock from "@/components/CityStock.vue";
 
 export default {
   name: 'App',
   components: {
     StoreStock,
+    CityStock,
   },
   data() {
     return {
       locale: zhCn,
-      activeName: '1',
+      activeName: '2',
     };
   },
 };
