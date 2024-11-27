@@ -1,103 +1,60 @@
 <template>
   <div class="CityStock">
-    <el-row>
-      <el-col>
-        <div>城市：</div>
-        <a-select
-            v-model:value="cityId"
-            show-search
-            style="width: 200px"
-            :options="cityOptions"
-            :filter-option="filterOption"
-            @change="handleChange"
-            @select="handleChange"
-        ></a-select>
-      </el-col>
-    </el-row>
-    <el-row>
-      <el-col>
-        <div>取车时间：</div>
-        <div style="display: flex; column-gap: 10px;justify-content: space-between;">
-          <el-date-picker v-model="pickupDate"
-                          type="date"
-                          placeholder="选择取车日期"
-                          :disabled-date="disabledDate"
-                          :editable="false"
-                          :clearable="false"
-                          value-format="YYYY-MM-DD"
-                          style="width: 100%;"/>
-          <el-time-select v-model="pickupHour"
-                          start="00:00"
-                          step="01:00"
-                          end="23:30"
-                          :editable="false"
-                          :min-time="startTime"
-                          format="HH:mm"
-                          style="width: 100%;"/>
-        </div>
-      </el-col>
-    </el-row>
-    <el-row gutter="40">
-      <el-col :span="12">
-        <div>用车天数：</div>
-        <el-input-number v-model="usageDays" :min="1" :max="60" style="width: 100%"/>
-      </el-col>
-      <el-col :span="12">
-        <el-checkbox v-model="isWednesday">周三下单88折扣</el-checkbox>
-        <el-checkbox v-model="isAdd51">总价+51保障</el-checkbox>
-      </el-col>
-    </el-row>
-    <el-row :gutter="20" justify="start" align="middle" style="margin-bottom: 0">
-      <el-col span="auto">
-        <el-button type="primary" @click="confirm">确认</el-button>
-      </el-col>
-      <el-col span="auto">
-        还车时间：{{ returnTime }}
-      </el-col>
-    </el-row>
-    <el-divider>Result</el-divider>
-    <el-row style="margin-bottom: 0">
-      <el-col>
-        <a-input
-            :value="carNameSearchInput"
-            @change="seachInputChange"
-            style="width: 50%; margin-bottom: 10px"
-            placeholder="输入车型"
-        ></a-input>
-        <el-table size="small" :data-source="filterCityStock" :pagination="false" border>
-          <el-table-column label="车型" show-overflow-tooltip>
-            <template #default="scope">
-              {{ scope.row.carName }}
-            </template>
-          </el-table-column>
-          <el-table-column label="门店" show-overflow-tooltip>
-            <template #default="scope">
-              {{ scope.row.storeName }}
-            </template>
-          </el-table-column>
-          <el-table-column label="总价" show-overflow-tooltip>
-            <template #default="scope">
-              <div>{{ computeTotalPrice(scope.row) }}</div>
-            </template>
-          </el-table-column>
-        </el-table>
-      </el-col>
-    </el-row>
+    <div style="display: flex; align-items: center">
+      <div>城市：</div>
+      <el-select
+          v-model:value="cityId"
+          show-search
+          placeholder="Select a person"
+          style="width: 200px"
+          :options="cityOptions"
+          :filter-option="filterOption"
+          @change="handleChange"
+          @select="handleChange"
+      ></el-select>
+    </div>
+    <br/>
+    <div style="display: flex; column-gap: 10px">
+      <el-date-picker v-model:value="pickupDate" valueFormat="YYYY-MM-DD" :disabledDate="disabledDate"/>
+      <el-time-picker
+          v-model:value="pickupHour"
+          format="HH"
+          :minuteStep="30"
+          :showNow="false"
+          :disabledHours="disabledHours"
+          allowClear
+          value-format="HH:mm"
+      />
+    </div>
+    <br/>
+    <div style="display: flex; column-gap: 20px; align-items: center">
+      <div>
+        使用天数：
+        <el-input-number v-model:value="usageDays" :min="1" :max="60" style="margin-right: 20px"/>
+      </div>
+      <el-checkbox v-model:checked="isWednesday">周三下单88折扣</el-checkbox>
+      <el-checkbox v-model:checked="isAdd51">总价+51保障</el-checkbox>
+    </div>
+    <br/>
+    <div style="display: flex; column-gap: 20px; align-items: center">
+      <el-button type="primary" @click="confirm">确认</el-button>
+      <div>还车时间：{{ this.returnTime }}</div>
+    </div>
+    <el-divider/>
+    <el-input
+        :value="carNameSearchInput"
+        @change="seachInputChange"
+        style="width: 250px; margin-bottom: 10px"
+        placeholder="输入车型"
+    ></el-input>
+    <el-table :columns="newEnergyTableColumns" :data-source="filterCityStock" :pagination="false"></el-table>
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import cityStockMock from '../mock/cityStockMock.json';
 import queryList from '../http/queryList.ts';
 import dayjs from 'dayjs';
-import {isDev} from "@/utils";
-
-interface IStoreStock {
-  cityId: number,
-  storeId: number,
-  storeName: string,
-  storeStock: {},
-}
 
 export default {
   name: 'CityStock',
@@ -116,7 +73,7 @@ export default {
       // 门店数据
       city: undefined,
       // 整个城市的车辆库存
-      cityStock: [] as IStoreStock['storeStock'][],
+      cityStock: [],
       carNameSearchInput: '',
       // filterCityStock: [],
       // 库存
@@ -130,37 +87,89 @@ export default {
       // 使用天数
       usageDays: 1,
       // 最高的舒适车价格
-      comfortCarTopPrice: 0,
+      topComfortCarPrice: 0,
       // 最高的精英车价格
-      betterCarTopPrice: 0,
+      topBetterCarPrice: 0,
+      // 基础费用（基本保障服务费+车辆整备费）
+      preparePrice: 20,
+      basicServicePrice: 50,
+      // 新能源车列表
+      allNewEnergyCar: [],
+
+      // 舒适车列表
+      allComfortCar: [],
+      // 舒适车价格集合
+      comfortCarPriceSet: new Set(),
+      // 精英车列表
+      allBetterCar: [],
+      // 精英车价格集合
+      betterCarPriceSet: new Set(),
+
+      newEnergyTableColumns: [
+        {
+          title: '车型',
+          dataIndex: 'carType',
+          key: 'carType',
+          customRender: ({_, record}) => {
+            return record.carName;
+          },
+        },
+        {
+          title: '门店',
+          dataIndex: 'storeName',
+          key: 'storeName',
+          customRender: ({_, record}) => {
+            return record.storeName;
+          },
+        },
+        {
+          title: '总价',
+          dataIndex: 'totalPrice',
+          key: 'totalPrice',
+          customCell: (record, rowIndex, column) => {
+            const totalPrice = record.totalPrice;
+            return {
+              title: this.isWednesday
+                  ? `${totalPrice}-${Math.floor(totalPrice * 0.12)}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` +
+                  (this.isAdd51 ? `+${51 * this.usageDays}` : 0)
+                  : `${totalPrice}+${this.basicServicePrice}*${this.usageDays}+${this.preparePrice}` +
+                  (this.isAdd51 ? `+${51 * this.usageDays}` : 0),
+            };
+          },
+          customRender: ({_, record}) => {
+            const totalPrice = record.totalPrice;
+            return this.isWednesday
+                ? // 总价-周三88折折扣+基本保障服务费*使用天数+车辆整备费+51保障
+                totalPrice -
+                Math.floor(totalPrice * 0.12) +
+                this.basicServicePrice * this.usageDays +
+                this.preparePrice +
+                (this.isAdd51 ? 51 * this.usageDays : 0)
+                : // 总价+基本保障服务费*使用天数+车辆整备费+51保障
+                totalPrice +
+                this.basicServicePrice * this.usageDays +
+                this.preparePrice +
+                (this.isAdd51 ? 51 * this.usageDays : 0);
+          },
+          sorter: (a, b) => a.totalPrice - b.totalPrice,
+          sortDirections: ['descend'],
+        },
+      ],
     };
   },
   mounted() {
     this.queryCityList();
     this.queryStoreList();
     this.queryCarLevel();
-    cityStock
   },
   computed: {
-    startTime() {
-      const currentDate = dayjs().format('YYYY-MM-DD');
-      // 如果是今天
-      if (currentDate === this.pickupDate) {
-        const recentlyHour = dayjs().add(1, 'hour').startOf('hour').add(1, 'hour')
-        if (recentlyHour.isAfter(dayjs(), 'day')) {
-          this.pickupDate = dayjs().add(1, 'day').format('YYYY-MM-DD')
-        }
-        return recentlyHour.format('HH:mm')
-      } else {
-        return ''
-      }
-    },
     filterCityStock() {
+      console.log(222);
       return this.cityStock.filter((item) => {
         return item.carName.includes(this.carNameSearchInput);
       });
     },
-    // 城市选项
+    // 门店选项
     cityOptions() {
       return this.cityList.map((item) => {
         return {
@@ -182,28 +191,11 @@ export default {
     },
   },
   methods: {
-    computeTotalPrice(record) {
-      // 车辆租赁费用及门店服务费
-      const rent = record.totalPrice;
-      // 基础保障服务费
-      const basicPrice = 50 * this.usageDays
-      // 整备费
-      const preparePrice = 20
-      // 保险保障
-      const safeguardPrice = this.isAdd51
-          ? 51 * (this.usageDays > 7 ? 7 : this.usageDays)
-          : 0
-      // 折扣
-      const discount = this.isWednesday ? Math.floor(rent * 0.12) : 0
-      // 最终价
-      return rent + basicPrice + preparePrice + safeguardPrice - discount
-    },
     seachInputChange(e) {
       this.carNameSearchInput = e.target.value;
     },
-    // 控制哪些日期不可选
-    disabledDate(time: Date) {
-      return dayjs(time).isBefore(dayjs(), 'day')
+    disabledDate(current) {
+      return current < dayjs();
     },
     disabledHours() {
       const currentHour = dayjs().hour();
@@ -293,7 +285,7 @@ export default {
         console.log('cityStock', handledCityStock);
         this.cityStock = handledCityStock;
       };
-      if (isDev) {
+      if (process.env.NODE_ENV === 'development') {
         // mock
         setTimeout(() => {
           handleCityStock(cityStockMock);
@@ -354,13 +346,7 @@ export default {
 <style lang="less" scoped>
 .CityStock {
   position: relative;
-
-  :deep(.el-row) {
-    margin-bottom: 10px;
-  }
-
-  :deep(.el-divider) {
-    margin: 20px 0;
-  }
+  overflow-y: auto;
+  height: 100%;
 }
 </style>
