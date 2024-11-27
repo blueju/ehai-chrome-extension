@@ -69,7 +69,7 @@
                   :filter-option="filterOption"></a-select>
       </el-col>
     </el-row>
-    <el-row>
+    <el-row style="margin-bottom: 0">
       <el-col>
         <el-table size="small" :data="filteredStock" :pagination="false" border>
           <el-table-column label="车型" show-overflow-tooltip>
