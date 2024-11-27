@@ -2,18 +2,21 @@ import './assets/main.css'
 
 import {createApp} from 'vue'
 import App from './App.vue'
-import {Select} from 'ant-design-vue';
+import {Select, Input} from 'ant-design-vue';
 import {isDev} from './utils/index'
 
 
 const app = createApp(App)
 app.use(Select)
+app.use(Input)
 
 const id = `ehai-helper-${Date.now()}`;
 const ehaiHelper = document.createElement('div');
 ehaiHelper.id = id;
 ehaiHelper.setAttribute('class', 'ehai-helper')
 document.body.appendChild(ehaiHelper);
+
+document.title="嗨车助手"
 
 const timer1 = setInterval(() => {
     const root = document.querySelector('#root')
