@@ -54,7 +54,7 @@
         还车时间：{{ returnTime }}
       </el-col>
     </el-row>
-    <el-divider/>
+    <el-divider>Result</el-divider>
     <el-row>
       <el-col>
         <a-select v-model:value="whichCarLevel"
@@ -68,12 +68,12 @@
     <el-row>
       <el-col>
         <el-table size="small" :data="filteredStock" :pagination="false" border>
-          <el-table-column label="车型" width="180" show-overflow-tooltip>
+          <el-table-column label="车型" show-overflow-tooltip>
             <template #default="scope">
               {{ scope.row.carTypeItem.name }}
             </template>
           </el-table-column>
-          <el-table-column label="总价" width="180" show-overflow-tooltip>
+          <el-table-column label="总价" show-overflow-tooltip>
             <template #default="scope">
               <div>{{ computeTotalPrice(scope.row) }}</div>
             </template>

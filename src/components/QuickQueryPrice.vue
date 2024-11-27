@@ -338,7 +338,6 @@ export default {
         pickupTime: this.pickupTime,
         returnTime: this.returnTime,
       };
-      debugger
       if (import.meta.env.MODE === 'development') {
         // mock
         setTimeout(() => {

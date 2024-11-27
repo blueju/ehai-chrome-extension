@@ -312,7 +312,6 @@ export default {
                 resolve(response);
               }, getRandomDelay());
             } catch (error) {
-              debugger;
               reject(error);
             }
           });

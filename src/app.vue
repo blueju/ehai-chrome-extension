@@ -1,39 +1,57 @@
 <template>
   <el-config-provider :locale="locale">
-    <Entry/>
+    <el-tabs v-model="activeName" style="height: 100%">
+      <el-tab-pane name="1" label="门店库存">
+        <StoreStock/>
+      </el-tab-pane>
+      <el-tab-pane name="2" label="城市库存" style="height: 100%">
+        <!-- <QuickQueryStock></QuickQueryStock> -->
+      </el-tab-pane>
+    </el-tabs>
   </el-config-provider>
 </template>
 
 <script>
-import Entry from '@/components/Entry.vue';
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
-import {ElConfigProvider} from 'element-plus'
-import 'dayjs/locale/zh-cn';
+
+import StoreStock from "@/components/StoreStock.vue";
+// import QuickQueryStock from './CityStock.vue';
 
 export default {
   name: 'App',
   components: {
-    Entry,
-    ElConfigProvider
+    StoreStock,
   },
   data() {
     return {
       locale: zhCn,
+      activeName: '1',
     };
   },
 };
 </script>
 
 <style lang="less" scoped>
-:global(#ehai-helper) {
-  width: 100%;
-  height: 100%;
+:global(.ehai-helper) {
   position: fixed;
+  width: 100vw;
+  height: 100vh;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(178, 94, 239, 0.5);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  //background-color: rgba(178, 94, 239, 0.5);
+  background: #ffffff;
+  z-index: 999;
   padding: 10px;
-  z-index: 9999;
+}
+
+:deep(.el-tabs__content) {
+  height: 100%;
+  overflow-y: auto;
+}
+
+:global(body) {
+  overflow: hidden;
 }
 </style>

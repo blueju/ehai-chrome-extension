@@ -47,11 +47,9 @@ export default function queryList(params: {
                 },
             })
             .then((res) => {
-                debugger;
                 resolve(res);
             })
             .catch((err) => {
-                debugger;
                 reject(err);
             });
     });
