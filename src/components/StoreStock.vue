@@ -46,8 +46,8 @@
         <el-input-number v-model="usageDays" :min="1" :max="60" style="width: 100%"/>
       </el-col>
       <el-col :span="12">
-        <el-checkbox v-model:checked="isWednesday">周三下单88折扣</el-checkbox>
-        <el-checkbox v-model:checked="isAdd51">总价+51保障</el-checkbox>
+        <el-checkbox v-model="isWednesday">周三下单88折扣</el-checkbox>
+        <el-checkbox v-model="isAdd51">总价+51保障</el-checkbox>
       </el-col>
     </el-row>
     <el-row :gutter="20" justify="start" align="middle" style="margin-bottom: 0">
@@ -66,7 +66,7 @@
                   style="width: 50%"
                   :show-search="false"
                   :options="carLevelOptions"
-                  :filter-option="filterOption"></a-select>
+        ></a-select>
       </el-col>
     </el-row>
     <el-row style="margin-bottom: 0">
@@ -94,6 +94,28 @@ import dayjs, {Dayjs} from "dayjs";
 import stockMock from './stockMock.json';
 import queryList from './queryList';
 import {isDev} from '../utils/index'
+
+interface ICarLevel {
+  // 车型名称
+  name: string,
+  // 车辆等级ID
+  carLevelId: number
+}
+
+interface IStoreOption {
+  // 门店ID
+  value: number,
+  id: number,
+  // 门店名称
+  name: string,
+  label: string,
+  // 城市ID
+  cityId: string,
+  // 门店类型
+  // 1：门店
+  // 2：送车点
+  type: 1 | 2
+}
 
 export default {
   name: 'StoreStock',
@@ -155,7 +177,7 @@ export default {
     },
     carLevelOptions() {
       if (Object.keys(this.carLevel).length) {
-        return Object.values(this.carLevel).map((item: { name: string, carLevelId: number }) => {
+        return Object.values(this.carLevel).map((item) => {
           return {
             label: item.name,
             value: item.carLevelId
@@ -194,6 +216,7 @@ export default {
       // 最终价
       return rent + basicPrice + preparePrice + safeguardPrice - discount
     },
+    // 控制哪些日期不可选
     disabledDate(time: Date) {
       return dayjs(time).isBefore(dayjs(), 'day')
     },
@@ -224,10 +247,11 @@ export default {
             this.carLevel = resJson;
           });
     },
-    filterOption(input: string, option: { label: string; value: string }) {
+    // 门店搜索逻辑
+    filterOption(input: string, option: IStoreOption) {
       return option.label.indexOf(input) >= 0;
     },
-    handleChange(storeId, option) {
+    handleChange(storeId: number, option: IStoreOption) {
       this.storeId = storeId;
       this.store = option;
     },
