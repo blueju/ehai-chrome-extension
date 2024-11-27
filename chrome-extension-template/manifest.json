@@ -11,7 +11,7 @@
     "content_scripts": [
         {
             "matches": [
-                "<all_urls>"
+                "https://booking.1hai.cn/*"
             ],
             "js": [
                 "content_scripts.js"
@@ -31,7 +31,7 @@
                 "ehai-helper.js"
             ],
             "matches": [
-                "<all_urls>"
+                "https://booking.1hai.cn/*"
             ]
         }
     ]
