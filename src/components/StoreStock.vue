@@ -42,7 +42,7 @@
     </el-row>
     <el-row gutter="40">
       <el-col :span="12">
-        <div>取车时间：</div>
+        <div>用车天数：</div>
         <el-input-number v-model="usageDays" :min="1" :max="60" style="width: 100%"/>
       </el-col>
       <el-col :span="12">
