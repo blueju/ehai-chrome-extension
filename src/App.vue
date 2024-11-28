@@ -2,31 +2,36 @@
   <el-config-provider :locale="locale">
     <el-tabs v-model="activeName" style="height: 100%">
       <el-tab-pane name="1" label="门店库存">
-        <StoreStock/>
+        <StoreStock />
       </el-tab-pane>
-      <el-tab-pane name="2" label="城市库存" style="height: 100%">
-        <CityStock/>
+      <el-tab-pane name="2" label="付费升级" style="height: 100%">
+        <GiveMoneyUpgrade />
+      </el-tab-pane>
+      <el-tab-pane name="3" label="城市库存" style="height: 100%">
+        <CityStock />
       </el-tab-pane>
     </el-tabs>
   </el-config-provider>
 </template>
 
 <script>
-import zhCn from 'element-plus/es/locale/lang/zh-cn'
+import zhCn from "element-plus/es/locale/lang/zh-cn";
 
 import StoreStock from "@/components/StoreStock.vue";
 import CityStock from "@/components/CityStock.vue";
+import GiveMoneyUpgrade from "@/components/GiveMoneyUpgrade.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     StoreStock,
     CityStock,
+    GiveMoneyUpgrade,
   },
   data() {
     return {
       locale: zhCn,
-      activeName: '2',
+      activeName: "2",
     };
   },
 };
