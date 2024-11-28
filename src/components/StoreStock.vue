@@ -4,14 +4,19 @@
       <el-col>
         <div>取车门店：</div>
         <a-select
-            v-model:value="storeId"
-            style="width: 100%"
-            :show-search="true"
-            :filter-option="filterOption"
-            @change="handleChange"
-            @select="handleChange"
+          v-model:value="storeId"
+          style="width: 100%"
+          :show-search="true"
+          :filter-option="filterOption"
+          @change="handleChange"
+          @select="handleChange"
         >
-          <a-select-option v-for="item in storeOptions" :key="item.value" :value="item.value">
+          <a-select-option
+            v-for="item in storeOptions"
+            :key="item.value"
+            :value="item.value"
+            :label="item.label"
+          >
             {{ item.label }}
           </a-select-option>
         </a-select>
@@ -20,52 +25,71 @@
     <el-row>
       <el-col>
         <div>取车时间：</div>
-        <div style="display: flex; column-gap: 10px;justify-content: space-between;">
-          <el-date-picker v-model="pickupDate"
-                          type="date"
-                          placeholder="选择取车日期"
-                          :disabled-date="disabledDate"
-                          :editable="false"
-                          :clearable="false"
-                          value-format="YYYY-MM-DD"
-                          style="width: 100%;"/>
-          <el-time-select v-model="pickupHour"
-                          start="00:00"
-                          step="01:00"
-                          end="23:30"
-                          :editable="false"
-                          :min-time="startTime"
-                          format="HH:mm"
-                          style="width: 100%;"/>
+        <div
+          style="
+            display: flex;
+            column-gap: 10px;
+            justify-content: space-between;
+          "
+        >
+          <el-date-picker
+            v-model="pickupDate"
+            type="date"
+            placeholder="选择取车日期"
+            :disabled-date="disabledDate"
+            :editable="false"
+            :clearable="false"
+            value-format="YYYY-MM-DD"
+            style="width: 100%"
+          />
+          <el-time-select
+            v-model="pickupHour"
+            start="00:00"
+            step="01:00"
+            end="23:30"
+            :editable="false"
+            :min-time="startTime"
+            format="HH:mm"
+            style="width: 100%"
+          />
         </div>
       </el-col>
     </el-row>
-    <el-row gutter="40">
+    <el-row>
       <el-col :span="12">
         <div>用车天数：</div>
-        <el-input-number v-model="usageDays" :min="1" :max="60" style="width: 100%"/>
+        <el-input-number
+          v-model="usageDays"
+          :min="1"
+          :max="60"
+          style="width: 100%"
+        />
       </el-col>
-      <el-col :span="12">
+      <el-col :span="10" :offset="2">
         <el-checkbox v-model="isWednesday">周三下单88折扣</el-checkbox>
         <el-checkbox v-model="isAdd51">总价+51保障</el-checkbox>
       </el-col>
     </el-row>
-    <el-row :gutter="20" justify="start" align="middle" style="margin-bottom: 0">
+    <el-row
+      :gutter="20"
+      justify="start"
+      align="middle"
+      style="margin-bottom: 0"
+    >
       <el-col span="auto">
         <el-button type="primary" @click="confirm">确认</el-button>
       </el-col>
-      <el-col span="auto">
-        还车时间：{{ returnTime }}
-      </el-col>
+      <el-col span="auto"> 还车时间：{{ returnTime }} </el-col>
     </el-row>
     <el-divider>Result</el-divider>
     <el-row>
       <el-col>
-        <a-select v-model:value="whichCarLevel"
-                  placeholder="选择车型"
-                  style="width: 50%"
-                  :show-search="false"
-                  :options="carLevelOptions"
+        <a-select
+          v-model:value="whichCarLevel"
+          placeholder="选择车型"
+          style="width: 50%"
+          :show-search="false"
+          :options="carLevelOptions"
         ></a-select>
       </el-col>
     </el-row>
@@ -89,36 +113,36 @@
 </template>
 
 <script lang="ts">
-import dayjs, {Dayjs} from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
 
-import stockMock from '../mock/stockMock.json';
-import queryList from '../http/queryList';
-import {isDev} from '../utils/index'
+import stockMock from "../mock/stockMock.json";
+import queryList from "../http/queryList";
+import { isDev } from "../utils/index";
 
 interface ICarLevel {
   // 车型名称
-  name: string,
+  name: string;
   // 车辆等级ID
-  carLevelId: number
+  carLevelId: number;
 }
 
 interface IStoreOption {
   // 门店ID
-  value: number,
-  id: number,
+  value: number;
+  id: number;
   // 门店名称
-  name: string,
-  label: string,
+  name: string;
+  label: string;
   // 城市ID
-  cityId: string,
+  cityId: string;
   // 门店类型
   // 1：门店
   // 2：送车点
-  type: 1 | 2
+  type: 1 | 2;
 }
 
 export default {
-  name: 'StoreStock',
+  name: "StoreStock",
   data() {
     return {
       storeOptions: [] as Array<{ label: string; value: string }>,
@@ -131,9 +155,9 @@ export default {
       // 车型列表
       carLevel: {} as {
         [key: string]: {
-          name: string,
-          carLevel: number
-        }
+          name: string;
+          carLevel: number;
+        };
       },
       // 门店数据
       store: undefined,
@@ -142,9 +166,9 @@ export default {
       // 门店ID
       storeId: 2596,
       // 取车日期
-      pickupDate: dayjs().format('YYYY-MM-DD'),
+      pickupDate: dayjs().format("YYYY-MM-DD"),
       // 取车时刻
-      pickupHour: dayjs().add(2, 'hour').format('HH:00'),
+      pickupHour: dayjs().add(2, "hour").format("HH:00"),
       // 使用天数
       usageDays: 1,
       // 展示库存
@@ -157,22 +181,25 @@ export default {
   },
   computed: {
     filteredStock() {
-      return this.storeStock.filter(item => {
-        return item.carTypeItem.carLevelId === this.whichCarLevel
-      })
+      return this.storeStock.filter((item) => {
+        return item.carTypeItem.carLevelId === this.whichCarLevel;
+      });
     },
     //
     startTime() {
-      const currentDate = dayjs().format('YYYY-MM-DD');
+      const currentDate = dayjs().format("YYYY-MM-DD");
       // 如果是今天
       if (currentDate === this.pickupDate) {
-        const recentlyHour = dayjs().add(1, 'hour').startOf('hour').add(1, 'hour')
-        if (recentlyHour.isAfter(dayjs(), 'day')) {
-          this.pickupDate = dayjs().add(1, 'day').format('YYYY-MM-DD')
+        const recentlyHour = dayjs()
+          .add(1, "hour")
+          .startOf("hour")
+          .add(1, "hour");
+        if (recentlyHour.isAfter(dayjs(), "day")) {
+          this.pickupDate = dayjs().add(1, "day").format("YYYY-MM-DD");
         }
-        return recentlyHour.format('HH:mm')
+        return recentlyHour.format("HH:mm");
       } else {
-        return ''
+        return "";
       }
     },
     carLevelOptions() {
@@ -180,9 +207,9 @@ export default {
         return Object.values(this.carLevel).map((item) => {
           return {
             label: item.name,
-            value: item.carLevelId
-          }
-        })
+            value: item.carLevelId,
+          };
+        });
       } else {
         return [];
       }
@@ -190,12 +217,14 @@ export default {
     // 取车时间
     pickupTime() {
       const pickupTime = `${this.pickupDate} ${this.pickupHour}`;
-      return dayjs(pickupTime).format('YYYY-MM-DD HH:mm');
+      return dayjs(pickupTime).format("YYYY-MM-DD HH:mm");
     },
     // 还车时间
     returnTime() {
-      console.log(111)
-      const returnTime = dayjs(this.pickupTime).add(this.usageDays, 'day').format('YYYY-MM-DD HH:mm');
+      console.log(111);
+      const returnTime = dayjs(this.pickupTime)
+        .add(this.usageDays, "day")
+        .format("YYYY-MM-DD HH:mm");
       return returnTime;
     },
   },
@@ -204,48 +233,48 @@ export default {
       // 车辆租赁费用及门店服务费
       const rent = record.priceItemList[0].totalPrice;
       // 基础保障服务费
-      const basicPrice = 50 * this.usageDays
+      const basicPrice = 50 * this.usageDays;
       // 整备费
-      const preparePrice = 20
+      const preparePrice = 20;
       // 保险保障
       const safeguardPrice = this.isAdd51
-          ? 51 * (this.usageDays > 7 ? 7 : this.usageDays)
-          : 0
+        ? 51 * (this.usageDays > 7 ? 7 : this.usageDays)
+        : 0;
       // 折扣
-      const discount = this.isWednesday ? Math.floor(rent * 0.12) : 0
+      const discount = this.isWednesday ? Math.floor(rent * 0.12) : 0;
       // 最终价
-      return rent + basicPrice + preparePrice + safeguardPrice - discount
+      return rent + basicPrice + preparePrice + safeguardPrice - discount;
     },
     // 控制哪些日期不可选
     disabledDate(time: Date) {
-      return dayjs(time).isBefore(dayjs(), 'day')
+      return dayjs(time).isBefore(dayjs(), "day");
     },
     // 查询门店列表
     queryStoreList() {
-      fetch('https://dev.usemock.com/673c8274f92800c9ae107bc0/storeList')
-          .then((res) => res.json())
-          .then((resJson) => {
-            this.storeList = resJson;
-            this.storeOptions = resJson.map((item) => {
-              return {
-                ...item,
-                label: item.name,
-                value: item.id,
-              };
-            });
-            const store = resJson.find((item) => {
-              return item.id === 2596;
-            });
-            this.store = store;
+      fetch("https://dev.usemock.com/673c8274f92800c9ae107bc0/storeList")
+        .then((res) => res.json())
+        .then((resJson) => {
+          this.storeList = resJson;
+          this.storeOptions = resJson.map((item) => {
+            return {
+              ...item,
+              label: item.name,
+              value: item.id,
+            };
           });
+          const store = resJson.find((item) => {
+            return item.id === 2596;
+          });
+          this.store = store;
+        });
     },
     // 查询车型列表
     queryCarLevel() {
-      fetch('https://dev.usemock.com/673c8274f92800c9ae107bc0/carLevel')
-          .then((res) => res.json())
-          .then((resJson) => {
-            this.carLevel = resJson;
-          });
+      fetch("https://dev.usemock.com/673c8274f92800c9ae107bc0/carLevel")
+        .then((res) => res.json())
+        .then((resJson) => {
+          this.carLevel = resJson;
+        });
     },
     // 门店搜索逻辑
     filterOption(input: string, option: IStoreOption) {
@@ -262,7 +291,7 @@ export default {
         pickupTime: this.pickupTime,
         returnTime: this.returnTime,
       };
-      console.log(params)
+      console.log(params);
       if (isDev) {
         // mock
         setTimeout(() => {
@@ -271,13 +300,13 @@ export default {
       } else {
         // 实际
         queryList(params)
-            .then((res) => {
-              console.log(res);
-              this.storeStock = res.data.result.carTypeList;
-            })
-            .catch((err) => {
-              console.log(err);
-            });
+          .then((res) => {
+            console.log(res);
+            this.storeStock = res.data.result.carTypeList;
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       }
     },
   },
