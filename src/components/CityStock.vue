@@ -79,7 +79,7 @@
         <el-row>
           <el-input
             v-model="searchInput"
-            style="width: 50%; margin-bottom: 10px"
+            style="width: 50%; margin-bottom: 10px; margin-right: 10px"
             placeholder="输入车型"
           ></el-input>
           <el-button @click="startFilter">筛选</el-button>
