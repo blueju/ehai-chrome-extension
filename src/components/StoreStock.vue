@@ -101,7 +101,7 @@
               {{ scope.row.carTypeItem.name }}
             </template>
           </el-table-column>
-          <el-table-column label="总价" show-overflow-tooltip>
+          <el-table-column label="总价" show-overflow-tooltip width="100">
             <template #default="scope">
               <div>{{ computeTotalPrice(scope.row) }}</div>
             </template>
