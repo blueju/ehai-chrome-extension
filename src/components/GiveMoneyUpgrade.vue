@@ -276,19 +276,6 @@ export default {
       const cost = priceDifference + 187 * this.usageDays;
       return `${cost}（+${priceDifference}）`;
     },
-    upgradeFromBetter(record) {
-      if (this.betterCar.length === 0) {
-        return "/";
-      }
-      const totalPrice = record.priceItemList[0].totalPrice;
-      const topSuitablePrice = this.findTopSuitablePrice(totalPrice, [
-        ...this.betterCarPriceSet,
-      ]);
-      // 差价
-      const priceDifference = totalPrice - topSuitablePrice;
-      const cost = priceDifference + 187 * this.usageDays;
-      return `${cost}（+${priceDifference}）`;
-    },
     computeEachCarLevelTopPrice(record) {
       debugger;
       // 计算最高的舒适车价格
