@@ -1,0 +1,407 @@
+[
+  {
+    "projectId": "1901560290613457920",
+    "projectName": "各业务领域的规划支持及运营服务",
+    "projectKindId": "1073126635785466880",
+    "projectKindName": "研发项目",
+    "sysSource": "RD",
+    "taskList": [
+      {
+        "taskType": "1",
+        "taskSeq": 0,
+        "taskName": "2024年-MTL业务-规划支持",
+        "taskNumber": "TK-00294364",
+        "taskID": "1901639390397002752",
+        "createDate": "2024-03-08 18:17:20"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 1,
+        "taskName": "2024年-MTL业务-运营服务",
+        "taskNumber": "TK-00294350",
+        "taskID": "1901630167500102656",
+        "createDate": "2024-03-08 17:56:20"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 2,
+        "taskName": "2024年-LTC业务-规划支持",
+        "taskNumber": "TK-00294326",
+        "taskID": "1901614682465402880",
+        "createDate": "2024-03-08 17:26:59"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 3,
+        "taskName": "2024年-LTC业务-运营服务",
+        "taskNumber": "TK-00293213",
+        "taskID": "1899948511500468224",
+        "createDate": "2024-03-06 09:04:56"
+      }
+    ],
+    "hasWorkDays": false,
+    "createTime": "2024-12-03 21:55:47"
+  },
+  {
+    "projectId": "1900918517172305920",
+    "projectName": "小微业务零星需求（持续迭代）",
+    "projectKindId": "1073126635785466880",
+    "projectKindName": "研发项目",
+    "sysSource": "RD",
+    "taskList": [
+      {
+        "taskType": "1",
+        "taskSeq": 0,
+        "taskName": "开发任务【官网新增界面】",
+        "taskNumber": "TK-00362076",
+        "taskID": "2082899590297752577",
+        "createDate": "2024-11-13 20:29:40"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 4,
+        "taskName": "开发任务【SEM新落地页开发需求】",
+        "taskNumber": "TK-00351241",
+        "taskID": "2056602131670013954",
+        "createDate": "2024-10-08 13:41:19"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 5,
+        "taskName": "开发任务【jdy官网视频播修复】",
+        "taskNumber": "TK-00345766",
+        "taskID": "2035607854307781632",
+        "createDate": "2024-09-09 14:29:26"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 6,
+        "taskName": "开发任务【JDY官网首页首屏主播招募海报下线】",
+        "taskNumber": "TK-00343858",
+        "taskID": "2030515497468078080",
+        "createDate": "2024-09-02 13:51:50"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 7,
+        "taskName": "开发任务【kdjdy域名精斗云两个广告落地页跳转到提交成功页，并回传代码】",
+        "taskNumber": "TK-00342185",
+        "taskID": "2022547668135599104",
+        "createDate": "2024-08-22 14:01:11"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 9,
+        "taskName": "开发任务【斗云进销存及云会计投放页面内容调整】",
+        "taskNumber": "TK-00325899",
+        "taskID": "1982779383298928640",
+        "createDate": "2024-06-28 17:08:42"
+      }
+    ],
+    "hasWorkDays": false,
+    "createTime": "2024-12-03 21:55:47"
+  },
+  {
+    "projectId": "1726262719872529408",
+    "projectName": "MCR管理客户关系",
+    "projectKindId": "1073126635785466880",
+    "projectKindName": "研发项目",
+    "sysSource": "RD",
+    "taskList": [
+      {
+        "taskType": "1",
+        "taskSeq": 0,
+        "taskName": "开发任务【集团下属公司、与金蝶合作公司弹框交互优化】",
+        "taskNumber": "TK-00364282",
+        "taskID": "2088671618715932672",
+        "createDate": "2024-11-21 19:37:40"
+      }
+    ],
+    "hasWorkDays": false,
+    "createTime": "2024-12-03 21:55:47"
+  },
+  {
+    "projectId": "1726249793162057728",
+    "projectName": "KBC零星需求（持续迭代）",
+    "projectKindId": "1073126635785466880",
+    "projectKindName": "研发项目",
+    "sysSource": "RD",
+    "taskList": [
+      {
+        "taskType": "1",
+        "taskSeq": 0,
+        "taskName": "开发任务【苍穹APP取数和跳转支持】",
+        "taskNumber": "TK-00365179",
+        "taskID": "2092360618110811136",
+        "createDate": "2024-11-26 21:47:03"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 2,
+        "taskName": "【KBC移动端组件化建设】Tab 标签页组件",
+        "taskNumber": "TK-00345484",
+        "taskID": "2033508129664208896",
+        "createDate": "2024-09-06 16:57:11"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 3,
+        "taskName": "【KBC移动端组件化建设】Uploader 文件上传组件",
+        "taskNumber": "TK-00344840",
+        "taskID": "2032050696802830336",
+        "createDate": "2024-09-04 16:35:49"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 4,
+        "taskName": "【KBC移动端组件化建设】组件国际化",
+        "taskNumber": "TK-00333404",
+        "taskID": "2000810320989387776",
+        "createDate": "2024-07-23 14:12:22"
+      }
+    ],
+    "hasWorkDays": false,
+    "createTime": "2024-12-03 21:55:47"
+  },
+  {
+    "projectId": "1894858773131060224",
+    "projectName": "2024-优化-市场增长数字化建设",
+    "projectKindId": "1073126635785466880",
+    "projectKindName": "研发项目",
+    "sysSource": "RD",
+    "taskList": [
+      {
+        "taskType": "1",
+        "taskSeq": 0,
+        "taskName": "开发任务【客户授权优化】",
+        "taskNumber": "TK-00338316",
+        "taskID": "2012614018665178112",
+        "createDate": "2024-08-08 21:04:47"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 1,
+        "taskName": "开发任务【小程序名片优化(不包括新版首页涉及的优化)】",
+        "taskNumber": "TK-00328881",
+        "taskID": "1990042831108064257",
+        "createDate": "2024-07-08 17:39:52"
+      }
+    ],
+    "hasWorkDays": false,
+    "createTime": "2024-12-03 21:55:47"
+  },
+  {
+    "projectId": "1894460127369793536",
+    "projectName": "2024-优化-客户数据资产库及应用优化",
+    "projectKindId": "1073126635785466880",
+    "projectKindName": "研发项目",
+    "sysSource": "RD",
+    "taskList": [
+      {
+        "taskType": "1",
+        "taskSeq": 0,
+        "taskName": "开发任务【移动端客户数据概览-数据穿透】-客户切换组件",
+        "taskNumber": "TK-00364895",
+        "taskID": "2091318783330271232",
+        "createDate": "2024-11-25 11:17:06"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 1,
+        "taskName": "开发任务【客户详情页：企业曾用名、企业分类展示，内容的展示优化】",
+        "taskNumber": "TK-00364291",
+        "taskID": "2088679035361085440",
+        "createDate": "2024-11-21 19:52:24"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 4,
+        "taskName": "开发任务【标签展示注释信息】",
+        "taskNumber": "TK-00352762",
+        "taskID": "2059741506390223873",
+        "createDate": "2024-10-12 21:38:42"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 6,
+        "taskName": "开发任务【MCR移动端0808优化第三期优化】",
+        "taskNumber": "TK-00347576",
+        "taskID": "2042221993188791297",
+        "createDate": "2024-09-18 17:30:33"
+      },
+      {
+        "taskType": "1",
+        "taskSeq": 7,
+        "taskName": "MCR客户任务/跟进",
+        "taskNumber": "TK-00343925",
+        "taskID": "2030592723655921664",
+        "createDate": "2024-09-02 16:24:22"
+      }
+    ],
+    "hasWorkDays": false,
+    "createTime": "2024-12-03 21:55:47"
+  },
+  {
+    "projectId": "1900923517109705728",
+    "projectName": "MTL云营销零星需求（持续迭代）",
+    "projectKindId": "1073126635785466880",
+    "projectKindName": "研发项目",
+    "sysSource": "RD",
+    "taskList": [
+      {
+        "taskType": "1",
+        "taskSeq": 0,
+        "taskName": "开发任务【表单优化】",
+        "taskNumber": "TK-00321329",
+        "taskID": "1972544097646440448",
+        "createDate": "2024-06-14 14:13:00"
+      }
+    ],
+    "hasWorkDays": false,
+    "createTime": "2024-12-03 21:55:47"
+  },
+  {
+    "projectId": "1890848552360467456",
+    "projectName": "日常耗费",
+    "projectKindId": "1878197416214160384",
+    "projectKindName": "耗费类",
+    "manTask": false,
+    "sysSource": "KBC",
+    "taskList": [
+      {
+        "parent": null,
+        "kded_actualhours": 14445,
+        "kded_planhours": 8,
+        "level": 1,
+        "kded_iscomplete": false,
+        "taskseq": 1,
+        "project": "1890848552360467456",
+        "percent": 0,
+        "kded_pro_approva": {
+          "kded_isopen": false
+        },
+        "kded_wbs": "1",
+        "name": "部门管理（含制度、规范、体系建设、内部工作穿透、产品/研发/运营/运维例会）",
+        "id": "1890848692005624832",
+        "isleaf": true,
+        "completionstatus": "2",
+        "kded_projstage": {
+          "projectStageId": "1890843477219073024",
+          "projectStageName": "IT日常"
+        }
+      },
+      {
+        "parent": null,
+        "kded_actualhours": 1479.5,
+        "kded_planhours": 8,
+        "level": 1,
+        "kded_iscomplete": false,
+        "taskseq": 2,
+        "project": "1890848552360467456",
+        "percent": 0,
+        "kded_pro_approva": {
+          "kded_isopen": false
+        },
+        "kded_wbs": "2",
+        "name": "学习成长（含技术分享、专业知识分享、经验与思考分享、员工培训指导等）",
+        "id": "1890848779029170176",
+        "isleaf": true,
+        "completionstatus": "2",
+        "kded_projstage": {
+          "projectStageId": "1890843477219073024",
+          "projectStageName": "IT日常"
+        }
+      },
+      {
+        "parent": null,
+        "kded_actualhours": 788,
+        "kded_planhours": 8,
+        "level": 1,
+        "kded_iscomplete": false,
+        "taskseq": 3,
+        "project": "1890848552360467456",
+        "percent": 0,
+        "kded_pro_approva": {
+          "kded_isopen": false
+        },
+        "kded_wbs": "3",
+        "name": "新员工学习（仅应用于新入职员工在试用期的学习成长）",
+        "id": "1896432782545152000",
+        "isleaf": true,
+        "completionstatus": "2",
+        "kded_projstage": {
+          "projectStageId": "1890843477219073024",
+          "projectStageName": "IT日常"
+        }
+      },
+      {
+        "parent": null,
+        "kded_actualhours": 454.7,
+        "kded_planhours": 8,
+        "level": 1,
+        "kded_iscomplete": false,
+        "taskseq": 4,
+        "project": "1890848552360467456",
+        "percent": 0,
+        "kded_pro_approva": {
+          "kded_isopen": false
+        },
+        "kded_wbs": "4",
+        "name": "组织文化（含项目管理文化/信息安全文化/流程文化等）",
+        "id": "1890849400599988224",
+        "isleaf": true,
+        "completionstatus": "2",
+        "kded_projstage": {
+          "projectStageId": "1890843477219073024",
+          "projectStageName": "IT日常"
+        }
+      },
+      {
+        "parent": null,
+        "kded_actualhours": 1252.5,
+        "kded_planhours": 8,
+        "level": 1,
+        "kded_iscomplete": false,
+        "taskseq": 5,
+        "project": "1890848552360467456",
+        "percent": 0,
+        "kded_pro_approva": {
+          "kded_isopen": false
+        },
+        "kded_wbs": "5",
+        "name": "技术探索与预研（非专项的、IT内部发起的技术探索与预研）",
+        "id": "1896433032450172928",
+        "isleaf": true,
+        "completionstatus": "2",
+        "kded_projstage": {
+          "projectStageId": "1890843477219073024",
+          "projectStageName": "IT日常"
+        }
+      },
+      {
+        "parent": null,
+        "kded_actualhours": 5394.1,
+        "kded_planhours": 8,
+        "level": 1,
+        "kded_iscomplete": false,
+        "taskseq": 6,
+        "project": "1890848552360467456",
+        "percent": 0,
+        "kded_pro_approva": {
+          "kded_isopen": false
+        },
+        "kded_wbs": "6",
+        "name": "其他（非专项的内部沟通耗费）",
+        "id": "1890849504006012928",
+        "isleaf": true,
+        "completionstatus": "2",
+        "kded_projstage": {
+          "projectStageId": "1890843477219073024",
+          "projectStageName": "IT日常"
+        }
+      }
+    ],
+    "hasWorkDays": false,
+    "createTime": "2024-02-22 20:51:56"
+  }
+]

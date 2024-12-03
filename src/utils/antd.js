@@ -1,6 +1,8 @@
 import {
   Button,
   Select,
+  SelectOptGroup,
+  SelectOption,
   Divider,
   DatePicker,
   TimePicker,
@@ -11,6 +13,9 @@ import {
   Tabs,
   TabPane,
   Input,
+  Textarea,
+  Row,
+  Col,
 } from 'ant-design-vue';
 
 const Antd = {
@@ -27,6 +32,11 @@ const Antd = {
     Vue.component('a-tabs', Tabs);
     Vue.component('a-tab-pane', TabPane);
     Vue.component('a-input', Input);
+    Vue.component('a-textarea', Textarea);
+    Vue.component('a-row', Row);
+    Vue.component('a-col', Col);
+    Vue.component('a-select-opt-group', SelectOptGroup);
+    Vue.component('a-select-option', SelectOptGroup);
   },
 };
 

@@ -18,6 +18,5 @@
 // @require      https://cdn.bootcdn.net/ajax/libs/vue/3.4.33/vue.global.min.js
 // @require      https://cdn.bootcdn.net/ajax/libs/axios/0.21.0/axios.min.js
 // @require      https://cdn.bootcdn.net/ajax/libs/dayjs/1.11.12/dayjs.min.js
-// @match        https://booking.1hai.cn/order/firstStep*
-// @match        https://booking.1hai.cn/order/firststep*
+// @match        https://kebc.kingdee.com/mobile/pms/home/home-setting#funcNumber=FP-201224-0150
 // ==/UserScript==

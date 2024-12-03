@@ -1,56 +1,159 @@
 <template>
   <div class="card" :class="{ 'card--hide': isHide }">
-    <!-- <Header></Header> -->
-    <a-tabs v-model:activeKey="activeKey" style="height: 100%">
-      <a-tab-pane key="1" tab="门店库存">
-        <QuickQueryPrice></QuickQueryPrice>
-      </a-tab-pane>
-      <a-tab-pane key="2" tab="城市库存" style="height: 100%">
-        <QuickQueryStock></QuickQueryStock>
-      </a-tab-pane>
-    </a-tabs>
+    <a-row>
+      <a-col :span="24">
+        <a-textarea v-model:value="showParams" :rows="8" />
+      </a-col>
+    </a-row>
+    <br>
+    <a-row>
+      <a-col :span="24">
+        <a-date-picker style="width: 100%;" v-model:value="date" value-format="YYYY-MM-DD" format="YYYY-MM-DD" />
+      </a-col>
+    </a-row>
+    <br>
+    <a-row>
+      <a-col :span="24">
+        <a-select style="width: 100%;" @change="handleChange" :options="options"></a-select>
+      </a-col>
+    </a-row>
+    <br>
+    <a-row>
+      <a-col>
+        <a-button block type="primary" @click="submit">提交</a-button>
+      </a-col>
+    </a-row>
 
     <div class="card__btn" @click="hide">
-      <svg
-        t="1589962875590"
-        class="icon"
-        viewBox="0 0 1024 1024"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        p-id="2601"
-      >
+      <svg t="1589962875590" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        p-id="2601">
         <path
           d="M730.020653 1018.946715l91.277028-89.978692a16.760351 16.760351 0 0 0 5.114661-11.803064 15.343983 15.343983 0 0 0-5.114661-11.803064l-400.123871-393.435467L821.691117 118.254899a17.075099 17.075099 0 0 0 0-23.606129L730.020653 4.670079a17.232473 17.232473 0 0 0-23.999564 0L202.030255 500.08402a16.445603 16.445603 0 0 0-4.721226 11.803064 15.265296 15.265296 0 0 0 5.114661 11.803064l503.597399 495.413941a17.153786 17.153786 0 0 0 23.999564 0z m0 0"
-          fill="#FFFFFF"
-          p-id="2602"
-        ></path>
+          fill="#FFFFFF" p-id="2602"></path>
       </svg>
     </div>
   </div>
 </template>
 
 <script>
-// import Header from './Header.vue'
-import QuickQueryPrice from './QuickQueryPrice.vue';
-import QuickQueryStock from './QuickQueryStock.vue';
+import taskMock from './taskMock.json'
+import dayjs from 'dayjs';
+import { omit } from 'lodash-es'
 
 export default {
   name: 'Entry',
   components: {
-    // Header,
-    QuickQueryPrice,
-    QuickQueryStock,
   },
   data() {
     return {
-      activeKey: '1',
       isHide: false,
+      initalParams: {
+        "workDate": "",
+        "taskID": "",
+        "sysSource": "",
+        "rdTaskName": "",
+        "rdProjectId": "",
+        "rdProjectName": ""
+      },
+      myActiveProjectAndTask: [],
+      date: dayjs().format('YYYY-MM-DD'),
+      task: {}
     };
+  },
+  computed: {
+    showParams() {
+      return JSON.stringify(this.initalParams, null, 2);
+    },
+    options() {
+      return this.myActiveProjectAndTask.map(project => {
+        return {
+          label: project.projectName,
+          options: project.taskList.map(task => {
+            return {
+              label: task.taskName,
+              value: task.taskID,
+              ...task,
+              ...omit(project, ['taskList'])
+            }
+          })
+        }
+      })
+    }
+  },
+  mounted() {
+    this.getMyActiveProjectAndTask()
   },
   methods: {
     hide() {
       this.isHide = !this.isHide;
     },
+    handleChange(value, option) {
+      console.log(value, option);
+      this.task = option
+      this.initalParams = {
+        "workDate": this.date,
+        "taskID": option.taskID,
+        "sysSource": option.sysSource,
+        "rdTaskName": option.taskName,
+        "rdProjectId": option.projectId,
+        "rdProjectName": option.projectName,
+      }
+    },
+    getMyActiveProjectAndTask() {
+      if (process.env.NODE_ENV === 'development') {
+        this.myActiveProjectAndTask = taskMock;
+      } else {
+        fetch("https://kebc.kingdee.com/ierp/kapi/app/pmas/getMyActiveProjectAndTask", {
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "zh-CN,zh;q=0.9",
+            "ajax": "true",
+            "cache-control": "no-cache",
+            "pragma": "no-cache",
+            "sec-ch-ua": "\"Not)A;Brand\";v=\"99\", \"Microsoft Edge\";v=\"127\", \"Chromium\";v=\"127\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\"",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-origin"
+          },
+          "referrer": "https://kebc.kingdee.com/mobile/pms/home/home-setting",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body": null,
+          "method": "GET",
+          "mode": "cors",
+          "credentials": "include"
+        })
+          .then(response => response.json())
+          .then(resJson => {
+            this.myActiveProjectAndTask = resJson.data;
+          });
+      }
+    },
+    submit() {
+      fetch("https://kebc.kingdee.com/ierp/kapi/app/pmpt/saveUserTaskRelation", {
+        "headers": {
+          "accept": "application/json, text/plain, */*",
+          "accept-language": "zh-CN,zh;q=0.9",
+          "ajax": "true",
+          "content-type": "application/json;charset=UTF-8",
+          "sec-ch-ua": "\"Not)A;Brand\";v=\"99\", \"Microsoft Edge\";v=\"127\", \"Chromium\";v=\"127\"",
+          "sec-ch-ua-mobile": "?0",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "sec-fetch-dest": "empty",
+          "sec-fetch-mode": "cors",
+          "sec-fetch-site": "same-origin"
+        },
+        "referrer": "https://kebc.kingdee.com/mobile/pms/home/home-setting",
+        "referrerPolicy": "strict-origin-when-cross-origin",
+        "body": JSON.stringify([this.initalParams]),
+        "method": "POST",
+        "mode": "cors",
+        "credentials": "include"
+      }).then(() => {
+        location.reload()
+      });
+    }
   },
 };
 </script>
