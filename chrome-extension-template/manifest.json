@@ -1,12 +1,12 @@
 {
     "manifest_version": 3,
-    "name": "嗨车助手",
+    "name": "工时助手",
     "version": "1.0",
     "permissions": [
         "declarativeNetRequest"
     ],
     "host_permissions": [
-        "https://booking.1hai.cn/*"
+        "https://kebc.kingdee.com/*"
     ],
     "content_scripts": [
         {
