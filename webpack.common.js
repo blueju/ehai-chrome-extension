@@ -15,7 +15,7 @@ module.exports = () => {
       app: './src/main.js',
     },
     output: {
-      filename: 'ehai-helper.js',
+      filename: 'worktime-helper.js',
       path: path.resolve(__dirname, 'dist'),
     },
     resolve: {

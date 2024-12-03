@@ -28,7 +28,7 @@
                 "lib/vue.global.min.js",
                 "lib/axios.min.js",
                 "lib/dayjs.min.js",
-                "ehai-helper.js"
+                "worktime-helper.js"
             ],
             "matches": [
                 "<all_urls>"

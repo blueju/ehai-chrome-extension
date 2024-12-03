@@ -1,7 +1,7 @@
 loadStyle('https://cdn.bootcdn.net/ajax/libs/ant-design-vue/3.2.20/antd.min.css');
 
 import App from './app.vue';
-import { isDev } from './config';
+// import { isDev } from './config';
 import { loadStyle } from './utils';
 import Antd from '@/utils/antd';
 import './styles/global.scss';
@@ -11,24 +11,7 @@ const root = document.createElement('div');
 root.id = id;
 document.body.appendChild(root);
 
-if (isDev) {
-  const Vue = require('vue');
-  const app = Vue.createApp(App);
-  // const Antd = require('ant-design-vue');
-  // app.use(Antd)
-  app.use(Antd);
-  app.mount(`#${id}`);
-} else {
-  const timer = setInterval(() => {
-    if (window.ehai) {
-      clearInterval(timer);
-      const app = Vue.createApp(App);
-      // const Antd = require('ant-design-vue');
-      // app.use(Antd)
-      app.use(Antd);
-      app.mount(`#${id}`);
-    } else {
-      console.log('等待下一次检查');
-    }
-  }, 1000);
-}
+const Vue = require('vue');
+const app = Vue.createApp(App);
+app.use(Antd);
+app.mount(`#${id}`);
